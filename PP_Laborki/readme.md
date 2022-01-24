@@ -227,3 +227,12 @@
       ;input:     (wykonaj (list 1 (list 2 3 4) 5 6 (list 7 8) 9 (list 0 1 10)))
       ;output:    '(1 9 5 6 15 9 11)
 ```
+## 15. Napisz program na wyliczanie reszty z dzielenia liczby n przez liczbę k metodą kolejnych odejmowań. Np. dla n=10 k=3 : 10-3; 7-3; 4-3; wynik wynosi 1
+```Scheme
+(define (dzielenie n k)
+  (if (< n k)
+      n
+      (dzielenie (- n k) k)
+      )
+  )
+```

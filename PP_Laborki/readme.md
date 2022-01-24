@@ -235,4 +235,7 @@
       (dzielenie (- n k) k)
       )
   )
+
+      ;input:     (dzielenie 11 3)
+      ;output:    2
 ```

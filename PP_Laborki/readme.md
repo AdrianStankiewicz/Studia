@@ -19,3 +19,8 @@ ___
 ```Scheme
 objawki(D,C) :- pacjent(D,X), choroba(C,F), jest_na_liscie(X,F).
 ```
+___
+## Wyszukanie wspólnych części:
+```Scheme
+wspolne(X,Y,C) :- pojazd(X,_,F), pojazd(Y,_,E), jest_na_liscie(C,E), jest_na_liscie(C,F).
+```

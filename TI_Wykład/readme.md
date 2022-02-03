@@ -13,8 +13,8 @@ ___
 # 3. Ile poziomów jakości usług zdefiniowano w protokole MQTT?
 - ## 🟥 1
 - ## 🟥 2
-- ## 🟥 3
-- ## 🟩 4
+- ## 🟩 3
+- ## 🟥 4
 # 4. Jaki model komunikacji wykorzystyuje przotokół MQTT?
 - ## 🟥 Żądanie / Odpowiedź
 - ## 🟥 Rozgłoszeniowy
@@ -36,10 +36,10 @@ ___
 - ## 🟥 Stan sesji i ciasteczka zapamiętuje serwer
 - ## 🟥 Stan sesji zapamiętuje przeglądarka, ciasteczka zapamiętuje serwer
 # 8. Zaznacz prawdziwe zdania
-- ## 🟩 Stan sesji zapamiętuje serwer, ciasteczka zapamiętuje przeglądarka
-- ## 🟥 Stan sesji i ciasteczka zapamiętuje przeglądarka
-- ## 🟥 Stan sesji i ciasteczka zapamiętuje serwer
-- ## 🟩 Stan sesji zapamiętuje przeglądarka, ciasteczka zapamiętuje serwer
+- ## 🟩 Stan aplikacji może być modyfikowany przez wszystkie strony wszystkich sesji tej aplikacji 
+- ## 🟥 Stan aplikacji może być modyfikowany tylko przez serwer
+- ## 🟥 Stan aplikacji jest widoczny tylko przez serwer
+- ## 🟩 Stan aplikacji jest widoczny przez wszystkie strony wszystkich sesji tej aplikacji
 # 9. Zaznacz prawdziwe zdania
 - ## 🟥 Konfiguracja aplikacji sieciowej jest zapisana tylko w plikach o nazwie Web.config
 - ## 🟩 Konfiguracja aplikacji sieciowej jest zapisana w plikach o nazwie Web.config i machine.config

@@ -189,15 +189,20 @@ ___
         ```
 # 24. Opisz metody przekazywania parametrów aktualnych do podprogramów.
 - ## Wartość
-    - ### podaje się dokładną wartość
+    - ### parametr staje się zmienną lokalną o "sklonowanej" wartości podanego przy wywołaniu parametru
+        - #### np. Ada, Pascal, C
 - ## Wynik
-    - ### podaje się zmienną, która zostanie “skopiowana” do działania w podprogramie
+    - ### zmienna bez wartości początkowej, musi być podana w podprogramie
+        - #### Ada
 - ## Wartość i wynik
-    - ### podaje się zmienną, która od razu staje się dokładną wartością
+    - ### ma wartość początkową i zachowuje wartość
+        - #### Ada
 - ## Nazwę
-    - ### działa na parametrze aktualnym o danej nazwie
+    - ### nazwa jak makro
+        - ####  ALGOL
 - ## Referencję
-    - ### działa na dokładnie tym samym wskaźniku, strukturze, obiekcie (p-nie obiektowe)
+    - ### działa na dokładnie tym samym wskaźniku, strukturze, obiekcie 
+        - #### każdy język obiektowy
 ___
 # 25. Z jakimi strukturami bywają kłopoty przy przekazywaniu ich do podprogramów.
 - ### tablica

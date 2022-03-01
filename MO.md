@@ -1,3 +1,5 @@
+https://www.canva.com/design/DAE5ZuZINAw/dkrcFCOm6s-czRF5caY73w/view?utm_content=DAE5ZuZINAw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
 # WYKRES
 ___
 # Podział optymalizacji

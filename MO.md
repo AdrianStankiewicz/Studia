@@ -56,4 +56,8 @@ ___
 - ### Wartość funkcji celu jest zależna zarówno od argumentu, jak i od chwili, w której jest obliczana. 
 Trzeba uważać - Proces, statek płynie, dron leci itd
 ## Rozgrywająca
+### dotyczy rozgrywajacych procesow transportowych lub logistycznych, ktorych synteze prowadzi sie metodami kierunków gier, oraz opiera sie na zasadzie min-max.
+### Teoria gier jest działem współczesnej matematyki, obejmujących teorię sytuacji konfliktowych oraz budowę i analizę ich modeli.
+### Gracze to strony uczestniczące ze swoimi strategiami w sytuacji konflikowej
+### Strategia natomiast to zbiór reguł sterowania gracza, których nie mogą zmienić działania przeciwnika lub natury.
 ### układ min-max - minimum wysiłku, maksimum zadowolenia ze studiów

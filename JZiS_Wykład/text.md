@@ -34,3 +34,21 @@ ___
 # cross-platform
 - ## Jako Desktop nie działa na mobilkach. Wyjąć z Elektrona i działa jako strona
 ___
+
+<h1 style="font-size:50px;text-align:center;">APLIKACJA</h1>
+
+### Sprawdzenie:
+
+```
+npm -v
+node -v
+```
+### Wpisujemy komendę: 
+```terminal
+npx create-electron-app nazwa
+```
+___
+## W src mamy foldery __index.html, index.css__ które odpowiadają za renderowanie apli (FrontEnd, Chromium) oraz __index.js__, który odpowiada za kod node.js, czyli proces główny aplikacji
+___
+### Pokazać live, że działa jako strona
+### Pokazać npm start W FOLDERZE GDZIE GDZIE JEST PACKAGE.JSON

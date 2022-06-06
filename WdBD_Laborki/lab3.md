@@ -126,3 +126,8 @@ WHERE idklienta = (
 	WHERE nazwa = 'Gładzki Sp z o.o.'
 )
 ```
+# 13. 
+# 14. Klientom, których łączna wartość zakupów przekroczyła 5000 ustaw rabat na 5%.
+```SQL
+
+```

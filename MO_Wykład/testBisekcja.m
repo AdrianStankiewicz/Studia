@@ -1,0 +1,17 @@
+function y = f(x)
+%y = sin(x);
+%y = x.^2 - 3*x - 9;
+%y = sin(x) + cos(sqrt(3)*x);
+y = x.^3 - 6*x.^2 + 4*x + 12;
+%y = -3*x -5;
+%y = (x.^2)/2 - 3*x + 3;
+%y = (x+1)/2 -2*((x.^2) - 1);
+%y = x.^3 + 8*(x.^2) - 5;
+%y = sin(x) * exp(x);
+%y = sin(x.^2) * cos(x);
+%y = (x.^4) - 4 * (x.^3)
+%y = ((x.^2)-5) * ((x.^2)-3)-3;
+%y = cos(2*x)+exp(x/2)-5;
+%y = log10(x) - 3*sin(x);
+%y = log10(x) - sin(x.^2) + 0.75;
+%y = log(x) * sin(x) - cos(3*x);

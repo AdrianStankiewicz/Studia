@@ -1,0 +1,67 @@
+Kolokwium sieci:
+- Wszystkie zamknięte, tylko jedna dobra
+
+Wykład 1:
+    - Zastosowania i cechy dobrej sieci
+    - Rodzaje sieci (LAN / MAN / WAN)
+    - Z czego się składają (Serwer, Klient - Co to?), Wszustkie urządzenia
+    - Urządzenia pośredniczące i końcowe (co to?)
+    - CO to Ruter i Przełącznik i Rzutnik (CO to i co robią)
+    - Media transmisyjne (rodzaje, )
+    - 4 topologie (opis i jak wyglada) (sieci, gwiazdy, magistrali, pierscienia)
+    - BEZ PODŁĄCZANIA
+Wykład 2:
+    - Warstwy modelu OSI
+    - Jakie protokoły na warstwie
+    - Role warstw
+    - OSI a TCP/IP
+    - Enkapsulacja i dekapsulacja
+    - BEZ IANA i IEEE
+Wykład 3:
+    - Jak działa każde okablowanie (skrętka - żyły, różnice potencjałów | światłowód odbicie całkowite)W
+    - BEZ JAKIE MAMY RODZAJE SKRĘTEK I KATEGORIE
+    - Wady i zalety każdego rodzaju okablowania
+    - BEZ STANDARDÓW
+Wykład 4:
+    - Co to ethernet
+    - Protokół tylko ethernet
+    - ROZDZIAŁ 3 BARDZO WAŻNY (jak działa łącze danych) (istnieją mac, przełącznik podejmuje decyzje gdzie dać ramkę, jest ARP, po co jest ARP, jak działa)
+    - ROZDZIAŁ 4 NIC
+Wykład 5:
+    - Napewno o nagłówku (__do czego służy ttl?__)
+    - Najwazniejszy rozdzial 3: Routing (tablica routingu, trasy statyczne, trasy wyuczone przez protokolu routingu, co to i do czego sluza trasy ostatniej szansy, co sie dzieje jak ich nie ma)
+    - BEZ PYTAŃ Z ROZDZIAŁU O ICMP (tylko co to jest i jakie komendy go uzywaja)
+    - BEZ PYTAŃ O RODZAJE KOMUNIKATOW I BLEDOW
+    - Brak bramy domyślnej?
+    - Rola bramy domyślnej?
+Wykład 6:
+    - CO to adres sieci, co to adres rozgłoszeniowy, do czrgo służą, jak są zbudowane, jak je wyróżnić
+    - IPv4 TAK, IPv6 NIE
+    - Dzielenie sieci na podsieci (Jaka musi byc maska dla danej ilosci hostow, albo ile wydluzenia to ile podsieci)
+    - Rodzaje adresów IP (CO to adres LoopBack, co to adresy prywatne)
+    - BEZ PYTAŃ O KLASY
+    - BEZ SYSTEMÓW NUMERYCZNYCH
+Wykład 7:
+    - Rola warstwy transportowej
+    - TCP a UDP, do czego co lepiej sluzy, ktory kiedy wybierac w jakims konkrentnym zastosowaniu
+    - Pytania o dzialanie TCP (Niezawodnosc, w jaki sposob)
+    - JAKIES FLAGI NIE SLUCHALEM KAMILA MNIE ZAGADALA (chyba od TCP)
+Wykład 8:
+    - Który protokół warstwy aplikacyjnej uzywa UDP a ktory TCP
+    - Kazdy protokol do czego sluzy i czym się różnią te podobne (HTTP/HTTPS, FTP/TFTP, POP3/IMAP) (bez maili chyba jednak)
+    - Jaki protokół to jaki port 
+Wykład 9:
+    - Chyba nic, bo nie ma być komend na pamięć 
+    - TELNET/SSH
+    - Jak bezpiecznie połączyć się z urządzeniem
+    - Połączenie konsolowe / wdzwaniane
+    - Rola SNMP
+DALEJ
+    - Rodzaje sieci bezprzewodowej
+    - Bluettoth vs Irda
+    - Co zmienic w WiFi zeby dzialalo lepiej
+    - WPA2 i inne bezpieczenstwo
+    - Bez standardow WiFi
+    - Bez pytan o GSM i LTE
+    - Znac ogolne typy atakow (rozdzial 2) i jak sie przed nimi chronic (doszlo do danego ataku. Ktory z tych srodkow bezpieczenstwa powinien byc wykorzystany zeby do tego ataku nie doszlo)
+    - Z dzisiaj tez cos bedzie (cos w sieci nie dziala - CO moze / NIE MOZE być źródłem problemu?)

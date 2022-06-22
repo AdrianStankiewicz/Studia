@@ -1,0 +1,22 @@
+//**********************************************
+//funkcja zwraca indeks listy, pozycję na którą 
+//należy wstawić wartość 
+function wyszukajBinarnie(lista,wartość){
+    odPozycji=0
+    doPozycji=lista.length-1
+    while(odPozycji<=doPozycji){
+    środek=odPozycji+Math.floor((doPozycji-odPozycji)/2)
+    if(lista[środek]>wartość) doPozycji=środek-1
+    else if(lista[środek]<wartość) odPozycji=środek+1
+    else return środek}
+    return odPozycji
+    }
+//*********************************************
+//fragment kodu wpisywania na listę elementów 
+//z kolekcji wartości  
+lista=[3,5,8,9,12,34,56,77,88]
+wartości=[33,78,1,125]
+for(k=0;k<wartości.length;k++){
+x=wyszukajBinarnie(lista,wartości[k])
+lista.splice(x,0,wartości[k])}
+Writeln(lista)

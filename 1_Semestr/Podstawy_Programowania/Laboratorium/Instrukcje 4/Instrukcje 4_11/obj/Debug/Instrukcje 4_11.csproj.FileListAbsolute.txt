@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Instrukcje 4_11\bin\Debug\Instrukcje 4_11.exe.config
+C:\Users\adi02\source\repos\Instrukcje 4_11\bin\Debug\Instrukcje 4_11.exe
+C:\Users\adi02\source\repos\Instrukcje 4_11\bin\Debug\Instrukcje 4_11.pdb
+C:\Users\adi02\source\repos\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.exe
+C:\Users\adi02\source\repos\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.pdb
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\bin\Debug\Instrukcje 4_11.exe.config
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\bin\Debug\Instrukcje 4_11.exe
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\bin\Debug\Instrukcje 4_11.pdb
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.exe
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4_11\obj\Debug\Instrukcje 4_11.pdb

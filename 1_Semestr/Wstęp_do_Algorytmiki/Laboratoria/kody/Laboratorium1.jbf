@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="student" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Zadanie1">
+    <canvas interval="200" posX="0.0" posY="0.0" zoom="4"/>
+    <input>10</input>
+    <input>3</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="-250.0"/>
+        <comment>Zadanie1</comment>
+        <connect ID="5"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="190.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="10.0"/>
+        <content>suma=jeden+dwa;;	modulo=jeden%dwa;;	suma_z_modulo=suma+modulo</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="110.0"/>
+        <content>Writeln("Razem = " + (getValueOf(suma_z_modulo)));	;	</content>
+        <comment>"Razem = " +suma_z_modulo</comment>
+        <connect ID="2"/>
+        <io ioType="1" message="Razem = " messageSuffix="" newLine="true" variable="suma_z_modulo"/>
+      </block>
+      <block id="5" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="-170.0"/>
+        <content>jeden=ReadNumber("");	;	</content>
+        <comment>jeden ;	</comment>
+        <connect ID="6"/>
+        <io array="0" inputType="0" ioType="2" message="" variable="jeden"/>
+      </block>
+      <block id="6" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="-90.0"/>
+        <content>dwa=ReadNumber("");	;	</content>
+        <comment>dwa ;	</comment>
+        <connect ID="3"/>
+        <io array="0" inputType="0" ioType="2" message="" variable="dwa"/>
+      </block>
+      <block id="7" type="COMMENT">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-380.0" posY="110.0"/>
+        <comment>Suma obu liczb oraz modulo jest równa:;	</comment>
+        <connect ID="4"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie2">
+    <canvas interval="200" posX="-200.0" posY="-100.0" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-90.0" posY="-50.0"/>
+        <comment>Zadanie2</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="90.0" posY="450.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-90.0" posY="40.0"/>
+        <content>x=ReadNumber("Wprowadz x");	;	</content>
+        <comment>"Wprowadz x";	x ;	</comment>
+        <connect ID="4"/>
+        <io array="0" inputType="0" ioType="2" message="Wprowadz x" variable="x"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-90.0" posY="110.0"/>
+        <content>y=ReadNumber("Wprowadz y");	;	</content>
+        <comment>"Wprowadz y";	y ;	</comment>
+        <connect ID="5"/>
+        <io array="0" inputType="0" ioType="2" message="Wprowadz y" variable="y"/>
+      </block>
+      <block id="5" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-90.0" posY="200.0"/>
+        <content>x&gt;y</content>
+        <connect ID="6" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="6" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-90.0" posY="300.0"/>
+        <content>Writeln("Większe jest: " + (getValueOf(x)));	;	</content>
+        <comment>"Większe jest: " +x</comment>
+        <connect ID="12"/>
+        <io ioType="1" message="Większe jest: " messageSuffix="" newLine="true" variable="x"/>
+      </block>
+      <block id="7" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="90.0" posY="200.0"/>
+        <content>x==y</content>
+        <connect ID="8" value="true"/>
+        <connect ID="11" value="false"/>
+      </block>
+      <block id="8" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="90.0" posY="300.0"/>
+        <content>Writeln("x jest równy y");	;	</content>
+        <comment>"x jest równy y" </comment>
+        <connect ID="10"/>
+        <io ioType="1" message="x jest równy y" messageSuffix="" newLine="true" variable=""/>
+      </block>
+      <block id="9" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="290.0" posY="300.0"/>
+        <content>Writeln("Większe jest:" + (getValueOf(y)));	;	</content>
+        <comment>"Większe jest:" +y</comment>
+        <connect ID="13"/>
+        <io ioType="1" message="Większe jest:" messageSuffix="" newLine="true" variable="y"/>
+      </block>
+      <block id="10" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="90.0" posY="370.0"/>
+        <content> </content>
+        <connect ID="2"/>
+      </block>
+      <block id="11" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="290.0" posY="200.0"/>
+        <content> </content>
+        <connect ID="9"/>
+      </block>
+      <block id="12" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-90.0" posY="370.0"/>
+        <content> </content>
+        <connect ID="10"/>
+      </block>
+      <block id="13" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="290.0" posY="370.0"/>
+        <content> </content>
+        <connect ID="10"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie 3">
+    <canvas interval="200" posX="0.0" posY="50.0" zoom="4"/>
+    <input>7</input>
+    <input>5</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Zadanie_3</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="230.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-30.0"/>
+        <content>x=ReadNumber("Daj x");	;	</content>
+        <comment>"Daj x";	x ;	</comment>
+        <connect ID="4"/>
+        <io array="0" inputType="0" ioType="2" message="Daj x" variable="x"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="40.0"/>
+        <content>y=ReadNumber("Daj y");	;	</content>
+        <comment>"Daj y";	y ;	</comment>
+        <connect ID="5"/>
+        <io array="0" inputType="0" ioType="2" message="Daj y" variable="y"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="120.0"/>
+        <content>if(x&gt;y) Writeln("Większa jest " + x);	else if(y&gt;x) Writeln("Większa jest" + y);	else Writeln("Liczby są równe")</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie7">
+    <canvas interval="200" posX="0.0" posY="0.0" zoom="4"/>
+    <input>5</input>
+    <input>9</input>
+    <input>6</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="140.0" posY="-130.0"/>
+        <comment>Zadanie4</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="140.0" posY="300.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="140.0" posY="-40.0"/>
+        <content>x=ReadNumber("Daj x");	;	</content>
+        <comment>"Daj x";	x ;	</comment>
+        <connect ID="4"/>
+        <io array="0" inputType="0" ioType="2" message="Daj x" variable="x"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="140.0" posY="30.0"/>
+        <content>y=ReadNumber("Daj y");	;	</content>
+        <comment>"Daj y";	y ;	</comment>
+        <connect ID="6"/>
+        <io array="0" inputType="0" ioType="2" message="Daj y" variable="y"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="140.0" posY="190.0"/>
+        <content>if(x&gt;y &amp;&amp; x&gt;z) Writeln("Większa jest " + x);	else if(y&gt;x &amp;&amp; y&gt;z) Writeln("Większa jest " + y);	else if(z&gt;x &amp;&amp; z&gt;y) Writeln("Większa jest " + z);	else Writeln("Liczby są równe")</content>
+        <connect ID="2"/>
+      </block>
+      <block id="6" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="140.0" posY="100.0"/>
+        <content>z=ReadNumber("Daj z");	;	</content>
+        <comment>"Daj z";	z ;	</comment>
+        <connect ID="5"/>
+        <io array="0" inputType="0" ioType="2" message="Daj z" variable="z"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie6">
+    <canvas interval="200" posX="-120.0" posY="-240.0" zoom="3"/>
+    <input>5</input>
+    <input>8</input>
+    <input>7</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="10.0" posY="-100.0"/>
+        <comment>Zadanie5</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="110.0" posY="410.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="10.0" posY="-20.0"/>
+        <content>x=ReadNumber("Daj x");	;	</content>
+        <comment>"Daj x";	x ;	</comment>
+        <connect ID="4"/>
+        <io array="0" inputType="0" ioType="2" message="Daj x" variable="x"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="10.0" posY="50.0"/>
+        <content>y=ReadNumber("Daj y");	;	</content>
+        <comment>"Daj y";	y ;	</comment>
+        <connect ID="5"/>
+        <io array="0" inputType="0" ioType="2" message="Daj y" variable="y"/>
+      </block>
+      <block id="5" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="10.0" posY="120.0"/>
+        <content>z=ReadNumber("Daj z");	;	</content>
+        <comment>"Daj z";	z ;	</comment>
+        <connect ID="13"/>
+        <io array="0" inputType="0" ioType="2" message="Daj z" variable="z"/>
+      </block>
+      <block id="6" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-170.0" posY="220.0"/>
+        <content>x&gt;y &amp;&amp; x&gt;z</content>
+        <connect ID="12" value="true"/>
+        <connect ID="8" value="false"/>
+      </block>
+      <block id="7" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="210.0" posY="220.0"/>
+        <content>z&gt;x &amp;&amp; z&gt;y</content>
+        <connect ID="10" value="true"/>
+        <connect ID="14" value="false"/>
+      </block>
+      <block id="8" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="20.0" posY="220.0"/>
+        <content>y&gt;x &amp;&amp; y&gt;z</content>
+        <connect ID="9" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="9" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="20.0" posY="320.0"/>
+        <content>Writeln("Największa jest: " + (getValueOf(y)));	;	</content>
+        <comment>"Największa jest: " +y</comment>
+        <connect ID="16"/>
+        <io ioType="1" message="Największa jest: " messageSuffix="" newLine="true" variable="y"/>
+      </block>
+      <block id="10" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="210.0" posY="320.0"/>
+        <content>Writeln("Największa jest: z" + (getValueOf(z)));	;	</content>
+        <comment>"Największa jest: z" +z</comment>
+        <connect ID="17"/>
+        <io ioType="1" message="Największa jest: z" messageSuffix="" newLine="true" variable="z"/>
+      </block>
+      <block id="11" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-800.0" posY="120.0"/>
+        <content>Writeln();	;	</content>
+        <io ioType="1" message="" messageSuffix="" newLine="true" variable=""/>
+      </block>
+      <block id="12" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-170.0" posY="320.0"/>
+        <content>Writeln("Najwieksza jest: " + (getValueOf(x)));	;	</content>
+        <comment>"Najwieksza jest: " +x</comment>
+        <connect ID="15"/>
+        <io ioType="1" message="Najwieksza jest: " messageSuffix="" newLine="true" variable="x"/>
+      </block>
+      <block id="13" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-170.0" posY="120.0"/>
+        <content> </content>
+        <connect ID="6"/>
+      </block>
+      <block id="14" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="420.0" posY="220.0"/>
+        <content> </content>
+        <connect ID="19"/>
+      </block>
+      <block id="15" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-170.0" posY="410.0"/>
+        <content> </content>
+        <connect ID="16"/>
+      </block>
+      <block id="16" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="20.0" posY="410.0"/>
+        <content> </content>
+        <connect ID="2"/>
+      </block>
+      <block id="17" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="210.0" posY="410.0"/>
+        <content> </content>
+        <connect ID="2"/>
+      </block>
+      <block id="18" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="420.0" posY="410.0"/>
+        <content> </content>
+        <connect ID="17"/>
+      </block>
+      <block id="19" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="420.0" posY="320.0"/>
+        <content>Writeln("Liczby są równe");	;	</content>
+        <comment>"Liczby są równe" </comment>
+        <connect ID="18"/>
+        <io ioType="1" message="Liczby są równe" messageSuffix="" newLine="true" variable=""/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie4">
+    <canvas interval="200" posX="0.0" posY="0.0" zoom="4"/>
+    <input>5</input>
+    <input>8</input>
+    <input>6</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="260.0" posY="0.0"/>
+        <comment>Zadanie4</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="160.0" posY="400.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="130.0" posY="0.0"/>
+        <content>x=ReadNumber("Daj x");	;	</content>
+        <comment>"Daj x";	x ;	</comment>
+        <connect ID="4"/>
+        <io array="0" inputType="0" ioType="2" message="Daj x" variable="x"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="50.0" posY="0.0"/>
+        <content>y=ReadNumber("Daj y");	;	</content>
+        <comment>"Daj y";	y ;	</comment>
+        <connect ID="5"/>
+        <io array="0" inputType="0" ioType="2" message="Daj y" variable="y"/>
+      </block>
+      <block id="5" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-30.0" posY="0.0"/>
+        <content>z=ReadNumber("Daj z");	;	</content>
+        <comment>"Daj z";	z ;	</comment>
+        <connect ID="9"/>
+        <io array="0" inputType="0" ioType="2" message="Daj z" variable="z"/>
+      </block>
+      <block id="6" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-130.0" posY="100.0"/>
+        <content>x&gt;y</content>
+        <connect ID="18" value="false"/>
+        <connect ID="10" value="true"/>
+      </block>
+      <block id="7" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="250.0" posY="100.0"/>
+        <content>z&gt;x</content>
+        <connect ID="12" value="true"/>
+        <connect ID="26" value="false"/>
+      </block>
+      <block id="8" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="60.0" posY="100.0"/>
+        <content>y&gt;x</content>
+        <connect ID="20" value="false"/>
+        <connect ID="11" value="true"/>
+      </block>
+      <block id="9" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-130.0" posY="0.0"/>
+        <content> </content>
+        <connect ID="6"/>
+      </block>
+      <block id="10" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-130.0" posY="220.0"/>
+        <content>x&gt;z</content>
+        <connect ID="15" value="true"/>
+        <connect ID="17" value="false"/>
+      </block>
+      <block id="11" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="60.0" posY="220.0"/>
+        <content>y&gt;z</content>
+        <connect ID="13" value="true"/>
+        <connect ID="19" value="false"/>
+      </block>
+      <block id="12" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="250.0" posY="220.0"/>
+        <content>z&gt;y</content>
+        <connect ID="14" value="true"/>
+        <connect ID="25" value="false"/>
+      </block>
+      <block id="13" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="60.0" posY="300.0"/>
+        <content>Writeln("Największa jest: " + (getValueOf(y)));	;	</content>
+        <comment>"Największa jest: " +y</comment>
+        <connect ID="22"/>
+        <io ioType="1" message="Największa jest: " messageSuffix="" newLine="true" variable="y"/>
+      </block>
+      <block id="14" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="250.0" posY="300.0"/>
+        <content>Writeln("Największa jest: z" + (getValueOf(z)));	;	</content>
+        <comment>"Największa jest: z" +z</comment>
+        <connect ID="24"/>
+        <io ioType="1" message="Największa jest: z" messageSuffix="" newLine="true" variable="z"/>
+      </block>
+      <block id="15" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-130.0" posY="300.0"/>
+        <content>Writeln("Najwieksza jest: " + (getValueOf(x)));	;	</content>
+        <comment>"Najwieksza jest: " +x</comment>
+        <connect ID="21"/>
+        <io ioType="1" message="Najwieksza jest: " messageSuffix="" newLine="true" variable="x"/>
+      </block>
+      <block id="16" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="440.0" posY="300.0"/>
+        <content>Writeln("Liczby są równe");	;	</content>
+        <comment>"Liczby są równe" </comment>
+        <connect ID="23"/>
+        <io ioType="1" message="Liczby są równe" messageSuffix="" newLine="true" variable=""/>
+      </block>
+      <block id="17" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-49.0" posY="222.0"/>
+        <content> </content>
+        <connect ID="18"/>
+      </block>
+      <block id="18" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-50.0" posY="100.0"/>
+        <content> </content>
+        <connect ID="8"/>
+      </block>
+      <block id="19" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="150.0" posY="220.0"/>
+        <content> </content>
+        <connect ID="20"/>
+      </block>
+      <block id="20" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="150.0" posY="100.0"/>
+        <content> </content>
+        <connect ID="7"/>
+      </block>
+      <block id="21" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-130.0" posY="400.0"/>
+        <content> </content>
+        <connect ID="22"/>
+      </block>
+      <block id="22" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="60.0" posY="400.0"/>
+        <content> </content>
+        <connect ID="2"/>
+      </block>
+      <block id="23" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="440.0" posY="400.0"/>
+        <content> </content>
+        <connect ID="24"/>
+      </block>
+      <block id="24" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="250.0" posY="400.0"/>
+        <content> </content>
+        <connect ID="2"/>
+      </block>
+      <block id="25" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="350.0" posY="220.0"/>
+        <content> </content>
+        <connect ID="26"/>
+      </block>
+      <block id="26" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="350.0" posY="100.0"/>
+        <content> </content>
+        <connect ID="27"/>
+      </block>
+      <block id="27" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="440.0" posY="100.0"/>
+        <content> </content>
+        <connect ID="16"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie5">
+    <canvas interval="200" posX="191.34029" posY="-40.0" zoom="4"/>
+    <input>8</input>
+    <input>8</input>
+    <input>8</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="-220.0"/>
+        <comment>Zadanie5</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="430.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="-140.0"/>
+        <content>x=ReadNumber("Daj x");	;	</content>
+        <comment>"Daj x";	x ;	</comment>
+        <connect ID="4"/>
+        <io array="0" inputType="0" ioType="2" message="Daj x" variable="x"/>
+      </block>
+      <block id="4" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="-70.0"/>
+        <content>y=ReadNumber("Daj y");	;	</content>
+        <comment>"Daj y";	y ;	</comment>
+        <connect ID="6"/>
+        <io array="0" inputType="0" ioType="2" message="Daj y" variable="y"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-70.0" posY="210.0"/>
+        <content>if(x&gt;y) {;	  if(x&gt;z) {;	    Writeln("Większa jest " + x);	  };	};	else if(y&gt;x) {;	  if(y&gt;z) {;	     Writeln("Większa jest " + y);	  };	};	else if(z&gt;x) {;	if (z &gt; y) {;	 Writeln("Większa jest " + z);	  };	};	else Writeln("Liczby są równe")</content>
+        <connect ID="2"/>
+      </block>
+      <block id="6" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-70.0" posY="0.0"/>
+        <content>z=ReadNumber("Daj z");	;	</content>
+        <comment>"Daj z";	z ;	</comment>
+        <connect ID="5"/>
+        <io array="0" inputType="0" ioType="2" message="Daj z" variable="z"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

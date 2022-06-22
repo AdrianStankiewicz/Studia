@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="adi02" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="-326.06537" posY="38.823822" zoom="4"/>
+    <input>Jan</input>
+    <input>Kowalski</input>
+    <input>2001-12-20</input>
+    <input>koniec</input>
+    <input>Maciej</input>
+    <input>Winnicki</input>
+    <input>2000-07-26</input>
+    <input>Dawid</input>
+    <input>Mielonka</input>
+    <input>2002-06-15</input>
+    <input>koniec</input>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="680.0" posY="-20.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="580.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="410.0" posY="-20.0"/>
+        <content>function Osoba(imie, nazwisko, dataUrodzenia) {&#13;;	  this.imie = imie&#13;;	  this.nazwisko = nazwisko&#13;;	  this.dataUrodzenia = dataUrodzenia&#13;;	  this.wiek = function() {&#13;;	    lista = this.dataUrodzenia.split("-")&#13;;	    lata = bRok - lista[0]&#13;;	    miesiac = bMiesiac - lista[1]&#13;;	    &#13;;	    if(miesiac&lt;0) {&#13;;	      lata--&#13;;	      miesiac+=12&#13;;	    }&#13;;	  }&#13;;	}&#13;;	i = 0</content>
+        <connect ID="12"/>
+      </block>
+      <block id="4" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="140.0"/>
+        <content>listaOsob = []</content>
+        <connect ID="10"/>
+      </block>
+      <block id="5" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="230.0"/>
+        <content>x=Read("");	;	</content>
+        <comment>x ;	</comment>
+        <connect ID="6"/>
+        <io array="0" inputType="1" ioType="2" message="" variable="x"/>
+      </block>
+      <block id="6" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="300.0"/>
+        <content>x.equals("koniec")</content>
+        <connect ID="11" value="true"/>
+        <connect ID="7" value="false"/>
+      </block>
+      <block id="7" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="230.0" posY="300.0"/>
+        <content>y=Read("");	;	</content>
+        <comment>y ;	</comment>
+        <connect ID="8"/>
+        <io array="0" inputType="1" ioType="2" message="" variable="y"/>
+      </block>
+      <block id="8" type="IO">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="390.0" posY="300.0"/>
+        <content>z=Read("");	;	</content>
+        <comment>z ;	</comment>
+        <connect ID="9"/>
+        <io array="0" inputType="1" ioType="2" message="" variable="z"/>
+      </block>
+      <block id="9" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="390.0" posY="180.0"/>
+        <content>listaOsob.push(new Osoba(x, y , z))</content>
+        <connect ID="10"/>
+      </block>
+      <block id="10" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="180.0"/>
+        <content> </content>
+        <connect ID="5"/>
+      </block>
+      <block id="11" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="460.0"/>
+        <content>minWiek=listaOsob[0].wiek();;	osoba = 0;	for(i=0;i&lt;listaOsob.length;i++) {;	  if(listaOsob[i].wiek() &lt; minWiek) {;	    minWiek = wiek[i];	    osoba = i;	};	;	Writeln(minWiek +" "+ listaOsob[osoba].imie +" "+ listaOsob[osoba].nazwisko)</content>
+        <connect ID="2"/>
+      </block>
+      <block id="12" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-20.0"/>
+        <content>dzisiaj = new Date()&#13;;	bRok = dzisiaj.getFullYear()&#13;;	bMiesiac = dzisiaj.getMonth()+1&#13;;	bDzien = dzisiaj.getDate()&#13;;	data = (bRok +" "+ bMiesiac +" "+ bDzien)&#13;;	Writeln(data)</content>
+        <connect ID="4"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

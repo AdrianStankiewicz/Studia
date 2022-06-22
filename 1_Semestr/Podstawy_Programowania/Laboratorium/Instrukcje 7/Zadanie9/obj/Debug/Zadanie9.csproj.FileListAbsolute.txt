@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadanie9\bin\Debug\Zadanie9.exe.config
+C:\Users\adi02\source\repos\Zadanie9\bin\Debug\Zadanie9.exe
+C:\Users\adi02\source\repos\Zadanie9\bin\Debug\Zadanie9.pdb
+C:\Users\adi02\source\repos\Zadanie9\obj\Debug\Zadanie9.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie9\obj\Debug\Zadanie9.exe
+C:\Users\adi02\source\repos\Zadanie9\obj\Debug\Zadanie9.pdb
+C:\Users\adi02\source\repos\Zadanie9\obj\Debug\Zadanie9.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\bin\Debug\Zadanie9.exe.config
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\bin\Debug\Zadanie9.exe
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\bin\Debug\Zadanie9.pdb
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\obj\Debug\Zadanie9.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\obj\Debug\Zadanie9.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\obj\Debug\Zadanie9.exe
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie9\obj\Debug\Zadanie9.pdb

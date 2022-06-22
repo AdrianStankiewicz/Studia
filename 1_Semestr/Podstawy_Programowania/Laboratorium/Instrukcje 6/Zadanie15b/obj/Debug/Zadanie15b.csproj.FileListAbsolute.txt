@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadanie15b\bin\Debug\Zadanie15b.exe.config
+C:\Users\adi02\source\repos\Zadanie15b\bin\Debug\Zadanie15b.exe
+C:\Users\adi02\source\repos\Zadanie15b\bin\Debug\Zadanie15b.pdb
+C:\Users\adi02\source\repos\Zadanie15b\obj\Debug\Zadanie15b.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadanie15b\obj\Debug\Zadanie15b.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie15b\obj\Debug\Zadanie15b.exe
+C:\Users\adi02\source\repos\Zadanie15b\obj\Debug\Zadanie15b.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\bin\Debug\Zadanie15b.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\bin\Debug\Zadanie15b.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\bin\Debug\Zadanie15b.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\obj\Debug\Zadanie15b.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\obj\Debug\Zadanie15b.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\obj\Debug\Zadanie15b.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie15b\obj\Debug\Zadanie15b.pdb

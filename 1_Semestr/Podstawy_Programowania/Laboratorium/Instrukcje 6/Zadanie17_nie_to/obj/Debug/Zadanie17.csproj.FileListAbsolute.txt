@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadanie17\bin\Debug\Zadanie17.exe.config
+C:\Users\adi02\source\repos\Zadanie17\bin\Debug\Zadanie17.exe
+C:\Users\adi02\source\repos\Zadanie17\bin\Debug\Zadanie17.pdb
+C:\Users\adi02\source\repos\Zadanie17\obj\Debug\Zadanie17.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadanie17\obj\Debug\Zadanie17.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie17\obj\Debug\Zadanie17.exe
+C:\Users\adi02\source\repos\Zadanie17\obj\Debug\Zadanie17.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\bin\Debug\Zadanie17.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\bin\Debug\Zadanie17.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\bin\Debug\Zadanie17.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\obj\Debug\Zadanie17.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\obj\Debug\Zadanie17.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\obj\Debug\Zadanie17.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie17\obj\Debug\Zadanie17.pdb

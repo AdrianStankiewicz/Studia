@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="adi02" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="-129.33334" posY="-183.33333" zoom="2"/>
+    <blocks>
+      <block id="0" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="2"/>
+      </block>
+      <block id="1" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="270.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="2" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="60.0"/>
+        <content>function czyJestKopcem(abc)&#13;;	{&#13;;	dlugosc = abc.length;&#13;;	jestKopcem = true;&#13;;	for(k=1; k&lt;abc.length;k++) {&#13;;	    if(2*k&gt;=dlugosc) return true;&#13;;	    jestKopcem=abc[k]&gt;=abc[2*k];&#13;;	    if(2*k+1&gt;=dlugosc) return jestKopcem;&#13;;	    jestKopcem=jestKopcem &amp;&amp; abc[k]&gt;=abc[2*k+1];&#13;;	    if (!jestKopcem) return false;&#13;;	}&#13;;	return true;}</content>
+        <connect ID="1"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

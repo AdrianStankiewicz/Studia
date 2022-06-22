@@ -1,0 +1,12 @@
+C:\Users\adi02\source\repos\Zadanie12\bin\Debug\Zadanie12.exe.config
+C:\Users\adi02\source\repos\Zadanie12\bin\Debug\Zadanie12.exe
+C:\Users\adi02\source\repos\Zadanie12\bin\Debug\Zadanie12.pdb
+C:\Users\adi02\source\repos\Zadanie12\obj\Debug\Zadanie12.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie12\obj\Debug\Zadanie12.exe
+C:\Users\adi02\source\repos\Zadanie12\obj\Debug\Zadanie12.pdb
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie12\bin\Debug\Zadanie12.exe.config
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie12\bin\Debug\Zadanie12.exe
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie12\bin\Debug\Zadanie12.pdb
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie12\obj\Debug\Zadanie12.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie12\obj\Debug\Zadanie12.exe
+C:\Users\adi02\source\repos\Instrukcje 7\Zadanie12\obj\Debug\Zadanie12.pdb

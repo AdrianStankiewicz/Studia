@@ -1,0 +1,7 @@
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\bin\Debug\Laborki2Nadrabiam.exe.config
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\bin\Debug\Laborki2Nadrabiam.exe
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\bin\Debug\Laborki2Nadrabiam.pdb
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\obj\Debug\Laborki2Nadrabiam.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\obj\Debug\Laborki2Nadrabiam.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\obj\Debug\Laborki2Nadrabiam.exe
+C:\Users\adi02\source\repos\Laborki2Nadrabiam\obj\Debug\Laborki2Nadrabiam.pdb

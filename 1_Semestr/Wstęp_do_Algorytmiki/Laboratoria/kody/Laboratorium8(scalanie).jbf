@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="adi02" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="66.22803" posY="-162.55505" zoom="3"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-260.0" posY="-140.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-340.0" posY="150.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-260.0" posY="0.0"/>
+        <content>lista = [7, 10, 15, 16, 20, 8, 11, 22, 31, 33]&#13;;	pomocnicza = []&#13;;	odPoz = 0&#13;;	doPoz = lista.length-1&#13;;	srodek = 4&#13;;	&#13;;	for(i=0;i &lt;= doPoz; i++){&#13;;	    pomocnicza.push(lista[i])&#13;;	}</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="0.0"/>
+        <content>k = odPoz&#13;;	i = odPoz&#13;;	j = srodek+1</content>
+        <connect ID="10"/>
+      </block>
+      <block id="5" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="150.0"/>
+        <content>k &lt;= doPoz</content>
+        <connect ID="6" value="true"/>
+        <connect ID="19" value="false"/>
+      </block>
+      <block id="6" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="150.0"/>
+        <content>i &gt; srodek&#13;;	</content>
+        <connect ID="7" value="true"/>
+        <connect ID="11" value="false"/>
+      </block>
+      <block id="7" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="630.0" posY="150.0"/>
+        <content>lista[k] = pomocnicza[j++]</content>
+        <connect ID="8"/>
+      </block>
+      <block id="8" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="760.0" posY="150.0"/>
+        <content> </content>
+        <connect ID="9"/>
+      </block>
+      <block id="9" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="760.0" posY="70.0"/>
+        <content>k++</content>
+        <connect ID="10"/>
+      </block>
+      <block id="10" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="70.0"/>
+        <content> </content>
+        <connect ID="5"/>
+      </block>
+      <block id="11" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="290.0"/>
+        <content>j &gt; doPoz</content>
+        <connect ID="12" value="true"/>
+        <connect ID="14" value="false"/>
+      </block>
+      <block id="12" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="630.0" posY="290.0"/>
+        <content>lista[k] = pomocnicza[i++]</content>
+        <connect ID="13"/>
+      </block>
+      <block id="13" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="760.0" posY="290.0"/>
+        <content> </content>
+        <connect ID="8"/>
+      </block>
+      <block id="14" type="DECISION">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="440.0"/>
+        <content>pomocnicza[j] &lt; lista[i]</content>
+        <connect ID="15" value="true"/>
+        <connect ID="17" value="false"/>
+      </block>
+      <block id="15" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="630.0" posY="440.0"/>
+        <content>lista[k] = pomocnicza[j++]</content>
+        <connect ID="16"/>
+      </block>
+      <block id="16" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="760.0" posY="440.0"/>
+        <content> </content>
+        <connect ID="13"/>
+      </block>
+      <block id="17" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="200.0" posY="590.0"/>
+        <content>lista[k] = pomocnicza[i++]</content>
+        <connect ID="18"/>
+      </block>
+      <block id="18" type="JUMP">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="760.0" posY="590.0"/>
+        <content> </content>
+        <connect ID="16"/>
+      </block>
+      <block id="19" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-190.0" posY="150.0"/>
+        <content>Writeln(lista)</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

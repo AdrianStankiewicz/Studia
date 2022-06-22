@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadanie20\bin\Debug\Zadanie20.exe.config
+C:\Users\adi02\source\repos\Zadanie20\bin\Debug\Zadanie20.exe
+C:\Users\adi02\source\repos\Zadanie20\bin\Debug\Zadanie20.pdb
+C:\Users\adi02\source\repos\Zadanie20\obj\Debug\Zadanie20.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadanie20\obj\Debug\Zadanie20.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie20\obj\Debug\Zadanie20.exe
+C:\Users\adi02\source\repos\Zadanie20\obj\Debug\Zadanie20.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\bin\Debug\Zadanie20.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\bin\Debug\Zadanie20.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\bin\Debug\Zadanie20.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\obj\Debug\Zadanie20.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\obj\Debug\Zadanie20.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\obj\Debug\Zadanie20.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie20\obj\Debug\Zadanie20.pdb

@@ -1,0 +1,7 @@
+C:\Users\adi02\source\repos\Stankiewicz3.5\bin\Debug\Stankiewicz3.5.exe.config
+C:\Users\adi02\source\repos\Stankiewicz3.5\bin\Debug\Stankiewicz3.5.exe
+C:\Users\adi02\source\repos\Stankiewicz3.5\bin\Debug\Stankiewicz3.5.pdb
+C:\Users\adi02\source\repos\Stankiewicz3.5\obj\Debug\Stankiewicz3.5.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Stankiewicz3.5\obj\Debug\Stankiewicz3.5.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Stankiewicz3.5\obj\Debug\Stankiewicz3.5.exe
+C:\Users\adi02\source\repos\Stankiewicz3.5\obj\Debug\Stankiewicz3.5.pdb

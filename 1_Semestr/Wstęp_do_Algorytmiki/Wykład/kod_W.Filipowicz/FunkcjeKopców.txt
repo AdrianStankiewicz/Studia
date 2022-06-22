@@ -1,0 +1,75 @@
+
+//------------------------------------------------
+parametry:
+abc	przetarzana lista
+k	indeks zanurzanego elementu
+N	liczba elementów przetwarzanego zbioru
+//------------------------------------------------	
+function zanurzanie(abc, k, N)
+{ 
+while(2*k<=N) {
+j = 2*k;
+if(j<N && abc[j]<abc[j+1]) j++;
+if(!(abc[k]<abc[j])) break;
+pom=abc[k];
+abc[k]=abc[j];
+abc[j]=pom;
+k=j;}}
+//------------------------------------------------
+parametry:
+abc	testowana lista
+//------------------------------------------------
+function czyJestKopcem(abc) {
+dlugosc=abc.length;
+jestKopcem = true;
+for(k=1; k<abc.length;k++) {
+if(2*k>=dlugosc) return true;
+jestKopcem=abc[k]>=abc[2*k];
+if(2*k+1>=dlugosc) return jestKopcem;
+jestKopcem=jestKopcem && abc[k]>=abc[2*k+1];
+if (!jestKopcem) return false;
+}}
+//------------------------------------------------
+parametry:
+abc	tworzona lista
+K	liczba elementów tworzonego zbioru
+zakres	górny limit przedziału wartości generowanych liczb
+//------------------------------------------------	
+function utworzListe(abc,K,zakres){
+    abc[0]=0
+    for (k=1;k<K;k++)
+    abc[k]=Math.floor((Math.random()*zakres))}
+//------------------------------------------------
+parametry:
+abc	przetwarzana lista
+//------------------------------------------------
+function utworzKopiec(abc) {
+srodek=Math.floor(abc.length/2)
+for (k=srodek; k>=1; k--) 
+zanurzanie(abc, k,abc.length-1)
+}
+//------------------------------------------------
+parametry:
+lista	przetarzana lista
+k	indeks wynurzanego elementu
+//------------------------------------------------
+function wynurzanie(lista, k)
+{ m=Math.floor(k/2)
+while(k>1 && lista[m]<lista[k]) {
+pom=lista[k];
+//Writeln(k +" "+m)
+lista[k]=lista[m];
+lista[m]=pom;
+k=Math.floor(k/2);
+m=Math.floor(k/2)}}
+//------------------------------------------------
+parametry:
+abc	porzadkowana lista
+//------------------------------------------------
+function sortowanie(abc) {
+N = abc.length-1;
+while (N>1) {
+pom = abc[1];
+abc[1] = abc[N];
+abc[N--] = pom;
+zanurzanie(abc, 1, N)}}

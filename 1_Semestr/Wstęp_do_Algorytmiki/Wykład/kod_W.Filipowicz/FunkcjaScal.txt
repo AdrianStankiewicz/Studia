@@ -1,0 +1,10 @@
+//**********************************************
+//funkcja scalania fragmentów listy
+function scal(odPoz, srodek, doPoz)
+{i=odPoz; j=srodek+1
+for (k=odPoz; k<=doPoz; k++){
+if (i>srodek) lista[k]=pomocnicza[j++]
+else if (j>doPoz) lista[k]=pomocnicza[i++] 
+else if (pomocnicza[j]<pomocnicza[i]) 
+lista[k]=pomocnicza[j++]
+else lista[k]=pomocnicza[i++]}

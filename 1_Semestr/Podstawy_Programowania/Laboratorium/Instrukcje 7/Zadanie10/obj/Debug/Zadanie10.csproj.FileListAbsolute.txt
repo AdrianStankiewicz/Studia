@@ -1,0 +1,7 @@
+C:\Users\adi02\source\repos\Zadanie10\bin\Debug\Zadanie10.exe.config
+C:\Users\adi02\source\repos\Zadanie10\bin\Debug\Zadanie10.exe
+C:\Users\adi02\source\repos\Zadanie10\bin\Debug\Zadanie10.pdb
+C:\Users\adi02\source\repos\Zadanie10\obj\Debug\Zadanie10.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadanie10\obj\Debug\Zadanie10.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie10\obj\Debug\Zadanie10.exe
+C:\Users\adi02\source\repos\Zadanie10\obj\Debug\Zadanie10.pdb

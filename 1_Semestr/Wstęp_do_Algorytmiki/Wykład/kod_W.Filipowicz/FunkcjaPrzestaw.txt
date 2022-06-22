@@ -1,0 +1,15 @@
+//****************************************
+//funkcja przestawiania dla metody sortowania przez wstawianie
+function przestawianie(lista,i){
+    j=i
+    while(j>1 && lista[j]<lista[j-1]){
+        pom=lista[j]
+        lista[j]=lista[j-1]
+        lista[j-1]=pom
+        j--}
+        }
+//****************************************
+// kod wykorzystujący funkcję przestawianie
+lista=[2,56,77,88,9,3,6]
+for(k=1;k<lista.length;k++) przestawianie(lista,k)
+Writeln(lista)

@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadanie1c\bin\Debug\Zadanie1c.exe.config
+C:\Users\adi02\source\repos\Zadanie1c\bin\Debug\Zadanie1c.exe
+C:\Users\adi02\source\repos\Zadanie1c\bin\Debug\Zadanie1c.pdb
+C:\Users\adi02\source\repos\Zadanie1c\obj\Debug\Zadanie1c.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadanie1c\obj\Debug\Zadanie1c.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie1c\obj\Debug\Zadanie1c.exe
+C:\Users\adi02\source\repos\Zadanie1c\obj\Debug\Zadanie1c.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\bin\Debug\Zadanie1c.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\bin\Debug\Zadanie1c.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\bin\Debug\Zadanie1c.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\obj\Debug\Zadanie1c.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\obj\Debug\Zadanie1c.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\obj\Debug\Zadanie1c.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie1c\obj\Debug\Zadanie1c.pdb

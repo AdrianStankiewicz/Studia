@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Instrukcje 4\bin\Debug\Instrukcje 4.exe.config
+C:\Users\adi02\source\repos\Instrukcje 4\bin\Debug\Instrukcje 4.exe
+C:\Users\adi02\source\repos\Instrukcje 4\bin\Debug\Instrukcje 4.pdb
+C:\Users\adi02\source\repos\Instrukcje 4\obj\Debug\Instrukcje 4.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 4\obj\Debug\Instrukcje 4.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 4\obj\Debug\Instrukcje 4.exe
+C:\Users\adi02\source\repos\Instrukcje 4\obj\Debug\Instrukcje 4.pdb
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\obj\Debug\Instrukcje 4.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\obj\Debug\Instrukcje 4.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\obj\Debug\Instrukcje 4.exe
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\obj\Debug\Instrukcje 4.pdb
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\bin\Debug\Instrukcje 4.exe.config
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\bin\Debug\Instrukcje 4.exe
+C:\Users\adi02\source\repos\Instrukcje 4\Instrukcje 4\bin\Debug\Instrukcje 4.pdb

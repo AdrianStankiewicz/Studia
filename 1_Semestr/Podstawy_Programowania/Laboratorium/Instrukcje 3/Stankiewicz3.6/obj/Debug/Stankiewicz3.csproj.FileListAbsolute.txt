@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Stankiewicz3\bin\Debug\Stankiewicz3.exe.config
+C:\Users\adi02\source\repos\Stankiewicz3\bin\Debug\Stankiewicz3.exe
+C:\Users\adi02\source\repos\Stankiewicz3\bin\Debug\Stankiewicz3.pdb
+C:\Users\adi02\source\repos\Stankiewicz3\obj\Debug\Stankiewicz3.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Stankiewicz3\obj\Debug\Stankiewicz3.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Stankiewicz3\obj\Debug\Stankiewicz3.exe
+C:\Users\adi02\source\repos\Stankiewicz3\obj\Debug\Stankiewicz3.pdb
+C:\Users\adi02\source\repos\Stankiewicz3.6\bin\Debug\Stankiewicz3.exe.config
+C:\Users\adi02\source\repos\Stankiewicz3.6\bin\Debug\Stankiewicz3.exe
+C:\Users\adi02\source\repos\Stankiewicz3.6\bin\Debug\Stankiewicz3.pdb
+C:\Users\adi02\source\repos\Stankiewicz3.6\obj\Debug\Stankiewicz3.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Stankiewicz3.6\obj\Debug\Stankiewicz3.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Stankiewicz3.6\obj\Debug\Stankiewicz3.exe
+C:\Users\adi02\source\repos\Stankiewicz3.6\obj\Debug\Stankiewicz3.pdb

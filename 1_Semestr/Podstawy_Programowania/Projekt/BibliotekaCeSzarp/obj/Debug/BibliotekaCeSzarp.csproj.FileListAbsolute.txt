@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\bin\Debug\BibliotekaCeSzarp.exe.config
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\bin\Debug\BibliotekaCeSzarp.exe
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\bin\Debug\BibliotekaCeSzarp.pdb
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.exe
+C:\Users\adi02\source\repos\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.pdb
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\bin\Debug\BibliotekaCeSzarp.exe.config
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\bin\Debug\BibliotekaCeSzarp.exe
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\bin\Debug\BibliotekaCeSzarp.pdb
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.exe
+C:\Users\adi02\source\repos\ProjektPP1\BibliotekaCeSzarp\obj\Debug\BibliotekaCeSzarp.pdb

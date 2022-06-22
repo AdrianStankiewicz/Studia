@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="adi02" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="-119.966286" posY="106.560745" zoom="5"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-10.0" posY="-240.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="-10.0" posY="210.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="-10.0" posY="-20.0"/>
+        <content>kolekcja = [3, 5, 7, 10, 61, 12, 23, 75];&#13;;	n=4, t=0;&#13;;	&#13;;	while(n&lt;kolekcja.length-1) {&#13;;	  if(kolekcja[n] &gt; kolekcja[n+1]) {&#13;;	    t = kolekcja[n]&#13;;	    kolekcja[n] = kolekcja[n+1]&#13;;	    kolekcja[n+1] = t&#13;;	n++&#13;;	  }&#13;;	  else {&#13;;	    Writeln(kolekcja)&#13;;	    break&#13;;	  }&#13;;	}</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="">
+    <canvas interval="200" posX="0.0" posY="0.0" zoom="4"/>
+    <blocks>
+      <block id="0" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="1"/>
+      </block>
+      <block id="1" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="100.0"/>
+        <comment>End</comment>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

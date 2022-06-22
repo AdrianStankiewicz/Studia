@@ -1,0 +1,7 @@
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\bin\Debug\Zadanie13.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\bin\Debug\Zadanie13.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\bin\Debug\Zadanie13.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\obj\Debug\Zadanie13.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\obj\Debug\Zadanie13.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\obj\Debug\Zadanie13.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie13\obj\Debug\Zadanie13.pdb

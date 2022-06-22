@@ -1,0 +1,12 @@
+C:\Users\adi02\source\repos\Zadanie14\bin\Debug\Zadanie14.exe.config
+C:\Users\adi02\source\repos\Zadanie14\bin\Debug\Zadanie14.exe
+C:\Users\adi02\source\repos\Zadanie14\bin\Debug\Zadanie14.pdb
+C:\Users\adi02\source\repos\Zadanie14\obj\Debug\Zadanie14.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie14\obj\Debug\Zadanie14.exe
+C:\Users\adi02\source\repos\Zadanie14\obj\Debug\Zadanie14.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie14\bin\Debug\Zadanie14.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie14\bin\Debug\Zadanie14.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie14\bin\Debug\Zadanie14.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie14\obj\Debug\Zadanie14.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie14\obj\Debug\Zadanie14.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie14\obj\Debug\Zadanie14.pdb

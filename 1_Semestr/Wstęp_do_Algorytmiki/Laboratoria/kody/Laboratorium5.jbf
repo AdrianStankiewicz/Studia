@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="adi02" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="-347.05554" posY="-161.72919" zoom="3"/>
+    <blocks>
+      <block id="1" name="Zadanie1" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="10.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="250.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="10.0" posY="70.0"/>
+        <content>function konwertuj(x, n);	{;	  lista = [];	  i = 0;	  while(i &lt;= n) {;	    lista.push(x%2);	    x = Math.floor(x/2);	    i++;	  };	  return lista.reverse();	}</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="260.0" posY="70.0"/>
+        <content>function konwertuj10(x);	{;	  w10 = 0;	  koniec = x.length-1;	  waga = 1&lt;&lt;koniec;	  for(i=0;i &lt;= koniec ; i++) {;	    w10+=waga*x[i];	    waga=waga&gt;&gt;1;	  };	  return w10;	}</content>
+        <connect ID="5"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="260.0" posY="250.0"/>
+        <content>y = 87;	wynik = konwertuj(y);	Writeln(wynik);	wynik1 = konwertuj10(wynik);	Writeln(wynik1)</content>
+        <connect ID="2"/>
+      </block>
+    </blocks>
+  </flowchart>
+  <flowchart name="Zadanie2">
+    <canvas interval="200" posX="0.0" posY="0.0" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Zadanie2</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="190.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="-20.0"/>
+        <content>binarna = [];	i = 0</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="70.0"/>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

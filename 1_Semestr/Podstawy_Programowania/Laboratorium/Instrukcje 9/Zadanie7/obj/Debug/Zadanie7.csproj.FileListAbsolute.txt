@@ -1,0 +1,6 @@
+C:\Users\adi02\source\repos\Zadanie7\bin\Debug\Zadanie7.exe.config
+C:\Users\adi02\source\repos\Zadanie7\bin\Debug\Zadanie7.exe
+C:\Users\adi02\source\repos\Zadanie7\bin\Debug\Zadanie7.pdb
+C:\Users\adi02\source\repos\Zadanie7\obj\Debug\Zadanie7.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie7\obj\Debug\Zadanie7.exe
+C:\Users\adi02\source\repos\Zadanie7\obj\Debug\Zadanie7.pdb

@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\bin\Debug\Zadanie 3.exe.config
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\bin\Debug\Zadanie 3.exe
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\bin\Debug\Zadanie 3.pdb
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\obj\Debug\Zadanie 3.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\obj\Debug\Zadanie 3.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\obj\Debug\Zadanie 3.exe
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie 3\obj\Debug\Zadanie 3.pdb
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\bin\Debug\Zadanie 3.exe.config
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\bin\Debug\Zadanie 3.exe
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\bin\Debug\Zadanie 3.pdb
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\obj\Debug\Zadanie 3.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\obj\Debug\Zadanie 3.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\obj\Debug\Zadanie 3.exe
+C:\Users\adi02\source\repos\Instrukcje 5\Zadanie3\obj\Debug\Zadanie 3.pdb

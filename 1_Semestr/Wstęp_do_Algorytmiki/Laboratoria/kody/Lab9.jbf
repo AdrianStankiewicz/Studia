@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><JavaBlocks author="adi02" scriptEngine="JavaScript" version="6010">
+  <option fullConnectorValues="true" grid="false" pascal="false"/>
+  <flowchart name="Start">
+    <canvas interval="200" posX="-125.25726" posY="-148.55322" zoom="4"/>
+    <blocks>
+      <block id="1" name="Start" type="START">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="-100.0"/>
+        <comment>Start</comment>
+        <connect ID="3"/>
+      </block>
+      <block id="2" type="RETURN">
+        <options displayComment="true"/>
+        <visual color="255 255 0" posX="0.0" posY="1160.0"/>
+        <comment>End</comment>
+      </block>
+      <block id="3" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="70.0"/>
+        <content>function scal(odPod, srodek, doPoz)&#13;;	{&#13;;	    i = odPoz&#13;;	    j = srodek+i&#13;;	    for(k=odPoz; k &lt;= doPoz; k++)&#13;;	    {&#13;;	        if(i &gt; srodek) lista[k] = pom[i++]&#13;;	        else if(j &gt; doPoz) lista[k] = pom[j++]&#13;;	        else if (pom[j] &lt; pom[i]) lista[k] = pom[j++]&#13;;	        else lista[k] = pom[i++]&#13;;	    }&#13;;	}</content>
+        <connect ID="4"/>
+      </block>
+      <block id="4" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="300.0"/>
+        <content>lista = [1, 6, 18, 12, -23, -10, -8, 22]&#13;;	pom = []&#13;;	for(i = 0; i , lista.length; i++)&#13;;	{&#13;;	    pom[i] = lista[i]&#13;;	}</content>
+        <connect ID="5"/>
+      </block>
+      <block id="5" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="0.0" posY="510.0"/>
+        <content>zakres = 2&#13;;	n = 8&#13;;	for(x = 0; x &lt; n; x += zakres)&#13;;	{&#13;;	    trojka = [x + Math.floor((zakres-1)/2), x+zakres-1]&#13;;	    Writeln(trojka)&#13;;	    scal(trojka[0], trojka[1], trojka[2]]&#13;;	}&#13;;	Writeln(lista)</content>
+        <connect ID="2"/>
+      </block>
+      <block id="6" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="50.0" posY="730.0"/>
+        <content>for(i = 0; i &lt; lista.length; i++) pom[i] = lista[i]&#13;;	&#13;;	zakres = 4&#13;;	n = 8&#13;;	for(x = 0; x &lt; n; x += zakres)&#13;;	{&#13;;	    trojka = [x + Math.floor((zakres-1)/2), x+zakres-1]&#13;;	    Writeln(trojka)&#13;;	    scal(trojka[0], trojka[1], trojka[2]]&#13;;	}&#13;;	Writeln(lista)</content>
+      </block>
+      <block id="7" type="CPU">
+        <options displayComment="false"/>
+        <visual color="255 255 0" posX="50.0" posY="1010.0"/>
+        <content>for(i = 0; i &lt; lista.length; i++) pom[i] = lista[i]&#13;;	&#13;;	zakres = 8&#13;;	n = 8&#13;;	for(x = 0; x &lt; n; x += zakres)&#13;;	{&#13;;	    trojka = [x + Math.floor((zakres-1)/2), x+zakres-1]&#13;;	    Writeln(trojka)&#13;;	    scal(trojka[0], trojka[1], trojka[2]]&#13;;	}&#13;;	Writeln(lista)</content>
+      </block>
+    </blocks>
+  </flowchart>
+</JavaBlocks>

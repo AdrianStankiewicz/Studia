@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadanie3\bin\Debug\Zadanie3.exe.config
+C:\Users\adi02\source\repos\Zadanie3\bin\Debug\Zadanie3.exe
+C:\Users\adi02\source\repos\Zadanie3\bin\Debug\Zadanie3.pdb
+C:\Users\adi02\source\repos\Zadanie3\obj\Debug\Zadanie3.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadanie3\obj\Debug\Zadanie3.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadanie3\obj\Debug\Zadanie3.exe
+C:\Users\adi02\source\repos\Zadanie3\obj\Debug\Zadanie3.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\bin\Debug\Zadanie3.exe.config
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\bin\Debug\Zadanie3.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\bin\Debug\Zadanie3.pdb
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\obj\Debug\Zadanie3.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\obj\Debug\Zadanie3.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\obj\Debug\Zadanie3.exe
+C:\Users\adi02\source\repos\Instrukcje 6\Zadanie3\obj\Debug\Zadanie3.pdb

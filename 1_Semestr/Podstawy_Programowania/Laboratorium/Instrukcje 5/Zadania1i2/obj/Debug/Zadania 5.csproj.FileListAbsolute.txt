@@ -1,0 +1,14 @@
+C:\Users\adi02\source\repos\Zadania 5\bin\Debug\Zadania 5.exe.config
+C:\Users\adi02\source\repos\Zadania 5\bin\Debug\Zadania 5.exe
+C:\Users\adi02\source\repos\Zadania 5\bin\Debug\Zadania 5.pdb
+C:\Users\adi02\source\repos\Zadania 5\obj\Debug\Zadania 5.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Zadania 5\obj\Debug\Zadania 5.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Zadania 5\obj\Debug\Zadania 5.exe
+C:\Users\adi02\source\repos\Zadania 5\obj\Debug\Zadania 5.pdb
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\obj\Debug\Zadania 5.csprojAssemblyReference.cache
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\obj\Debug\Zadania 5.csproj.CoreCompileInputs.cache
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\obj\Debug\Zadania 5.exe
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\obj\Debug\Zadania 5.pdb
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\bin\Debug\Zadania 5.exe.config
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\bin\Debug\Zadania 5.exe
+C:\Users\adi02\source\repos\Instrukcje 5\Zadania1i2\bin\Debug\Zadania 5.pdb

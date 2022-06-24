@@ -1,0 +1,22 @@
+CHIP DEMUX16{
+    IN a[16],sel;
+    OUT x0[16],x1[16];
+
+    PARTS:
+    DEMUX(a=a[0],sel=sel,x0=x0[0],x1=x1[0]);
+    DEMUX(a=a[1],sel=sel,x0=x0[1],x1=x1[1]);
+    DEMUX(a=a[2],sel=sel,x0=x0[2],x1=x1[2]);
+    DEMUX(a=a[3],sel=sel,x0=x0[3],x1=x1[3]);
+    DEMUX(a=a[4],sel=sel,x0=x0[4],x1=x1[4]);
+    DEMUX(a=a[5],sel=sel,x0=x0[5],x1=x1[5]);
+    DEMUX(a=a[6],sel=sel,x0=x0[6],x1=x1[6]);
+    DEMUX(a=a[7],sel=sel,x0=x0[7],x1=x1[7]);
+    DEMUX(a=a[8],sel=sel,x0=x0[8],x1=x1[8]);
+    DEMUX(a=a[9],sel=sel,x0=x0[9],x1=x1[9]);
+    DEMUX(a=a[10],sel=sel,x0=x0[10],x1=x1[10]);
+    DEMUX(a=a[11],sel=sel,x0=x0[11],x1=x1[11]);
+    DEMUX(a=a[12],sel=sel,x0=x0[12],x1=x1[12]);
+    DEMUX(a=a[13],sel=sel,x0=x0[13],x1=x1[13]);
+    DEMUX(a=a[14],sel=sel,x0=x0[14],x1=x1[14]);
+    DEMUX(a=a[15],sel=sel,x0=x0[15],x1=x1[15]);
+}

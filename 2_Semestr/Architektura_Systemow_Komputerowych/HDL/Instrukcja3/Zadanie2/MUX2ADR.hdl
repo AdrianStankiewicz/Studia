@@ -1,0 +1,13 @@
+CHIP MUX2ADR{
+IN x3,x2,x1,x0,sel1,sel0;
+OUT out;
+    
+PARTS:
+NOT(a=sel1,out=w1);
+NOT(a=sel0,out=w0);
+AND3IN(a=x3,b=sel1,c=sel0,out=w2);
+AND3IN(a=x2,b=sel1,c=w0,out=w3);
+AND3IN(a=x1,b=w1,c=sel0,out=w4);
+AND3IN(a=x0,b=w1,c=w0,out=w5);
+OR4IN(a=w2,b=w3,c=w4,d=w5,out=out);
+}

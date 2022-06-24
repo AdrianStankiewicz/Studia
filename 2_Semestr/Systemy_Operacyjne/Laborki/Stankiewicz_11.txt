@@ -1,0 +1,85 @@
+SUPERUSER:
+
+1.
+    Login using your own account.
+        student
+        kernel21
+        192.168.133.77
+2.
+    Try to delete the file /etc/passwd . What message do you get?
+        student@linux:~$ rm -r /etc/passwd
+        rm: usunąć zabezpieczony przed zapisem zwykły plik '/etc/passwd'? nie
+3.
+    Use the su command to become root.
+        student@linux:~$ su -
+        Hasło:
+        root@linux:~#
+5.
+    Check the log and find the entry for the su command. ( on Floppix, the system logs are directed to /dev/tty8 ; press [alt][F8] to see the logs; [alt][F1] to return to console 1)
+        root@linux:~# who
+        student  pts/0        2021-05-30 12:15 (192.168.133.222)
+        root@linux:~# who am i
+        student  pts/0        2021-05-30 12:15 (192.168.133.222)
+        root@linux:~# whoami
+        root
+
+ADDING NEW USER
+
+3.
+    Create a home directory for samiam; this directory should be /home/samiam.
+        root@linux:~/home# mkdir samiam
+4.
+    Copy the system configuration files from /etc/skel to the home directory. Note: there are files in /etc/skel .
+        root@linux:/etc/skel# cd /etc/skel
+        root@linux:/etc/skel# cp -r /etc/skel ../../home
+5.
+    Change the ownership so that the home directory and all of its contents are owned by samiam. The commands are:
+        root@linux:/home# chown -R samiam /home/samiam
+        root@linux:/home# chgrp -R samiam /home/samiam
+6.
+    Check the permissions on the /home/samiam and its contents. Samiam must have rwx permissions on his home directory; the world should not have any permissions.
+        root@linux:/home# ls -l
+7.
+    Change the password. ( passwd samiam )
+        root@linux:/home# passwd samiam
+8.
+    If you want to fill in the rest of the gecos data ( chfn samiam )
+        root@linux:/home# chfn samiam
+9.
+    root@linux:/home# logout
+    student@linux:~$ su samiam
+    Hasło:
+    samiam@linux:/home/student$
+
+EXPERIMENT WITH SAMIAM
+
+1.
+    Edit /etc/passwd and put a * at the beginning of the password field for samiam. Switch to another console and try to login as samiam. What happens?
+        :x: -> :*x:
+2.
+    Edit /etc/passwd and delete the * you inserted. Switch to another console and try to login as samiam. What happens?
+        :*x: -> :x:
+3.
+    Edit /etc/passwd, delete the password field for samiam and then login as samiam. What happens?
+        :x: -> ::
+4.
+    Edit /etc/passwd, change the home directory for samiam to /tmp and then login as samiam. What happens?
+        :/home/samiam: -> :/tmp:
+5.
+    Edit /etc/passwd, change the login shell for samiam to /usr/bin/flin and then login as samiam. What happens?
+        :/bin/bash -> :/usr/bin/flin
+6.
+    Edit /etc/passwd, change the login shell for samiam to /usr/bin/passwd and then login as samiam. What happens?
+        :/bin/bash -> :usr/bin/passwd
+7.
+    Edit /etc/passwd, change the login shell for samiam to /bin/true and then login as samiam. What happens?
+        :/bin/bash -> /bin/true
+8.
+    What will happen if you change samiam's login shell to /bin/ls? Test your answer to see if you are correct.
+        :/bin/bash -> :/bin/ls
+9.
+    Edit /etc/passwd, change the login shell for samiam to /bin/bash, change the gid for samiam to 100 and then login as samiam. Use touch to create a new file. What group does the file belong in?
+        :1003: -> :100:
+10.
+    Edit /etc/passwd, change the uid for samiam to 0 and then login as samiam. How can you test to see if samiam has superuser privileges? Is samiam now a superuser account?
+        :1003: -> :0:

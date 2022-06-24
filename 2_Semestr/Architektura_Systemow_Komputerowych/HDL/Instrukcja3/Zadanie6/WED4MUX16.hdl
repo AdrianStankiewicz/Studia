@@ -1,0 +1,9 @@
+CHIP WED4MUX16{
+    IN x3[16],x2[16],x1[16],x0[16],sel[2];
+    OUT out[16];
+
+    PARTS:
+    MUX16(x1=x3,x0=x2,sel=sel[0],out=w1);
+    MUX16(x1=x1,x0=x0,sel=sel[0],out=w2);
+    MUX16(x1=w1,x0=w2,sel=sel[1],out=out);
+}

@@ -1,0 +1,59 @@
+1.
+    Use the ps command:
+        a.
+            Enter the command ps au
+        b.
+            What processes are running on tty1?
+        c.
+            What processes are running on tty2?
+        d.
+            Switch to virtual console 2, login as alterego and enter the command ps au again.
+        e.
+            What processes are running on tty1?
+        f.
+            What processes are running on tty2?
+        g.
+            Logout on virtual console 2; switch back to virtual console 1.
+        h.
+            What processes are running on tty1?
+        i.
+            What processes are running on tty2?
+        j.
+            Enter the command: ps aux
+        k.
+            What additional processes are running?
+2. 
+    Suspend, background, foreground, kill
+        a.
+            Start links.
+                [asta@pollux ~]$ links
+        b.
+            Suspend it.
+                [Ctrl + Z]
+        c.
+            Enter the command: (sleep 60 ; sleep 60 ; ls -l > flist)
+            (make sure that you include the brackets; this command means: wait 60 seconds, wait 60 seconds, save the output from ls -l in the file flist).
+                [asta@pollux ~]$ (sleep 60 ; sleep 60 ; ls -l > flist)
+        d.
+            Suspend this command.
+                [Ctrl + Z]
+        e.
+            Background the sleep process started in step 3.
+                [asta@pollux ~]$ bg
+        f.
+            Foreground links
+                [asta@pollux ~]$ fg
+        g.
+            Suspend links
+                [Ctrl + Z]
+        h.
+            Kill links
+                [asta@pollux ~]$ killall links
+                [1]   Zakończony             links
+                [2]   Zakończony             links
+                [4]   Zakończony             links
+                [5]   Zakończony             links
+        i.
+            Check to see if the sleep command line has finished
+                [asta@pollux ~]$ jobs
+                [6]+  Zatrzymano              ( sleep 60; sleep 60; /bin/ls $LS_OPTIONS -l > flist )

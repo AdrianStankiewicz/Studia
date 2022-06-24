@@ -1,0 +1,58 @@
+1.
+    Look at the entry in the passwd file for your account. What is your uid?
+        asta@pollux:~$ cat passwd | grep asta
+        joe:x:500:500:Stankiewicz Adrian Arkadiusz - I INF sem 2:/home/asta:/bin/bash
+
+        500
+2.
+    Look at the entry in the passwd file for floopy. What is the shell?
+        asta@pollux:~$ cat passwd | grep root
+        root:x:0:0::/root:/bin/bash
+        
+        /bin/bash
+3.
+    What is your uid; what is your current gid; what groups are you a member of?
+        asta@pollux:~$ cat passwd | grep asta
+        joe:x:500:500:Stankiewicz Adrian Arkadiusz - I INF sem 2:/home/asta:/bin/bash
+4.
+    What is the name of the file that is checked for incoming mail? (MAIL) What is your terminal type?  (TERM) What is your path? (PATH)
+        asta@pollux:~$ set | grep mail
+        MAIL=/var/mail/asta
+
+        asta@pollux:~$ set | grep term
+        TERM=xterm
+
+        asta@pollux:~$ echo $PATH
+        /usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin
+5.
+    Use the chfn command to enter home and office phone numbers for your account. Look at your entry in the /etc/passwd file. Are the phone numbers stored there? Use the finger command to finger your own account. Are the phone numbers displayed?
+        asta@pollux:/etc$ cat passwd | grep asta
+        asta:x:646:646:Stankiewicz Adrian Arkadiusz - I INF sem 2,404,123976545,987654321:/home/asta:/bin/bash
+
+PRACTICE_EX8:
+
+0.
+    Using 'set' command, check which ports are open to establish the ssh connection between your device and Pollux server? and what's the ip of Pollux server? Which variable has these information?
+        SSH_CONNECTION='81.190.50.4 58890 153.19.112.239 22'
+        SSH_CLIENT='81.190.50.4 58890 22'
+1.
+    List of available shells (you can find it in /etc/shells). (use cat /etc/shells)
+        asta@pollux:/etc$ cat /etc/shells
+        /bin/bash
+        /bin/tcsh
+        /bin/csh
+        /bin/ash
+        /bin/ksh
+        /bin/zsh
+2.
+    Change your login shell to "/bin/ksh" (use: chsh -s /bin/ksh)
+        asta@pollux:/etc$ chsh -s /bin/ksh
+3.
+    Check your entry in the passwd file.
+        asta@pollux:/etc$ cat /etc/passwd | grep asta
+        asta:x:646:646:Stankiewicz Adrian Arkadiusz - I INF sem 2,404,123976545,987654321:/home/asta:/bin/ksh
+4.
+    Logout and login again. (Has something changed ?) (check your SHELL now: 'echo $SHELL' or ' set | grep SHELL')
+        asta@pollux:~$ echo $SHELL
+        /bin/ksh
+6. Back again to the bash shell "/bin/bash", then logout and login again.

@@ -1,0 +1,224 @@
+AT PRACTICE
+
+1.
+    Schedule task at coming 12:00 AM.
+        root@linux:~# at 12:00 am
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+2.
+    Schedule task at 9:45 AM on coming Sunday.
+        root@linux:~# at 9:45 am Sunday
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+3.
+    Schedule task at 15:15 on coming 12’th July.
+        root@linux:~# at 15:15 July 12
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+4.
+    Schedule task at 08:00 pm on coming 06.02.2021.
+        root@linux:~# at 8:00 02.06.2021
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+6.
+    Schedule task at 10:00 AM tomorrow.
+        root@linux:~# at 10:00 am tomorrow
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+7.
+    Schedule task at 7:30 AM tomorrow.
+        root@linux:~# at 7:30 am tomorrow
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+8.
+    Schedule task to execute after 2 hours.
+        root@linux:~# at now + 2 hours
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+9.
+    Schedule task to execute after 15 minutes.
+        root@linux:~# at now + 15 minutes
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+10.
+    Schedule task to execute just after 1 week.
+        root@linux:~# at now + 1 week
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+11.
+    Schedule task to execute just after 6 months.
+        root@linux:~# at now + 6 months
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+12.
+    Schedule task to execute at midnight.
+        root@linux:~# at midnight
+        warning: commands will be executed using /bin/sh
+        at> whoami
+        at> <EOT>
+        at> ^Croot@linux:~#
+13.
+    list the user's job (use: atq) 
+        root@linux:~# atq
+        17      Wed Jun  2 00:00:00 2021 a student
+14.
+    removing pending jobs (use: atrm [nr])
+        root@linux:~# atrm 17
+        root@linux:~# atq
+        root@linux:~#
+
+SCHEDULING TASKS WITH CRON
+
+1.
+    Setup a cron job to echo Study Linux every 30 minutes, Monday to Friday.
+        root@linux:~# crontab -e
+        */30 * * Mon-Fri echo "Study Linux"
+2.
+    Setup a cron job to echo Study Linux every hour on Saturday and Sunday.
+        student@linux:~$ crontab -e
+        00 * * * Saturday-Sunday echo "Study Linux"
+3.
+    Setup a script that displays the date and then a list of everyone who is logged on. Run your script and make sure that it works. Setup cron to run the script you created on the first day of every month at 08:02.
+        root@linux:~# vim dataObecni
+        #!/bin/bash
+        DATA="$(date)"
+        WHO="$(who)"
+        echo "$DATA"
+        echo "$WHO"
+
+        root@linux:~# crontab -e
+        55 13 * * 2 ./dataObecni
+4.
+    Setup a script called backup that echoes the message "You should backup now". Run your script and make sure that it works. Setup cron to run the script you created in question two the first day of every month at 07:17.
+        root@linux:~$ vi BACKUP
+        echo "You should backup now!"
+
+        07 23 * * 3 ./BACKUP
+5.
+    When you are sure that this is working correctly, store the output from crontab -l in the file cronlist.
+        root@linux:~# crontab -l > cronlist
+6.
+    Run crontab -r to delete all of your cron tasks.
+        root@linux:~# crontab -r
+        crontab 4.5
+        crontab file [-u user]  replace crontab from file
+        crontab -  [-u user]    replace crontab from stdin
+        crontab -l [-u user]    list crontab
+        crontab -e [-u user]    edit crontab
+        crontab -d [-u user]    delete crontab
+        crontab -c dir <opts>   specify crontab directory
+        root@linux:~# crontab -d
+        root@linux:~# crontab -l
+
+CRON-PRACTICE
+
+1.
+    Run backup at 00:01 a.m 1 minute after midnight everyday. 
+    *Setup a script called backup-at-midnight.sh that echoes the message "Daily backup at midnight is running"
+    *This is a good time to run backup when the system is not under load.
+        student@linux:~$ vim backup-at-night.sh
+
+        #!/bin/bash
+        echo "Daily backup at midnight is running"
+
+        root@linux:~$ crontab -e
+        1 0 * * * ./backup-at-night.sh
+2.
+    Run backup every weekday (Mon – Fri) at 11:59 p.m.
+    *Setup a script called backup.sh that echoes the message "Daily backup is running"
+        root@linux:~$ vim baskup.sh
+
+        #!/bin/bash
+        echo "Daily backup is running"
+
+        root@linux:~$ crontab -e
+        59 11 * * Mon-Fri ./backup.sh
+3.
+    Check who is login every 20 minutes between 08:00 up to 17:00  every weekday (Mon-Fri) and redirect it to who-is-login.txt file
+        root@linux:~$ vim SKRYPTT
+
+        #!/bin/bash
+        WHO="$(who)"
+        echo "$WHO"
+        SAVE="$(who > who-is-login.txt)"
+        echo "$SAVE"
+
+        root@linux:~$ crontab -e
+        */20 8-17 * * Mon-Fri ./SKRYPTT
+
+4.
+    Execute a full backup at 1:10 p.m on 1st of every month.
+    *Setup a script called fullbackup.sh that echoes the message "Full backup is running"
+        root@linux:~$ vim fullbackup.sh
+
+        #!/bin/bash
+        echo "Full backup is running"
+
+        root@linux:~$ crontab -e
+        10 1 1 * * ./fullbackup.sh
+5.
+    Run backup every 1st and 15th of each month.
+    *Setup a script called backup.sh that displays date and echoes the message "Backup is running in 1st and 15th of each month"
+        root@linux:~$ vim backupp.sh
+
+        #!/bin/bash
+        echo "Backup is running in 1st and 15th of each month"
+
+        root@linux:~$ crontab -e
+        0 0 1,15 * * ./backupp.sh
+6.
+    Schedule a job (annual-maintenance.sh) for first minute of every year using @yearly. 
+    - setup a script called annual-maintenance.sh that echoes the message "Annual maintenance"
+        root@linux:~# vim annual-maintance.sh
+
+        #!/bin/bash
+        echo "Annual maintenance"
+
+        root@linux:~$ crontab -e
+        0 0 1 1 * ./annual-maintance.sh
+7.
+    Schedule a Cron Job (quiz.sh)Beginning of Every Month using @monthly
+    - setup a script called quiz.sh that echoes the message "Quiz START !!"
+        root@linux:~# vim quiz.sh
+        root@linux:~# chmod 700 quiz.sh
+
+        #!/bin/bash
+        echo "Quiz starts!"
+
+        root@linux:~$ crontab -e
+        0 0 1 * * ./quiz.sh
+8.
+    Using the @daily cron keyword, to do a daily log file cleanup using cleanup-logs shell script at 00:00 on every day.
+    - setup a script called cleanup-logs.sh that echoes the message "daily log file cleanup"
+        root@linux:~# vim cleanup-logs.sh
+        root@linux:~# chmod 700 cleanup-logs.sh
+
+        #!/bin/bash
+        echo "Daily log file cleanup"
+
+        root@linux:~$ crontab -e
+        0 0 * * * ./cleanup-logs.sh
+9.
+    Execute a Linux Command After Every Reboot using @reboot
+    - run httpd Server after the machine got booted
+        

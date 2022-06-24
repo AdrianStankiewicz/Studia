@@ -1,0 +1,15 @@
+CHIP OR4IN{
+IN a,b,c,d;
+OUT out;
+            
+PARTS:
+Nand(a=a, b=a, out=w1);
+Nand(a=b, b=b, out=w2);
+Nand(a=w1, b=w2, out=w3);
+Nand(a=c, b=c, out=w4);
+Nand(a=d, b=d, out=w5);
+Nand(a=w4, b=w5, out=w6);
+Nand(a=w3, b=w3, out=w7);
+Nand(a=w6, b=w6, out=w8);
+Nand(a=w7, b=w8, out=out);
+}

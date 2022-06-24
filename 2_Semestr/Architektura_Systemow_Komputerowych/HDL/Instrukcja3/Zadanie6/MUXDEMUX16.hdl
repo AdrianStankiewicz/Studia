@@ -1,0 +1,8 @@
+CHIP MUXDEMUX16{
+    IN x0[16],x1[16],sel;
+    OUT xx0[16],xx1[16];
+
+    PARTS:
+    MUX16(x0=x0,x1=x1,sel=sel,out=w1);
+    DEMUX16(a=w1,sel=sel,x0=xx0,x1=xx1);
+}

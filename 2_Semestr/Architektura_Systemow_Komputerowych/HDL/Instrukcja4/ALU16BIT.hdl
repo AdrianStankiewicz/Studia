@@ -1,0 +1,26 @@
+CHIP ALU16BIT{
+    IN x[16],FalseX[16],zx,nx,y[16],FalseY[16],zy,ny,f,no;
+    OUT fxy[16],ng,zr;
+
+    PARTS:
+    MUX16(x0=x,x1=FalseX,sel=zx,out=w0);
+    NOT16(a=w0,out=notw0);
+    MUX16(x0=w0,x1=notw0,sel=nx,out=w2);
+
+    MUX16(x0=y,x1=FalseY,sel=zy,out=w1);
+    NOT16(a=w1,out=notw1);
+    MUX16(x0=w1,x1=notw1,sel=ny,out=w3);
+
+    AND16(a=w2,b=w3,out=w4);
+    Sumator16Bitowy(a=w2,b=w3,s=w5,cout=nieWiemCoToRobi);
+    MUX16(x0=w4,x1=w5,sel=f,out=w6);
+
+    NOT16(a=w6,out=notw6);
+    MUX16(x0=w6,x1=notw6,sel=no,out[0..7]=w7,out[8..15]=w8,out[15]=ng,out=fxy);
+
+    OR8IN(in=w7,out=w9);
+    OR8IN(in=w8,out=w10);
+
+    OR(a=w9,b=w10,out=w11);
+    NOT(a=w11,out=zr);
+}

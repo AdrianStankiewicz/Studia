@@ -1,0 +1,8 @@
+CHIP MUXDEMUX{
+    IN x0, x1, sel;
+    OUT xx0, xx1;
+
+    PARTS:
+    MUX(x0=x0,x1=x1,sel=sel,out=w1);
+    DEMUX(a=w1,sel=sel,x0=xx0,x1=xx1);
+}

@@ -1,0 +1,33 @@
+load WED4MUXDEMUX16.hdl,
+compare-to WED4MUXDEMUX16.cmp,
+output-file WED4MUXDEMUX16.out,
+output-list x3%B1.16.1 x2%B1.16.1 x1%B1.16.1 x0%B1.16.1 sel%B3.2.3 xx3%B1.16.1 xx2%B1.16.1 xx1%B1.16.1 xx0%B1.16.1;
+
+set x3 %B1111111111111111,
+set x2 %B0000000000000000,
+set x1 %B0000000000000000,
+set x0 %B0000000000000000,
+set sel %B11,
+eval,
+output;
+set x3 %B0000000000000000,
+set x2 %B1111111111111111,
+set x1 %B0000000000000000,
+set x0 %B0000000000000000,
+set sel %B10,
+eval,
+output;
+set x3 %B0000000000000000,
+set x2 %B0000000000000000,
+set x1 %B1111111111111111,
+set x0 %B0000000000000000,
+set sel %B01,
+eval,
+output;
+set x3 %B0000000000000000,
+set x2 %B0000000000000000,
+set x1 %B0000000000000000,
+set x0 %B1111111111111111,
+set sel %B00,
+eval,
+output;

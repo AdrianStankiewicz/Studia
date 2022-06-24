@@ -1,0 +1,11 @@
+CHIP SumatorPelny{
+IN cin,a,b;
+OUT cout,s;
+    
+PARTS:
+XOR(a=a, b=b, out=w1);
+AND(a=a, b=b, out=w2);
+AND(a=w1, b=cin, out=w3);
+XOR(a=w1, b=cin, out=s);
+OR(a=w3, b=w2, out=cout);
+}

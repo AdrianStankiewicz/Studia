@@ -1,0 +1,24 @@
+3. Read the motd. Is this message entirely in uppercase?
+        Tak
+4. Do you have any email messages?
+        Nie
+5. What is your command prompt?
+        $
+7. Did alterego get the same motd?
+        Tak
+8. Does alterego have any e-mail messages?
+        Tak
+9. What is the command prompt for the alterego account?
+        alterego >
+10. Are there any other differences between your account and the alterego account?
+        małe literki
+13. Read the motd. Is this message entirely in uppercase?
+        Tak
+14. What about the login prompt. Is it in upper or lowercase?
+        lowercase
+15. Type the logout command. Is it in upper or lowercase?
+        uppercase
+18. What differences do you notice between the floopy account and your own account?
+        Pollux foesn't allow to login as floppy
+20. Switch to console 1, then console 2 and then console 3. There is one difference in the login prompts on the 3 consoles.  What is it?
+        Pollux doesn't allow to switch consoles, but the answer is the number after tty changes - console1: tty1, console2: tty2...

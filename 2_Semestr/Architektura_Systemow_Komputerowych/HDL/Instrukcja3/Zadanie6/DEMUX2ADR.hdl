@@ -1,0 +1,9 @@
+CHIP DEMUX2ADR{
+IN a,sel0,sel1;
+OUT x3,x2,x1,x0;
+        
+PARTS:
+DEMUX(a=a, sel=sel1,x0=w1,x1=w2);
+DEMUX(a=w1,sel=sel0,x0=x0,x1=x1);
+DEMUX(a=w2,sel=sel0,x0=x2,x1=x3);
+}

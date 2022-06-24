@@ -1,0 +1,111 @@
+2. How many directories are stored under /var?
+    19
+3. Try to view the contents of the directory /sbin?
+    accton*              fsck.minix*         lvs@               request-key*
+    adjtimex*            fsck.msdos@         lvscan@            rescan-scsi-bus*
+    agetty*              fsck.reiserfs@      makebootstick@     resize2fs*
+    arp*                 fsck.vfat@          makepkg*           resize_reiserfs*
+    arpd*                fsck.xfs*           mdadm*             rmmod@
+    arping*              fsfreeze*           mdmon*             rmt@
+    badblocks*           fstab-decode*       mii-tool*          route*
+    blkdeactivate*       fstrim*             mkdosfs@           routef*
+    blkdiscard*          fuse2fs*            mke2fs*            routel*
+    blkid*               gdisk*              mkfs*              rpc.statd*
+    blockdev*            genl*               mkfs.bfs*          rpcbind*
+    bootlogd*            genpowerd*          mkfs.btrfs*        rpcinfo*
+    brctl*               genpowerfail*       mkfs.cramfs*       rtacct*
+    bridge*              gentest*            mkfs.ext2@         rtmon*
+    btrfs*               getcap*             mkfs.ext3@         rtpr*
+    btrfs-convert*       getpcaps*           mkfs.ext4@         rtstat@
+    btrfs-debug-tree*    getty*              mkfs.ext4dev@      runlevel*
+    btrfs-find-root*     halt*               mkfs.fat*          scsi_id@
+    btrfs-image*         hdparm*             mkfs.jfs@          setcap*
+    btrfs-map-logical*   hwclock*            mkfs.minix*        setpci*
+    btrfs-select-super*  ifcfg*              mkfs.msdos@        setserial*
+    btrfs-show-super*    ifconfig*           mkfs.ntfs@         sfdisk*
+    btrfs-zero-log*      ifrename*           mkfs.reiserfs@     sgdisk*
+    btrfsck@             ifstat*             mkfs.vfat@         shutdown*
+    btrfstune*           init*               mkfs.xfs*          sln*
+    capsh*               initlog*            mkinitrd*          ss*
+    cfdisk*              initscript.sample*  mklost+found*      stinit*
+    cgdisk*              insmod@             mkntfs*            sulogin*
+    chcpu*               installpkg*         mkreiserfs*        swaplabel*
+    clock@               ip*                 mkswap*            swapoff*
+    consoletype*         ipmaddr*            modinfo@           swapon*
+    convertquota*        iptunnel*           modprobe@          switch_root*
+    crda*                iwconfig*           mount@             sysctl*
+    cryptsetup*          iwevent*            mount.cifs*        tc*
+    ctrlaltdel*          iwgetid*            mount.fuse*        telinit@
+    ctstat@              iwlist*             mount.lowntfs-3g@  tipc*
+    debugfs*             iwpriv*             mount.nfs*         tune2fs*
+    debugfs.reiserfs@    iwspy*              mount.ntfs@        tunefs.reiserfs@
+    debugreiserfs*       jaztool@            mount.ntfs-3g@     udevadm*
+    depmod@              jfs_debugfs*        nameif*            udevd*
+    dhclient*            jfs_fsck*           netconfig*         umount@
+    dhclient-script*     jfs_fscklog*        nologin*           umount.nfs@
+    dhcpcd*              jfs_logdump*        nstat*             umount.udisks*
+    dmeventd*            jfs_mkfs*           ntfsclone*         upgradepkg*
+    dmsetup*             jfs_tune*           ntfscp*            uugetty*
+    dmstats@             key.dns_resolver*   ntfslabel*         vconfig*
+    dosfsck@             killall5*           ntfsresize*        vgcfgbackup@
+    dosfslabel@          kmod*               ntfsundelete*      vgcfgrestore@
+    dumpe2fs*            ldconfig*           osd_login*         vgchange@
+    e2freefrag*          lilo*               pccardctl*         vgck@
+    e2fsck*              liloconfig*         pidof*             vgconvert@
+    e2image*             lnstat*             pivot_root*        vgcreate@
+    e2label@             logsave*            pkgtool*           vgdisplay@
+    e2undo*              losetup*            plipconfig*        vgexport@
+    e4crypt*             lsmod@              poweroff@          vgextend@
+    e4defrag*            lspci*              pvchange@          vgimport@
+    explodepkg*          lspcmcia@           pvck@              vgimportclone*
+    extlinux*            lvchange@           pvcreate@          vgmerge@
+    fatlabel*            lvconvert@          pvdisplay@         vgmknodes@
+    fdisk*               lvcreate@           pvmove@            vgreduce@
+    filefrag*            lvdisplay@          pvremove@          vgremove@
+    findfs*              lvextend@           pvresize@          vgrename@
+    fixparts*            lvm*                pvs@               vgs@
+    fsadm*               lvmchange@          pvscan@            vgscan@
+    fsck*                lvmconf*            quotacheck*        vgsplit@
+    fsck-e2fsprogs*      lvmconfig@          quotaoff@          wipefs*
+    fsck.btrfs@          lvmdiskscan@        quotaon*           xfs_repair*
+    fsck.cramfs*         lvmdump*            rarp*              xfsdump*
+    fsck.ext2*           lvmsadc@            raw*               xfsrestore*
+    fsck.ext3*           lvmsar@             reboot@            ziptool*
+    fsck.ext4*           lvreduce@           regdbdump*         zramctl*
+    fsck.ext4dev*        lvremove@           reiserfsck*
+    fsck.fat*            lvrename@           reiserfstune*
+    fsck.jfs@            lvresize@           removepkg*
+What error message is displayed?
+    I didn't get any error message
+Why?
+    Because errors are scared of me
+
+4. Change to the /var directory. Try to create a directory called ddd.
+What error message is displayed? mkdir: nie można utworzyć katalogu „ddd”: Brak dostępu
+Why? I dov't have the permission to create fiels in server directories
+ 
+Change to your own home directory and make a directory called ddd there. This time the command should succeed.
+ 
+Cd to the ddd directory and create a file called fff using the command: touch fff
+ 
+7. Try to make a subdirectory called fff using the command: mkdir fff
+What error message is displayed? 
+    mkdir: nie można utworzyć katalogu „fff”: Plik istnieje
+Why?
+    Because there is already a file called fff
+ 
+8. Still in the ddd directory, try to remove the ddd directory using the command: rmdir ddd
+What error message is displayed?
+    /bin/ls: nie ma dostępu do 'ddd': Nie ma takiego pliku ani katalogu
+Why?
+    Because the directory ddd consists only of fff
+ 
+ 
+9. Change to your own home directory. Try to remove the ddd directory using the command: rmdir ddd
+What error message is displayed?
+    rmdir: nie udało się usunąć 'ddd': Katalog nie jest pusty
+Why?
+    Because Linux allows only emptu directories to be deleted
+ 
+10. Delete the file fff using the command: rm ddd/fff
+    Now remove the ddd directory. This time the command should succeed.

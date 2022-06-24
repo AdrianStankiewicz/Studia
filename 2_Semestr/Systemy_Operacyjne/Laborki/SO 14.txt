@@ -1,0 +1,154 @@
+DO ZROBIENIA (Exercises 1,2,3)
+
+1.
+    Get a directory listing of /home and save the listing in a file called "one" in your own home directory. Use the cat command to make sure that "one" does contain the correct data.
+        asta@pollux:~$ ls -l /home > ~/one
+        asta@pollux:~$ cat ~/one
+        razem 504
+        drwxrwxr-x+  5 aand aand 4096 mar 25 11:46 aand/
+        drwxrwx---+  9 abie abie 4096 mar 24 14:36 abie/
+        drwxrwxr-x+  4 aglo aglo 4096 mar  9 16:42 aglo/
+        drwxrwxr-x+  2 agrz agrz 4096 mar 22 10:28 agrz/
+        drwxrwxr-x+ 10 akra akra 4096 mar 28 16:49 akra/
+        drwxrwxr-x+  3 aryb aryb 4096 lut 19 15:23 aryb/
+        drwxrwxr-x+  8 asta asta 4096 mar 28 19:47 asta/
+        drwxrwxr-x+  7 aszw aszw 4096 mar 25 12:30 aszw/
+        drwxrwxr-x+ 11 azd  azd  4096 mar 24 15:24 azd/
+        drwxrwxr-x+  5 bbac bbac 4096 mar 16 17:29 bbac/
+        drwxrwxr-x+  2 bgue bgue 4096 mar  4 16:46 bgue/
+        drwxrwxr-x+  2 bjac bjac 4096 lut 27 13:48 bjac/
+        drwxrwx---+  8 bkun bkun 4096 mar 24 14:39 bkun/
+        drwxrwxr-x+ 11 bpar bpar 4096 mar 24 18:17 bpar/
+        drwxrwxr-x+  6 bsaw bsaw 4096 mar 21 16:10 bsaw/
+        drwxrwxr-x+  2 dhet dhet 4096 mar 22 10:28 dhet/
+        drwxrwxr-x+  4 dpes dpes 4096 mar 25 15:40 dpes/
+        drwxrwxr-x+  2 dpod dpod 4096 mar 22 10:28 dpod/
+        drwxrwxr-x+  3 dpta dpta 4096 mar 21 15:09 dpta/
+        drwxrwxr-x+  5 dsel dsel 4096 mar 28 17:10 dsel/
+        drwxrwxr-x+  5 dwin dwin 4096 mar 25 12:47 dwin/
+        drwxrwx---+  7 elep elep 4096 mar 24 13:03 elep/
+        drwxrwx---+  3 fbej fbej 4096 mar 24 14:45 fbej/
+        drwxrwxr-x+  3 frad frad 4096 mar 10 11:48 frad/
+        drwxrwxr-x+  6 gcic gcic 4096 mar 24 12:42 gcic/
+        drwxrwxr-x+  5 gwar gwar 4096 mar 25 11:34 gwar/
+        drwxrwxr-x+  2 hros hros 4096 mar 24 13:57 hros/
+        drwxrwxr-x+  5 jfis jfis 4096 mar 24 12:43 jfis/
+        drwxrwxr-x+  2 jkoz jkoz 4096 mar 22 10:28 jkoz/
+        drwxrwx---+  5 jkra jkra 4096 mar 24 14:47 jkra/
+        drwxrwxr-x+  3 jkwi jkwi 4096 mar 17 12:45 jkwi/
+        drwxrwxr-x+ 11 jmaj jmaj 4096 mar 21 19:23 jmaj/
+        drwxrwxr-x+  3 jmal jmal 4096 mar 25 15:52 jmal/
+        drwxrwxr-x+  3 jpio jpio 4096 mar 25 15:38 jpio/
+        drwxrwxr-x+  2 jpuf jpuf 4096 mar 22 10:28 jpuf/
+        drwxrwx---+  7 jrad jrad 4096 mar 24 14:36 jrad/
+        drwxrwxr-x+  7 kbaj kbaj 4096 mar 25 10:50 kbaj/
+        drwxrwxr-x+  2 kblo kblo 4096 mar 10 22:41 kblo/
+        drwxrwxr-x+  4 kbog kbog 4096 mar 16 17:03 kbog/
+        drwxrwxr-x+ 10 kcha kcha 4096 mar 21 18:31 kcha/
+        drwxrwxr-x+  2 kcza kcza 4096 mar 23 20:33 kcza/
+        drwxrwxr-x+  5 kfal kfal 4096 mar 27 12:36 kfal/
+        drwxrwxr-x+  3 kgro kgro 4096 mar 21 15:02 kgro/
+        drwxrwxr-x+  4 kgrz kgrz 4096 mar 24 12:40 kgrz/
+        drwxrwxr-x+  9 khj  khj  4096 mar 23 17:39 khj/
+        drwxrwxr-x+  7 kigi kigi 4096 mar 25 10:14 kigi/
+        drwxrwxr-x+ 12 kjag kjag 4096 mar 20 19:53 kjag/
+        drwxrwxr-x+  7 kkam kkam 4096 mar 28 18:57 kkam/
+        drwxrwxr-x+  3 kkas kkas 4096 mar 24 11:47 kkas/
+        drwxrwxr-x+  9 kkel kkel 4096 mar 28 19:42 kkel/
+        drwxrwxr-x+  8 kkos kkos 4096 mar 23 17:59 kkos/
+        drwxrwx---+  8 klec klec 4096 mar 25 20:34 klec/
+        drwxrwx---+  6 kmar kmar 4096 mar 24 14:36 kmar/
+        drwxrwxr-x+  2 kmur kmur 4096 mar 22 10:28 kmur/
+        drwxrwxr-x+  3 kpep kpep 4096 mar 25 15:40 kpep/
+        drwxrwxr-x+  4 kprz kprz 4096 mar 25 15:40 kprz/
+        drwxrwxr-x+  2 ktec ktec 4096 mar  4 14:10 ktec/
+        drwxrwxr-x+  3 ktut ktut 4096 mar 25 12:45 ktut/
+        drwxrwxr-x+  5 kwac kwac 4096 mar 25 12:45 kwac/
+        drwxrwx---+  8 kwlo kwlo 4096 mar 24 14:45 kwlo/
+        drwxrwxr-x+ 14 kzak kzak 4096 mar 23 20:32 kzak/
+        drwxrwxr-x+ 12 lsil lsil 4096 mar 27 12:21 lsil/
+        drwxrwxr-x+  3 lszc lszc 4096 mar 25 12:45 lszc/
+        drwxrwxr-x+  5 mbar mbar 4096 mar 18 10:35 mbar/
+        drwxrwxr-x+  2 mbik mbik 4096 lut 27 13:49 mbik/
+        drwxrwxr-x+  4 mbro mbro 4096 mar 23 22:06 mbro/
+        drwxrwxr-x+ 13 mcym mcym 4096 mar 27 22:23 mcym/
+        drwxrwxr-x+  5 mdam mdam 4096 mar 23 18:31 mdam/
+        drwxrwx---+  8 mdob mdob 4096 mar 24 14:37 mdob/
+        drwxrwxr-x+  4 mdon mdon 4096 mar  9 16:19 mdon/
+        drwxrwxr-x+  4 mdud mdud 4096 mar 24 12:42 mdud/
+        drwxrwxr-x+  2 melm melm 4096 lut 27 13:49 melm/
+        drwxrwxr-x+  2 mfil mfil 4096 mar 16 16:15 mfil/
+        drwxrwxr-x+  3 mfri mfri 4096 mar 21 15:06 mfri/
+        drwxrwxr-x+ 10 mhol mhol 4096 mar 28 14:02 mhol/
+        drwxrwxr-x+  3 mkal mkal 4096 mar 25 15:48 mkal/
+        drwxrwxr-x+  6 mkow mkow 4096 mar 25 10:47 mkow/
+        drwxrwxr-x+  3 mkro mkro 4096 mar 25 15:39 mkro/
+        drwxrwxr-x+  9 mmec mmec 4096 mar 28 16:40 mmec/
+        drwxrwxr-x+  2 mmez mmez 4096 mar 22 10:28 mmez/
+        drwxrwxr-x+  3 mmro mmro 4096 mar 21 15:02 mmro/
+        drwxrwxr-x+  3 morz morz 4096 mar 25 15:39 morz/
+        drwxrwxr-x+  2 mosi mosi 4096 mar 22 10:28 mosi/
+        drwxrwxr-x+  9 mpis mpis 4096 mar 21 19:40 mpis/
+        drwxrwxr-x+  2 mpla mpla 4096 mar 22 10:28 mpla/
+        drwxrwxr-x+ 12 mple mple 4096 mar 28 17:51 mple/
+        drwxrwxr-x+  3 mpol mpol 4096 mar 25 15:43 mpol/
+        drwxrwxr-x+  3 mpyr mpyr 4096 mar 25 12:45 mpyr/
+        drwxrwxr-x+  6 mros mros 4096 mar 25 10:51 mros/
+        drwxrwxr-x+  6 msag msag 4096 mar 18 12:43 msag/
+        drwxrwxr-x+  4 msmu msmu 4096 mar 22 16:47 msmu/
+        drwxrwxr-x+  4 mszr mszr 4096 mar 25 14:54 mszr/
+        drwxrwx---+ 19 mwar mwar 4096 mar 24 14:25 mwar/
+        drwxrwxr-x+  2 mzap mzap 4096 mar 22 10:28 mzap/
+        drwxrwxr-x+ 15 mzwi mzwi 4096 mar 26 17:18 mzwi/
+        drwxrwxr-x+  5 odie odie 4096 mar  9 16:21 odie/
+        drwxrwxr-x+  2 olew olew 4096 mar 22 10:28 olew/
+        drwxrwxr-x+ 15 omil omil 4096 mar 27 12:21 omil/
+        drwxrwxr-x+  3 pfra pfra 4096 mar 14 20:12 pfra/
+        drwxrwxr-x+  2 pgub pgub 4096 mar 16 17:16 pgub/
+        drwxrwxr-x+  4 pik  pik  4096 sty 21 00:13 pik/
+        drwxrwxr-x+  2 pkos pkos 4096 mar 22 10:16 pkos/
+        drwxrwxr-x+  5 pnie pnie 4096 mar 18 22:02 pnie/
+        drwxrwxr-x+ 11 ppio ppio 4096 mar 28 19:39 ppio/
+        drwxrwxr-x+  5 pras pras 4096 mar 25 10:35 pras/
+        drwxrwxr-x+  5 proz proz 4096 mar 16 16:29 proz/
+        drwxrwxr-x+  5 pzar pzar 4096 mar 25 12:10 pzar/
+        drwxrwxr-x+ 11 pzwo pzwo 4096 mar 27 16:18 pzwo/
+        drwxrwxr-x+  2 rkow rkow 4096 lut 27 13:48 rkow/
+        drwxrwxr-x+  5 rszy rszy 4096 mar 24 12:32 rszy/
+        drwxrwxr-x+  4 rtra rtra 4096 mar 14 18:55 rtra/
+        drwxrwxr-x+  7 serd serd 4096 mar 24 15:08 serd/
+        drwxrwxr-x+  2 smil smil 4096 mar 22 10:28 smil/
+        drwxrwxr-x+  3 soku soku 4096 mar 25 15:40 soku/
+        drwxrwxr-x+  4 spiw spiw 4096 mar 25 11:45 spiw/
+        drwxrwxr-x+  4 sryc sryc 4096 mar 23 18:07 sryc/
+        drwxrwxr-x+ 14 tlor tlor 4096 mar 26 21:30 tlor/
+        drwxrwxr-x+  3 ttre ttre 4096 mar 24 17:46 ttre/
+        drwxrwxr-x+  5 twas twas 4096 mar 25 10:51 twas/
+        drwxrwxr-x+  4 vhor vhor 4096 mar 25 15:43 vhor/
+        drwxrwxr-x+  6 wgor wgor 4096 mar 24 12:49 wgor/
+        drwxrwxr-x+  2 wkin wkin 4096 mar 22 10:28 wkin/
+        drwxrwxr-x+  8 wkoz wkoz 4096 mar 24 12:42 wkoz/
+        drwxrwxr-x+  2 wser wser 4096 mar  4 16:46 wser/
+        drwxrwxr-x+  5 wsta wsta 4096 mar 24 12:46 wsta/
+        drwxrwxr-x+ 10 zpan zpan 4096 mar 21 19:49 zpan/
+
+2.
+    Get a list of everyone currently logged on and save the list in a file called "users "in your own home directory.
+        asta@pollux:~$ who >> ~/users
+        asta@pollux:~$ cat users
+        kblo     pts/1        2021-03-28 19:16 (89.64.112.53)
+        kjag     pts/2        2021-03-28 19:47 (89.68.28.125)
+        kkel     pts/3        2021-03-28 16:51 (89.64.103.134)
+        asta     pts/5        2021-03-28 17:25 (81.190.50.4)
+
+3.
+    Get a list of all of the processes that are running and add this list to the end of the "users" file.
+        asta@pollux:~$ ps >> ~/users
+        asta@pollux:~$ cat users
+        kblo     pts/1        2021-03-28 19:16 (89.64.112.53)
+        kjag     pts/2        2021-03-28 19:47 (89.68.28.125)
+        kkel     pts/3        2021-03-28 16:51 (89.64.103.134)
+        asta     pts/5        2021-03-28 17:25 (81.190.50.4)
+          PID TTY          TIME CMD
+        15042 pts/5    00:00:00 bash
+        18732 pts/5    00:00:00 ps

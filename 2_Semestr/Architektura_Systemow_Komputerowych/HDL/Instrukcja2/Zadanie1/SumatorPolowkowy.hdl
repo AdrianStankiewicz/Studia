@@ -1,0 +1,8 @@
+CHIP SumatorPolowkowy{
+IN a,b;
+OUT c,s;
+
+PARTS:
+AND (a=a, b=b, out=c);
+XOR (a=a, b=b, out=s);
+}

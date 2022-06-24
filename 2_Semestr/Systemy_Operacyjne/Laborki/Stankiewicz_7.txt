@@ -1,0 +1,332 @@
+THE SEARCH PATH:
+
+DO ZROBIENIA
+
+1.
+    What is your current search path?
+        asta@pollux:~$ echo $PATH
+        /usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin
+2.
+    Check what programs does each directory has ?
+   /usr/local/bin ;
+        asta@pollux:~$ cd /usr/local/bin
+        asta@pollux:/usr/local/bin$ ls
+        manual*
+    /usr/bin;
+        minicom*                               mk_cmds*
+        zonetab2pot.py*                        mkafmmap*
+        zoo*
+    /bin ;
+        printenv*          tcsh*
+        egrep*       printf*            tee*
+    /usr/games ;
+        adventure*   bcd*        factor*   mille*      pom*
+3.
+    Where we can find the following commands: (use 'which' OR 'type')
+    - manual
+        man: /usr/bin/man /etc/man.conf /usr/local/man /usr/share/man /usr/man/man1/man.1.gz /usr/man/man7/man.7.gz
+    - ls
+        ls: /usr/bin/ls /bin/ls /usr/man/man1/ls.1.gz
+    - grep
+        grep: /usr/bin/grep /bin/grep /usr/man/man1/grep.1.gz /usr/info/grep.info.gz
+    - mkdir
+        mkdir: /usr/bin/mkdir /bin/mkdir /usr/man/man1/mkdir.1.gz /usr/man/man2/mkdir.2.gz
+    - who
+        who: /usr/bin/who /bin/who /usr/man/man1/who.1.gz
+    - snake
+        snake: /usr/games/snake /usr/man/man6/snake.6.gz
+    - random
+        random: /usr/games/random /usr/man/man6/random.6.gz /usr/man/man3/random.3.gz /usr/man/man4/random.4.gz
+    - ifconfig (use find)
+        asta@pollux:~$ find / -name ifconfig 2> /dev/null
+        /sbin/ifconfig
+4.
+    Clear your path $PATH.
+        asta@pollux:/usr/games$ PATH=
+        asta@pollux:/usr/games$ echo $PATH
+        
+5.
+    Try to create a new file/directory into your home directory. (using touch or mkdir)
+        asta@pollux:~$ PATH=
+        asta@pollux:~$ touch newfile
+        -bash: touch: Nie ma takiego pliku ani katalogu
+6.
+    Now try to create direcoty [myNewDir] using the command: /bin/mkdir myNewDir. Did this work?
+        asta@pollux:~$ /bin/mkdir myNewDir
+7.
+    Add /bin directory to $PATH.
+        asta@pollux:/$ PATH=/bin
+        asta@pollux:/$ echo $PATH
+        /bin
+8.
+    And now try to create a dir.
+        asta@pollux:~$ echo $PATH
+        /bin
+        asta@pollux:~$ mkdir myNewDir
+        mkdir: nie można utworzyć katalogu „myNewDir”: Plik istnieje
+9.
+    And now try to run a game [worm]. 
+        asta@pollux:~$ ./worm
+        -bash: ./worm: Nie ma takiego pliku ani katalogu
+
+10.
+    Go to the dir /usr/games, and now run it. Is it run ? (using ./worm)
+        asta@pollux:/usr/games$ ./worm
+
+        Well, you ran into something and the game is over.
+        Your final score was 119
+11.
+    Now copy the game [worm] to your home directory.
+        asta@pollux:~$ cp worm ~
+12.
+    Add your home directory to $PATH.
+        asta@pollux:~$ PATH=$PATH:/home/asta
+        asta@pollux:~$ echo $PATH
+        /bin:/home/asta
+13.
+    Can you run it now ? (using worm)
+        asta@pollux:~$ ./worm
+
+        Well, you ran into something and the game is over.
+        Your final score was 6
+14.
+    Add /usr/games directory to $PATH.
+        asta@pollux:~$ PATH=$PATH:/usr/games
+        asta@pollux:~$ echo $PATH
+        /bin:/home/asta:/usr/games
+15.
+    What is your current search path now ?
+        /bin:/home/asta:/usr/games
+16.
+    Logout and login again.
+        done
+17.
+    Display your $PATH, where each directory is printed in newline instead of after ":". (use tr )
+        asta@pollux:~$ echo $PATH | tr ":" '\n'
+        /usr/local/bin
+        /usr/bin
+        /bin
+        /usr/games
+        /usr/lib64/kde4/libexec
+        /usr/lib64/qt/bin
+        /usr/share/texmf/bin
+18.
+    Find where does "ifconfig" exist. And then add its directory to $PATH, in order to run "ifconfig" from the command line.
+        asta@pollux:~$ find / -name ifconfig 2> /dev/null
+        /sbin/ifconfig
+
+        asta@pollux:~$ PATH=$PATH:/sbin/ifconfig
+
+
+
+
+CONFIGURING YOUR ACCOUNT:
+
+1.
+    Look at the entry in the passwd file for your account. What is your uid?
+        asta@pollux:~$ cat passwd | grep asta
+        joe:x:500:500:Stankiewicz Adrian Arkadiusz - I INF sem 2:/home/asta:/bin/bash
+
+        500
+2.
+    Look at the entry in the passwd file for floopy. What is the shell?
+        asta@pollux:~$ cat passwd | grep root
+        root:x:0:0::/root:/bin/bash
+        
+        /bin/bash
+3.
+    What is your uid; what is your current gid; what groups are you a member of?
+        asta@pollux:~$ cat passwd | grep asta
+        joe:x:500:500:Stankiewicz Adrian Arkadiusz - I INF sem 2:/home/asta:/bin/bash
+4.
+    What is the name of the file that is checked for incoming mail? (MAIL) What is your terminal type?  (TERM) What is your path? (PATH)
+        asta@pollux:~$ set | grep mail
+        MAIL=/var/mail/asta
+
+        asta@pollux:~$ set | grep term
+        TERM=xterm
+
+        asta@pollux:~$ echo $PATH
+        /usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin
+5.
+    Use the chfn command to enter home and office phone numbers for your account. Look at your entry in the /etc/passwd file. Are the phone numbers stored there? Use the finger command to finger your own account. Are the phone numbers displayed?
+        asta@pollux:/etc$ cat passwd | grep asta
+        asta:x:646:646:Stankiewicz Adrian Arkadiusz - I INF sem 2,404,123976545,987654321:/home/asta:/bin/bash
+
+PRACTICE_EX8:
+
+0.
+    Using 'set' command, check which ports are open to establish the ssh connection between your device and Pollux server? and what's the ip of Pollux server? Which variable has these information?
+        SSH_CONNECTION='81.190.50.4 58890 153.19.112.239 22'
+        SSH_CLIENT='81.190.50.4 58890 22'
+1.
+    List of available shells (you can find it in /etc/shells). (use cat /etc/shells)
+        asta@pollux:/etc$ cat /etc/shells
+        /bin/bash
+        /bin/tcsh
+        /bin/csh
+        /bin/ash
+        /bin/ksh
+        /bin/zsh
+2.
+    Change your login shell to "/bin/ksh" (use: chsh -s /bin/ksh)
+        asta@pollux:/etc$ chsh -s /bin/ksh
+3.
+    Check your entry in the passwd file.
+        asta@pollux:/etc$ cat /etc/passwd | grep asta
+        asta:x:646:646:Stankiewicz Adrian Arkadiusz - I INF sem 2,404,123976545,987654321:/home/asta:/bin/ksh
+4.
+    Logout and login again. (Has something changed ?) (check your SHELL now: 'echo $SHELL' or ' set | grep SHELL')
+        asta@pollux:~$ echo $SHELL
+        /bin/ksh
+6. Back again to the bash shell "/bin/bash", then logout and login again.
+
+
+
+CONFIGURING THE BASH SHELL
+
+1.
+    Answer the following questions about the current setup:
+    a.
+        What is stored in the current .bash_profile?
+
+    b.
+        What is your prompt?
+            asta@pollux:/etc$ echo $PS1
+            \u@\h:\w\$
+
+            user@hostname:directory
+    c.
+        What is your path?
+            asta@pollux:/etc$ echo $PATH
+            /usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin
+    d.
+        What is your umask value?
+            asta@pollux:/etc$ umask
+            0022
+    e.
+        Are there any aliases set up?
+            asta@pollux:/etc$ alias
+            alias d='dir'
+            alias dir='/bin/ls $LS_OPTIONS --format=vertical'
+            alias ls='/bin/ls $LS_OPTIONS'
+            alias mc='. /usr/share/mc/bin/mc-wrapper.sh'
+            alias v='vdir'
+            alias vdir='/bin/ls $LS_OPTIONS --format=long'
+2.
+    Change the prompt as follows:
+    a.
+        Change the prompt to -->
+            asta@pollux:/etc$ PS1='-->'
+            -->
+    b.
+        Change the prompt to 2 lines:
+        Get going
+        Enter your next command>
+            -->PS1='Get going\nEnter your next <command>'
+            Get going
+            Enter your next <command>
+    c.
+        Change the prompt to: your working directory followed by a $
+            -->PS1='Get going\nEnter your next <command>'
+            Get going
+            Enter your next <command>^C
+            Get going
+            Enter your next <command>PS1='\w$'
+            /etc$cd ~
+            ~$
+    d.
+        When you change directories, does the prompt change to the new directory name? (it will if you've set it correctly)
+            Yes
+    e.
+        Logout and login again. Was the new prompt saved or has it gone back to $ ?
+            The prompt was restarted
+3.
+    Setup aliases as follows:
+    a.
+        Setup dir as an alias for ls -l . Type dir. Did you get a long directory listing? __
+            asta@pollux:~$ alias dir='ls -l'
+            asta@pollux:~$ dir
+            razem 70108
+            -rw-r--r--  1 asta asta        0 mar 28 21:13 [B
+            drwxr-xr-x  2 asta asta     4096 mar 28 20:29 backup-files/
+            -rw-r--r--  1 asta asta     9122 kwi  6 13:59 bashusers.txt
+            and so on... Yes, I did get a long listing
+    b.
+        Is "rename" a valid command in floppix?
+            Yes
+        Make rename an alias for mv. Now you should be able to use the command:
+        rename readme ignoreme
+        This should change the name of the readme file. Did it work?
+            asta@pollux:~$ alias rename='mv'
+            asta@pollux:~$ rename readme ignoreme
+    c.
+        Does the rm command ask for confirmation before a file is deleted? Test it out.
+            asta@pollux:~$ rm one
+            asta@pollux:~$
+            It doesn't ask
+        copy the passwd file to mypass: cp /etc/passwd mypass
+        remove the passwd file: rm mypass
+        did you receive a confirmation request before mypass was deleted?
+            asta@pollux:~$ cp /etc/passwd mypass
+            asta@pollux:~$ rm mypass
+            asta@pollux:~$
+            No question
+    d.
+        Create the following alias: rm='rm -i'
+            asta@pollux:~$ alias rm='rm -i'
+    e.
+        Test your alias:
+        copy the passwd file to mypass: cp /etc/passwd mypass
+        remove the passwd file: rm mypass
+        did you receive a confirmation request before mypass was deleted?
+            asta@pollux:~$ cp /etc/passwd mypass
+            asta@pollux:~$ rm mypass
+            rm: usunąć zwykły plik 'mypass'? yes
+            asta@pollux:~$
+            Now it asks
+4.
+    Test the noclobber option
+    a.
+        Turn on the noclobber option.
+            asta@pollux:~$ set -o noclobber
+    b.
+        Create the file flist using the command: ls -l > flist
+            asta@pollux:~$ ls -l > flist
+    c.
+        Repeat: ls -l > flist
+            asta@pollux:~$ ls -l > flist
+    d.
+        Did you get an error message?
+            -bash: flist: nie można nadpisać istniejącego pliku
+    e.
+        Turn off the noclobber option.
+            asta@pollux:~$ set +o noclobber
+    f.
+        Enter the command:  ls -l /etc > flist
+            asta@pollux:~$ ls -l /etc > flist
+    g.
+        This time the command should overwrite flist with a newer version. Did it?
+            Yes
+    h.
+        Point to remember:
+        -o turns noclobber ON
+        +o turns noclobber OFF
+5.
+    Create a .bash_profile that:
+a.
+    sets the background color of the screen to black.
+b.
+    sets the prompt to the name of the working directory followed by $ .
+c.
+    sets the search path to /usr/bin and /bin .
+d.
+    sets dir as an alias for ls -l .
+e.
+    configures rm to prompt for confirmation before deleting a file.
+f.
+    prevents bash from overwriting an existing file when redirecting output
+g.
+    Test your profile - logout and login again.
+
+    I didn't do what you asked for, BUUUT I did something much better. I can even show it later during classes :)

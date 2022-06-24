@@ -1,0 +1,59 @@
+1.
+    What is your current umask value? (enter the command: umask)
+        asta@pollux:~$ umask
+        0027
+2.
+    Use the mkdir command to make a new directory. What are the permissions for this directory?
+        asta@pollux:~$ mkdir newDirectory
+        drwxr-x---
+3.
+    Use the touch command to create a new file. What are the permissions for this file?
+        asta@pollux:~$ touch newFile
+        asta@pollux:~$ ls -l newFile
+        -rw-r----- 1 asta asta 0 kwi 14 13:03 newFile
+4.
+    Set the umask to 022.
+        asta@pollux:~$ umask 022
+        asta@pollux:~$ umask
+        0022
+5.
+    Use the mkdir command to make a new directory. What are the permissions for this directory?
+        asta@pollux:~$ mkdir newDirectory
+        drwxr-xr-x  2 asta asta     4096 kwi 14 13:05 newDirectory/
+6.
+    Use the touch command to create a new file. What are the permissions for this file?
+        asta@pollux:~$ touch newFile
+        asta@pollux:~$ ls -l newFile
+        -rw-r--r-- 1 asta asta 0 kwi 14 13:06 newFile
+7.
+    Change your umask so that the default permissions for any directory that you create are rwx------. What is the umask?
+        asta@pollux:~$ umask 077
+        asta@pollux:~$ mkdir newDirectory
+        drwx------  2 asta asta     4096 kwi 14 13:07 newDirectory/
+8.
+    Create a new directory. Verify that the umask worked.
+        I did it mechanically one excersise higher
+9.
+    With this umask, what are the permissions for a new file?
+        asta@pollux:~$ touch newFile
+        asta@pollux:~$ ls -l newFile
+        -rw------- 1 asta asta 0 kwi 14 13:09 newFile
+        
+
+Q&A
+1.
+    What command will change the permissions on the existing file readme to rw-rw-r--?
+        asta@pollux:~$ ls -l readme
+        -rw-rw-r-- 1 asta asta 0 kwi 14 11:29 readme
+2.
+    Assume that the "new" directory does not exist. The following commands are executed:
+     umask 027 ; mkdir new
+    What are the permissions for the new directory?
+        drwxr-x---  2 asta asta     4096 kwi 14 12:30 new/
+3.
+    Assume that "newfile" does not exist. The following commands are executed:
+     umask 027  ;  touch newfile
+    What are the permissions for the new file?
+        asta@pollux:~$ umask 027  ;  touch newfile
+        asta@pollux:~$ ls -l newfile
+        -rw-r----- 1 asta asta 0 kwi 14 12:35 newfile

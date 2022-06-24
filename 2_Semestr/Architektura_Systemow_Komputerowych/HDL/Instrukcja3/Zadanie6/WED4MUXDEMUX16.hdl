@@ -1,0 +1,8 @@
+CHIP WED4MUXDEMUX16{
+    IN x3[16],x2[16],x1[16],x0[16],sel[2];
+    OUT xx3[16],xx2[16],xx1[16],xx0[16];
+
+    PARTS:
+    WED4MUX16(x3=x3,x2=x2,x1=x1,x0=x0,sel=sel,out=w1);
+    WED4DEMUX16(a=w1,sel=sel,x3=xx3,x2=xx2,x1=xx1,x0=xx0);
+}

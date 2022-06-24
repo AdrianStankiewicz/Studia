@@ -1,0 +1,1050 @@
+PRACTICE_5
+
+1.  Create a directory find_ex/
+    asta@pollux:~$ mkdir find_ex
+2. Create files file1.txt, file2.txt, file2.pdf, File2.txt, File3.pdf
+    asta@pollux:~/find_ex$ touch file1.txt
+    asta@pollux:~/find_ex$ touch file2.txt
+    asta@pollux:~/find_ex$ touch file2.pdf
+    asta@pollux:~/find_ex$ touch File2.txt
+    asta@pollux:~/find_ex$ touch File3.pdf
+3. Find all the files whose name is file2.txt in a current working directory.
+    asta@pollux:~/find_ex$ find ~/find_ex/ -type f -name "file2.txt"
+    /home/asta/find_ex/file2.txt
+4. Find all the files under /home directory with name file2.txt.
+    asta@pollux:~/find_ex$ find /home/ type f -name "file2.txt" 2> /dev/null
+    /home/bpar/file2.txt
+    /home/bpar/backup-files/file2.txt
+    /home/mzwi/file2.txt
+    /home/mzwi/backup-files/file2.txt
+    /home/kfal/file2.txt
+    /home/kfal/backup-files/file2.txt
+    /home/ppio/find_ex/file2.txt
+    /home/azd/exercises/backup/file2.txt
+    /home/azd/exercises/find_ex/file2.txt
+    /home/asta/find_ex/file2.txt
+    /home/kjag/file2.txt
+    /home/tlor/file2.txt
+    /home/tlor/backup-files/file2.txt
+    /home/omil/file2.txt
+    /home/omil/backup-files/file2.txt
+    /home/kkam/file2.txt
+    /home/dsel/file2.txt
+    /home/kkel/file2.txt
+    /home/lsil/file2.txt
+    /home/lsil/backup-files/file2.txt
+    /home/serd/find_ex/file2.txt
+    /home/mcym/file2.txt
+    /home/mcym/backup-files/file2.txt
+    /home/akra/file2.txt
+    /home/mple/file2.txt
+    /home/mple/backup-files/file2.txt
+    /home/pzwo/file2.txt
+    /home/pzwo/backup-files/file2.txt
+5. Find all the files whose name start with file or File in /home directory. (use [-name "[fF]ile*"] OR [-iname "file*"] )
+    asta@pollux:~/find_ex$ find /home type f -name "[fF]ile*" 2> /dev/null
+    /home/msmu/files
+    /home/bpar/files
+    /home/bpar/file2.txt
+    /home/bpar/backup-files/file2.txt
+    /home/bpar/backup-files/File2.txt
+    /home/bpar/backup-files/file1.txt
+    /home/bpar/File2.txt
+    /home/bpar/file1.txt
+    /home/mzwi/files
+    /home/mzwi/files/files
+    /home/mzwi/file2.txt
+    /home/mzwi/backup-files/file2.txt
+    /home/mzwi/backup-files/File2.txt
+    /home/mzwi/backup-files/file1.txt
+    /home/mzwi/File2.txt
+    /home/mzwi/file1.txt
+    /home/mhol/files
+    /home/kcha/files
+    /home/kfal/file2.txt
+    /home/kfal/backup-files/file2.txt
+    /home/kfal/backup-files/File2.txt
+    /home/kfal/backup-files/file1.txt
+    /home/kfal/File2.txt
+    /home/kfal/file1.txt
+    /home/jmaj/files
+    /home/ppio/files
+    /home/ppio/find_ex/file2.txt
+    /home/ppio/find_ex/file2.pdf
+    /home/ppio/find_ex/File2.txt
+    /home/ppio/find_ex/file1.txt
+    /home/ppio/find_ex/File3.txt
+    /home/azd/test/file.txt
+    /home/azd/exercises/files
+    /home/azd/exercises/files/file
+    /home/azd/exercises/backup/file2.txt
+    /home/azd/exercises/backup/file1
+    /home/azd/exercises/backup/file 2
+    /home/azd/exercises/backup/fileA
+    /home/azd/exercises/backup/file2
+    /home/azd/exercises/backup/file(
+    /home/azd/exercises/backup/file1.txt
+    /home/azd/exercises/backup/filea
+    /home/azd/exercises/backup/fileAAA
+    /home/azd/exercises/backup/file10
+    /home/azd/exercises/backup/fileAB
+    /home/azd/exercises/backup/file
+    /home/azd/exercises/backup/file11
+    /home/azd/exercises/test/files
+    /home/azd/exercises/test/File2
+    /home/azd/exercises/test/file1
+    /home/azd/exercises/test/file 2
+    /home/azd/exercises/test/File3
+    /home/azd/exercises/test/File32
+    /home/azd/exercises/test/fileA
+    /home/azd/exercises/test/file2
+    /home/azd/exercises/test/file(
+    /home/azd/exercises/test/filea
+    /home/azd/exercises/test/fileAAA
+    /home/azd/exercises/test/file12
+    /home/azd/exercises/test/file10
+    /home/azd/exercises/test/fileAB
+    /home/azd/exercises/test/file11
+    /home/azd/exercises/find_ex/file2.txt
+    /home/azd/exercises/find_ex/File2.txt
+    /home/azd/exercises/find_ex/file1.txt
+    /home/asta/files
+    /home/asta/find_ex/file2.txt
+    /home/asta/find_ex/file2.pdf
+    /home/asta/find_ex/File3.pdf
+    /home/asta/find_ex/File2.txt
+    /home/asta/find_ex/file1.txt
+    /home/kjag/files
+    /home/kjag/file2.txt
+    /home/kjag/file2.pdf
+    /home/kjag/File3.pdf
+    /home/kjag/File2.txt
+    /home/kjag/file1.txt
+    /home/tlor/files
+    /home/tlor/file2.txt
+    /home/tlor/backup-files/file2.txt
+    /home/tlor/backup-files/File2.txt
+    /home/tlor/backup-files/file1.txt
+    /home/tlor/File2.txt
+    /home/tlor/file1.txt
+    /home/omil/files
+    /home/omil/file2.txt
+    /home/omil/backup-files/file2.txt
+    /home/omil/backup-files/File2.txt
+    /home/omil/backup-files/file1.txt
+    /home/omil/File2.txt
+    /home/omil/file1.txt
+    /home/kkam/file2.txt
+    /home/kkam/file2.pdf
+    /home/kkam/File3.pdf
+    /home/kkam/File2.txt
+    /home/kkam/file1.txt
+    /home/kkam/file.txt
+    /home/dsel/file2.txt
+    /home/dsel/File2.txt
+    /home/dsel/file1.txt
+    /home/kkel/files
+    /home/kkel/file2.txt
+    /home/kkel/File3.pdf
+    /home/kkel/File2.txt
+    /home/kkel/file1.txt
+    /home/lsil/files
+    /home/lsil/file2.txt
+    /home/lsil/backup-files/file2.txt
+    /home/lsil/backup-files/File2.txt
+    /home/lsil/backup-files/file1.txt
+    /home/lsil/File2.txt
+    /home/lsil/file1.txt
+    /home/serd/files
+    /home/serd/find_ex/file2.txt
+    /home/serd/find_ex/File2.txt
+    /home/serd/find_ex/file1.txt
+    /home/mcym/files
+    /home/mcym/file2.txt
+    /home/mcym/backup-files/file2.txt
+    /home/mcym/backup-files/File2.txt
+    /home/mcym/backup-files/file1.txt
+    /home/mcym/File2.txt
+    /home/mcym/file1.txt
+    /home/zpan/files
+    /home/akra/files
+    /home/akra/file2.txt
+    /home/akra/File2.txt
+    /home/akra/file1.txt
+    /home/mple/files
+    /home/mple/file2.txt
+    /home/mple/backup-files/file2.txt
+    /home/mple/backup-files/File2.txt
+    /home/mple/backup-files/file1.txt
+    /home/mple/File2.txt
+    /home/mple/file1.txt
+    /home/mmec/files
+    /home/mpis/files
+    /home/mpis/file
+    /home/pzwo/files
+    /home/pzwo/file2.txt
+    /home/pzwo/backup-files/file2.txt
+    /home/pzwo/backup-files/File2.txt
+    /home/pzwo/backup-files/file1.txt
+    /home/pzwo/File2.txt
+    /home/pzwo/file1.txt
+6. Find all directories whose name is your-login in / directory.
+    asta@pollux:~/find_ex$ find / -type d -name "asta" 2> /dev/null
+    /home/asta
+7. Find all pdf files in a /home directory.
+    asta@pollux:~/find_ex$ find /home -type f -name "*.pdf" 2> /dev/null
+    /home/msmu/files/sample.pdf
+    /home/msmu/files/troll_face.pdf
+    /home/mhol/files/sample.pdf
+    /home/mhol/files/troll_face.pdf
+    /home/kcha/files/sample.pdf
+    /home/kcha/files/troll_face.pdf
+    /home/jmaj/files/sample.pdf
+    /home/jmaj/files/troll_face.pdf
+    /home/ppio/files/sample.pdf
+    /home/ppio/files/troll_face.pdf
+    /home/ppio/find_ex/file2.pdf
+    /home/azd/exercises/files/sample.pdf
+    /home/azd/exercises/test/files/sample.pdf
+    /home/asta/files/sample.pdf
+    /home/asta/files/troll_face.pdf
+    /home/asta/find_ex/file2.pdf
+    /home/asta/find_ex/File3.pdf
+    /home/kjag/files/sample.pdf
+    /home/kjag/files/troll_face.pdf
+    /home/kjag/file2.pdf
+    /home/kjag/File3.pdf
+    /home/kkam/file2.pdf
+    /home/kkam/File3.pdf
+    /home/zpan/files/sample.pdf
+    /home/zpan/files/troll_face.pdf
+    /home/mmec/files/sample.pdf
+    /home/mmec/files/troll_face.pdf
+    /home/mpis/files/sample.pdf
+    /home/mpis/files/troll_face.pdf
+8. Find all the files whose permissions are 700. (-perm)
+    asta@pollux:~/find_ex$ find / -type f -perm "700"  2> /dev/null
+    /var/usermin/sessiondb.pag
+    /var/usermin/sessiondb.dir
+    /var/usermin/blocked
+    /usr/lib64/cups/backend/hp
+    /usr/lib64/cups/backend/hpfax
+    /usr/lib64/cups/backend/ipp
+    /usr/lib64/cups/backend/lpd
+    /usr/lib64/cups/backend/gutenprint52+usb
+    /sbin/dhclient-script
+9. Find all the files without permission 700. (! -perm) (couple examples)
+    asta@pollux:~/find_ex$ find / -type f ! -perm "700"  2> /dev/null
+    /sbin/osd_login
+    /sbin/mkfs.cramfs
+    /sbin/jfs_tune
+    /sbin/e2fsck
+    /sbin/fsck-e2fsprogs
+    /sbin/udevadm
+    /sbin/fuse2fs
+    /sbin/jfs_debugfs
+    /tmp/readme
+    /tmp/readme.abcde
+    /tmp/aa
+    /tmp/readme.abcd
+    /tmp/readme.ab
+10. Find all Empty Files in /tmp directory (-empty)
+    asta@pollux:~/find_ex$ find /tmp -type f -empty 2> /dev/null
+    /tmp/readme
+    /tmp/readme.abcde
+    /tmp/aa
+    /tmp/readme.abcd
+    /tmp/redme.new
+    /tmp/test-chat/chat-to-anas
+    /tmp/readme.new
+    /tmp/readme.abc
+11. Find all Empty Directories /tmp directory
+    asta@pollux:~/find_ex$ find /tmp -type d -empty 2> /dev/null
+    /tmp/TEMP
+    /tmp/.webmin
+12. Find all Hidden Files in /tmp directory
+    asta@pollux:~/find_ex$ find /tmp -type f -name ".*" 2> /dev/null
+13. Find all files under / root directory of owner root
+    asta@pollux:~/find_ex$ find / -user root 2> /dev/null
+    /sbin/mount.ntfs
+    /sbin/jfs_fsck
+    /sbin/poweroff
+    /sbin/genl
+    /sbin/osd_login
+    /sbin/mkfs.cramfs
+    /sbin/jfs_tune
+    /sbin/e2fsck
+    /sbin/fsck-e2fsprogs
+    /sbin/mkfs.ext4
+    /sbin/udevadm
+    /sbin/fuse2fs
+    /sbin/jfs_debugfs
+    /tmp
+    /tmp/mc-root
+    /tmp/.webmin
+    /root
+14. Find all .txt files of user your-login under /home directory.
+    asta@pollux:~/find_ex$ find /home -user asta -name "*.txt" 2> /dev/null
+    /home/asta/cnt.txt
+    /home/asta/count.txt
+    /home/asta/tailing.txt
+    /home/asta/touched/yesterday.txt
+    /home/asta/touched/today.txt
+    /home/asta/touched/my.file.txt
+    /home/asta/tailing2.txt
+    /home/asta/catcnt.txt
+    /home/asta/find_ex/file2.txt
+    /home/asta/find_ex/File2.txt
+    /home/asta/find_ex/file1.txt
+15. Find all 10MB files in a / root directory. (-size)
+    asta@pollux:~/find_ex$ find / -type f -size +10M 2> /dev/null
+    /sys/devices/pci0000:00/0000:00:1e.0/0000:18:02.0/resource0_wc
+    /sys/devices/pci0000:00/0000:00:1e.0/0000:18:02.0/resource0
+    /proc/kcore
+    /var/log/syslog
+    /var/log/messages
+    /var/tmp/elvis22.ses
+    /usr/lib64/seamonkey-2.40/omni.ja
+    /usr/lib64/seamonkey-2.40/components/libsuite.so
+    /usr/lib64/seamonkey-2.40/libxul.so
+    /usr/lib64/thunderbird-45.1.1/omni.ja
+    /usr/lib64/thunderbird-45.1.1/libxul.so
+    /usr/lib64/firefox-45.2.0/browser/omni.ja
+    /usr/lib64/firefox-45.2.0/libxul.so
+    /usr/lib64/libmysqld.so.18
+    /usr/lib64/libvirtuoso-t.a
+    /usr/lib64/libclang.so.3.8
+    /usr/lib64/libgcj.so.16.0.0
+    /usr/lib64/libgs.so.9.19
+    /usr/lib64/libgo.so.7.0.0
+    /usr/lib64/libclangSema.a
+    /usr/lib64/libLLVM-3.8.so
+    /usr/lib64/xine/plugins/2.5/xineplug_vo_out_dxr3.so
+    /usr/lib64/xine/plugins/2.5/xineplug_decode_ff.so
+    /usr/lib64/qt/lib/libQtWebKit.so.4.10.4
+    /usr/lib64/qt/lib/libQtGui.so.4.8.7
+    /usr/lib64/qt/plugins/script/libqtscript_gui.so.1.0.0
+    /usr/lib64/libgo.a
+    /usr/lib64/libicudata.so.56.1
+    /usr/bin/mysql_embedded
+    /usr/bin/clang-tidy
+    /usr/bin/clang-check
+    /usr/bin/emacs-24.5-with-x11
+    /usr/bin/ctest
+    /usr/bin/gs
+    /usr/bin/emacs-24.5-no-x11
+    /usr/bin/mplayer
+    /usr/bin/mysql_client_test_embedded
+    /usr/bin/mencoder
+    /usr/bin/virtuoso-t
+    /usr/bin/clang-3.8
+    /usr/bin/modularize
+    /usr/bin/mysqltest_embedded
+    /usr/bin/clang-rename
+    /usr/bin/clang-query
+    /usr/bin/doxygen
+    /usr/share/anthy/anthy.dic
+    /usr/share/apps/carddecks/svg-dondorf/dondorf.svgz
+    /usr/share/apps/kiten/edict
+    /usr/share/fonts/TTF/sazanami-mincho.ttf
+    /usr/share/fonts/TTF/wqy-zenhei.ttc
+    /usr/share/fonts/kanjistrokeorders/KanjiStrokeOrders.ttf
+    /usr/libexec/mysqld
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/cc1plus
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/go1
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/gnat1
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/cc1
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/f951
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/jc1
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/cc1obj
+    /usr/libexec/gcc/x86_64-slackware-linux/5.3.0/lto1
+16. Find all the files which are greater than 5MB and less than 10MB. (-size +5M -size -10M)
+    asta@pollux:~/find_ex$ find / -type f -size +5M -10M 2> /dev/null
+17. Find all .pdf files in your own directory and delete them using one single command.
+    asta@pollux:~/find_ex$ find ~/ -type f -name "*.pdf" -exec rm -f {} \; 2> /dev/null
+18. Create a new directory "~/backup-files/". Find all *.txt files in your own directory and copy them to ~/backup-files .
+    asta@pollux:~$ find ~/ -type f -name "*.txt" -exec cp {} ./backup-files \; 2> /dev/null
+    asta@pollux:~$ ls ~/backup-files
+    beka_ze_mnie_bo_usunalem_wszystkie_txt.txt  one.txt  two.txt
+19. Use [whereis] command to locate binary programs: ls, who, cal, mail, man, whereis. 
+    asta@pollux:~$ whereis ls
+    ls: /usr/bin/ls /bin/ls /usr/man/man1/ls.1.gz
+    asta@pollux:~$ whereis who
+    who: /usr/bin/who /bin/who /usr/man/man1/who.1.gz
+    asta@pollux:~$ whereis cal
+    cal: /usr/bin/cal /usr/man/man1/cal.1.gz
+    asta@pollux:~$ whereis mail
+    mail: /usr/bin/mail /usr/sbin/mail.local /bin/mail /etc/mail /usr/man/man1/mail.1.gz
+    asta@pollux:~$ whereis man
+    man: /usr/bin/man /etc/man.conf /usr/local/man /usr/share/man /usr/man/man1/man.1.gz /usr/man/man7/man.7.gz
+    asta@pollux:~$ whereis whereis
+    whereis: /usr/bin/whereis /usr/man/man1/whereis.1.gz
+
+
+PRACTICE_EX_GREP:
+
+
+1) Use the grep command to display the lines from the file /etc/passwd for users in your class. (hint: 'I INF sem 2')
+    asta@pollux:~$ grep 'I INF sem 2' /etc/passwd
+    dsel:x:642:642:Selonka Dawid Franciszek - I INF sem 2:/home/dsel:/bin/bash
+    lsil:x:643:643:Siluta Lidia Danuta - I INF sem 2:/home/lsil:/bin/bash
+    msmu:x:644:644:Smusz Mikołaj Kamil - I INF sem 2:/home/msmu:/bin/bash
+    wsta:x:645:645:Stachyra Wojciech Tomasz - I INF sem 2:/home/wsta:/bin/bash
+    asta:x:646:646:Stankiewicz Adrian Arkadiusz - I INF sem 2:/home/asta:/bin/bash
+    rszy:x:647:647:Szymaniak Rafał Robert - I INF sem 2:/home/rszy:/bin/bash
+    rtra:x:648:648:Tracz Rafał Krzysztof - I INF sem 2:/home/rtra:/bin/bash
+    kwlo:x:649:649:Włodarska Kamila Karolina - I INF sem 2:/home/kwlo:/bin/bash
+    pzwo:x:650:650:Zwoliński Paweł   - I INF sem 2:/home/pzwo:/bin/bash
+    mzwi:x:651:651:Żwirełło Marcin Dawid - I INF sem 2:/home/mzwi:/bin/bash
+    kblo:x:652:652:Blok Kacper - I INF sem 2:/home/kblo:/bin/bash
+2) Use the grep command to display the lines from the file /etc/profile that are NOT comment lines (the comment lines are the lines that start with #).
+    asta@pollux:~$ grep -v '^#' /etc/profile
+
+    export MINICOM="-c on"
+    export MANPATH=/usr/local/man:/usr/man
+    export HOSTNAME="`cat /etc/HOSTNAME`"
+    export LESSOPEN="|lesspipe.sh %s"
+    export LESS="-M"
+
+    if [ ! -r "$HOME/.inputrc" ]; then
+      export INPUTRC=/etc/inputrc
+    fi
+
+    PATH="/usr/local/bin:/usr/bin:/bin:/usr/games"
+
+    if [ "`id -u`" = "0" ]; then
+      echo $PATH | grep /usr/local/sbin 1> /dev/null 2> /dev/null
+      if [ ! $? = 0 ]; then
+        PATH=/usr/local/sbin:/usr/sbin:/sbin:$PATH
+      fi
+    fi
+
+
+    if [ "$TERM" = "" -o "$TERM" = "unknown" ]; then
+     TERM=linux
+    fi
+
+    if [ "$SHELL" = "/bin/ksh" ]; then
+      VISUAL=emacs
+    fi
+3) Use the grep command to display all lines from any file in /etc/rc.d/ that start with echo.
+    asta@pollux:~$ grep ^echo /etc/rc.d/* 2</dev/null
+    /etc/rc.d/rc.0:echo "Running shutdown script $0:"
+    /etc/rc.d/rc.0:echo "Unmounting remote filesystems:"
+    /etc/rc.d/rc.0:echo "Saving random seed from /dev/urandom in /etc/random-seed."
+    /etc/rc.d/rc.0:echo "Turning off swap."
+    /etc/rc.d/rc.0:echo "Unmounting local file systems:"
+    /etc/rc.d/rc.0:echo "Remounting root filesystem read-only:"
+    /etc/rc.d/rc.4:echo "Starting up X11 session manager..."
+    /etc/rc.d/rc.4:echo
+    /etc/rc.d/rc.4:echo "Hey, you don't have KDM, GDM, or XDM.  Can't use runlevel 4 without"
+    /etc/rc.d/rc.4:echo "one of those installed."
+    /etc/rc.d/rc.6:echo "Running shutdown script $0:"
+    /etc/rc.d/rc.6:echo "Unmounting remote filesystems:"
+    /etc/rc.d/rc.6:echo "Saving random seed from /dev/urandom in /etc/random-seed."
+    /etc/rc.d/rc.6:echo "Turning off swap."
+    /etc/rc.d/rc.6:echo "Unmounting local file systems:"
+    /etc/rc.d/rc.6:echo "Remounting root filesystem read-only:"
+    /etc/rc.d/rc.K:echo "Unmounting remote filesystems:"
+    /etc/rc.d/rc.K:echo
+    /etc/rc.d/rc.K:echo "Sending all processes the SIGHUP signal."
+    /etc/rc.d/rc.K:echo -n "Waiting for processes to hang up"
+    /etc/rc.d/rc.K:echo
+    /etc/rc.d/rc.K:echo "Sending all processes the SIGTERM signal."
+    /etc/rc.d/rc.K:echo -n "Waiting for processes to terminate"
+    /etc/rc.d/rc.K:echo
+    /etc/rc.d/rc.K:echo "Sending all processes the SIGKILL signal."
+    /etc/rc.d/rc.K:echo -n "Waiting for processes to exit"
+    /etc/rc.d/rc.K:echo
+    /etc/rc.d/rc.K:echo "Going to single user mode..."
+    /etc/rc.d/rc.M:echo "Going multiuser..."
+    /etc/rc.d/rc.S:echo "Mounting non-root local filesystems:"
+    /etc/rc.d/rc.cpufreq:echo $SCALING_GOVERNOR | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor 1> /dev/null 2> /dev/null
+4) Which files in /etc/rc.d/ contain the string "dmesg"? ____________________ (use option: -l )
+    asta@pollux:~$ grep -l "dmesg" /etc/rc.d/* 2> /dev/null
+    /etc/rc.d/rc.M
+5) Which files in /etc/rc.d/ don't contain the string "dmesg"? ____________________ (use option: -L )
+    asta@pollux:~$ grep -L "dmesg" /etc/rc.d/* 2> /dev/null
+    /etc/rc.d/init.d
+    /etc/rc.d/rc.0
+    /etc/rc.d/rc.4
+    /etc/rc.d/rc.6
+    /etc/rc.d/rc.K
+    /etc/rc.d/rc.S
+    /etc/rc.d/rc.acpid
+    /etc/rc.d/rc.alsa
+    /etc/rc.d/rc.alsa-oss
+    /etc/rc.d/rc.atalk
+    /etc/rc.d/rc.autofs
+    /etc/rc.d/rc.bind
+    /etc/rc.d/rc.bluetooth
+    /etc/rc.d/rc.cgconfig
+    /etc/rc.d/rc.cgmanager
+    /etc/rc.d/rc.cgproxy
+    /etc/rc.d/rc.cgred
+    /etc/rc.d/rc.consolekit
+    /etc/rc.d/rc.cpufreq
+    /etc/rc.d/rc.cups
+    /etc/rc.d/rc.cups-browsed
+    /etc/rc.d/rc.dnsmasq
+    /etc/rc.d/rc.font
+    /etc/rc.d/rc.fuse
+    /etc/rc.d/rc.gpm
+    /etc/rc.d/rc.httpd
+    /etc/rc.d/rc.inet1
+    /etc/rc.d/rc.inet2
+    /etc/rc.d/rc.inetd
+    /etc/rc.d/rc.ip_forward
+    /etc/rc.d/rc.local
+    /etc/rc.d/rc.loop
+    /etc/rc.d/rc.lxc
+    /etc/rc.d/rc.mcelog
+    /etc/rc.d/rc.messagebus
+    /etc/rc.d/rc.modules
+    /etc/rc.d/rc.modules.local
+    /etc/rc.d/rc.mysqld
+    /etc/rc.d/rc.networkmanager
+    /etc/rc.d/rc.nfsd
+    /etc/rc.d/rc.ntpd
+    /etc/rc.d/rc.pcmcia
+    /etc/rc.d/rc.php-fpm
+    /etc/rc.d/rc.pulseaudio
+    /etc/rc.d/rc.rpc
+    /etc/rc.d/rc.samba
+    /etc/rc.d/rc.saslauthd
+    /etc/rc.d/rc.sendmail
+    /etc/rc.d/rc.serial
+    /etc/rc.d/rc.snmpd
+    /etc/rc.d/rc.sshd
+    /etc/rc.d/rc.syslog
+    /etc/rc.d/rc.sysstat
+    /etc/rc.d/rc.sysvinit
+    /etc/rc.d/rc.udev
+    /etc/rc.d/rc.ulogd
+    /etc/rc.d/rc.wireless
+    /etc/rc.d/rc.yp
+    /etc/rc.d/rc0.d
+    /etc/rc.d/rc1.d
+    /etc/rc.d/rc2.d
+    /etc/rc.d/rc3.d
+    /etc/rc.d/rc4.d
+    /etc/rc.d/rc5.d
+    /etc/rc.d/rc6.d
+6) Which files in /etc/rc.d contain the word 'tr' ? _________________________
+    asta@pollux:~$ grep -l "tr" /etc/rc.d/* 2> /dev/null
+    /etc/rc.d/rc.0
+    /etc/rc.d/rc.4
+    /etc/rc.d/rc.6
+    /etc/rc.d/rc.K
+    /etc/rc.d/rc.M
+    /etc/rc.d/rc.S
+    /etc/rc.d/rc.alsa
+    /etc/rc.d/rc.alsa-oss
+    /etc/rc.d/rc.atalk
+    /etc/rc.d/rc.autofs
+    /etc/rc.d/rc.bind
+    /etc/rc.d/rc.cgconfig
+    /etc/rc.d/rc.cgmanager
+    /etc/rc.d/rc.cgred
+    /etc/rc.d/rc.cpufreq
+    /etc/rc.d/rc.cups
+    /etc/rc.d/rc.cups-browsed
+    /etc/rc.d/rc.fuse
+    /etc/rc.d/rc.gpm
+    /etc/rc.d/rc.httpd
+    /etc/rc.d/rc.inet1
+    /etc/rc.d/rc.inet2
+    /etc/rc.d/rc.ip_forward
+    /etc/rc.d/rc.mcelog
+    /etc/rc.d/rc.messagebus
+    /etc/rc.d/rc.modules.local
+    /etc/rc.d/rc.mysqld
+    /etc/rc.d/rc.nfsd
+    /etc/rc.d/rc.pcmcia
+    /etc/rc.d/rc.php-fpm
+    /etc/rc.d/rc.serial
+    /etc/rc.d/rc.syslog
+    /etc/rc.d/rc.sysstat
+    /etc/rc.d/rc.sysvinit
+    /etc/rc.d/rc.udev
+    /etc/rc.d/rc.wireless
+    /etc/rc.d/rc.yp
+Note: use the man command to lookup to option for grep that searches for the word "tr" instead of the string "tr".
+7) Print number of each line which contain a word "if" in /etc/profile . (use: -n )
+    asta@pollux:~$ grep -n -w if /etc/profile 2> /dev/null
+    /etc/profile:12:if [ ! -r "$HOME/.inputrc" ]; then
+    /etc/profile:22:if [ "`id -u`" = "0" ]; then
+    /etc/profile:24:  if [ ! $? = 0 ]; then
+    /etc/profile:35:if [ "$TERM" = "" -o "$TERM" = "unknown" ]; then
+    /etc/profile:40:if [ "$SHELL" = "/bin/ksh" ]; then
+    /etc/profile:48:if [ "$SHELL" = "/bin/pdksh" ]; then
+    /etc/profile:68:if [ -x /usr/bin/biff ]; then
+    /etc/profile:74:  if [ -x $profile_script ]; then
+8) Count number of lines which contain a word "if" in /etc/profile. (use: -c)
+    asta@pollux:~$ grep -c -w if /etc/profile 2> /dev/null
+    8
+9) Use the grep command to display the line with your name (all letters are lower case) from the file /etc/passwd by using ignoring-case option. (use: -i)
+    asta@pollux:~$ grep -n -i "adrian" /etc/passwd
+    80:asta:x:646:646:Stankiewicz Adrian Arkadiusz - I INF sem 2:/home/asta:/bin/bash
+    123:aszw:x:829:829:Szweda Adrian Benedykt - II SiST sem 4:/home/aszw:/bin/bash
+10) Display the lines from the file /etc/group which contain your login. What's your group id ?
+    asta@pollux:~$ grep -n -i "asta" /etc/group
+    49:students:x:200:fbej,abie,kcha,gcic,mcym,mdob,mdud,serd,kfal,jfis,pfra,wgor,kgrz,mhol,bjac,kjag,kkam,kkas,kkel,rkow,wkoz,akra,jkra,bkun,jkwi,klec,elep,tlor,jmaj,kmar,mmec,omil,zpan,bpar,ppio,mpis,mple,jrad,frad,hros,bsaw,dsel,lsil,msmu,wsta,asta,rszy,rtra,kwlo,pzwo,mzwi,kbaj,mbar,kigi,mkow,pras,mros,ktec,twas,aand,bbac,kbog,mdam,odie,mdon,mfil,aglo,pgub,bgue,vhor,mkal,kkos,mkro,jmal,soku,morz,kpep,dpes,jpio,mpol,kprz,mpyr,proz,msag,wser,lszc,mszr,aszw,ttre,ktut,kwac,gwar,dwin,kzak,pzar,mbik,mbro,melm,mfri,kgro,mmro,dpta,kblo,spiw,pnie,sryc,pkos,kcza,agrz,dhet,wkin,jkoz,olew,mmez,smil,kmur,mosi,mpla,dpod,jpuf,mzap
+    56:informatyka:x:600:fbej,abie,kcha,gcic,mcym,mdob,mdud,serd,kfal,jfis,pfra,wgor,kgrz,mhol,bjac,kjag,kkam,kkas,kkel,rkow,wkoz,akra,jkra,bkun,jkwi,klec,elep,tlor,jmaj,kmar,mmec,omil,zpan,bpar,ppio,mpis,mple,jrad,frad,hros,bsaw,dsel,lsil,msmu,wsta,asta,rszy,rtra,kwlo,pzwo,mzwi,kblo
+    102:asta:x:646:
+
+    students - informatyka - asta
+
+
+REDIRECTION:
+
+
+1.
+    Get a directory listing of /home and save the listing in a file called "one" in your own home directory. Use the cat command to make sure that "one" does contain the correct data.
+        asta@pollux:~$ ls -l /home > ~/one
+        asta@pollux:~$ cat ~/one
+        razem 504
+        drwxrwxr-x+  5 aand aand 4096 mar 25 11:46 aand/
+        drwxrwx---+  9 abie abie 4096 mar 24 14:36 abie/
+        drwxrwxr-x+  4 aglo aglo 4096 mar  9 16:42 aglo/
+        drwxrwxr-x+  2 agrz agrz 4096 mar 22 10:28 agrz/
+        drwxrwxr-x+ 10 akra akra 4096 mar 28 16:49 akra/
+        drwxrwxr-x+  3 aryb aryb 4096 lut 19 15:23 aryb/
+        drwxrwxr-x+  8 asta asta 4096 mar 28 19:47 asta/
+        drwxrwxr-x+  7 aszw aszw 4096 mar 25 12:30 aszw/
+        drwxrwxr-x+ 11 azd  azd  4096 mar 24 15:24 azd/
+        drwxrwxr-x+  5 bbac bbac 4096 mar 16 17:29 bbac/
+        drwxrwxr-x+  2 bgue bgue 4096 mar  4 16:46 bgue/
+        drwxrwxr-x+  2 bjac bjac 4096 lut 27 13:48 bjac/
+        drwxrwx---+  8 bkun bkun 4096 mar 24 14:39 bkun/
+        drwxrwxr-x+ 11 bpar bpar 4096 mar 24 18:17 bpar/
+        drwxrwxr-x+  6 bsaw bsaw 4096 mar 21 16:10 bsaw/
+        drwxrwxr-x+  2 dhet dhet 4096 mar 22 10:28 dhet/
+        drwxrwxr-x+  4 dpes dpes 4096 mar 25 15:40 dpes/
+        drwxrwxr-x+  2 dpod dpod 4096 mar 22 10:28 dpod/
+        drwxrwxr-x+  3 dpta dpta 4096 mar 21 15:09 dpta/
+        drwxrwxr-x+  5 dsel dsel 4096 mar 28 17:10 dsel/
+        drwxrwxr-x+  5 dwin dwin 4096 mar 25 12:47 dwin/
+        drwxrwx---+  7 elep elep 4096 mar 24 13:03 elep/
+        drwxrwx---+  3 fbej fbej 4096 mar 24 14:45 fbej/
+        drwxrwxr-x+  3 frad frad 4096 mar 10 11:48 frad/
+        drwxrwxr-x+  6 gcic gcic 4096 mar 24 12:42 gcic/
+        drwxrwxr-x+  5 gwar gwar 4096 mar 25 11:34 gwar/
+        drwxrwxr-x+  2 hros hros 4096 mar 24 13:57 hros/
+        drwxrwxr-x+  5 jfis jfis 4096 mar 24 12:43 jfis/
+        drwxrwxr-x+  2 jkoz jkoz 4096 mar 22 10:28 jkoz/
+        drwxrwx---+  5 jkra jkra 4096 mar 24 14:47 jkra/
+        drwxrwxr-x+  3 jkwi jkwi 4096 mar 17 12:45 jkwi/
+        drwxrwxr-x+ 11 jmaj jmaj 4096 mar 21 19:23 jmaj/
+        drwxrwxr-x+  3 jmal jmal 4096 mar 25 15:52 jmal/
+        drwxrwxr-x+  3 jpio jpio 4096 mar 25 15:38 jpio/
+        drwxrwxr-x+  2 jpuf jpuf 4096 mar 22 10:28 jpuf/
+        drwxrwx---+  7 jrad jrad 4096 mar 24 14:36 jrad/
+        drwxrwxr-x+  7 kbaj kbaj 4096 mar 25 10:50 kbaj/
+        drwxrwxr-x+  2 kblo kblo 4096 mar 10 22:41 kblo/
+        drwxrwxr-x+  4 kbog kbog 4096 mar 16 17:03 kbog/
+        drwxrwxr-x+ 10 kcha kcha 4096 mar 21 18:31 kcha/
+        drwxrwxr-x+  2 kcza kcza 4096 mar 23 20:33 kcza/
+        drwxrwxr-x+  5 kfal kfal 4096 mar 27 12:36 kfal/
+        drwxrwxr-x+  3 kgro kgro 4096 mar 21 15:02 kgro/
+        drwxrwxr-x+  4 kgrz kgrz 4096 mar 24 12:40 kgrz/
+        drwxrwxr-x+  9 khj  khj  4096 mar 23 17:39 khj/
+        drwxrwxr-x+  7 kigi kigi 4096 mar 25 10:14 kigi/
+        drwxrwxr-x+ 12 kjag kjag 4096 mar 20 19:53 kjag/
+        drwxrwxr-x+  7 kkam kkam 4096 mar 28 18:57 kkam/
+        drwxrwxr-x+  3 kkas kkas 4096 mar 24 11:47 kkas/
+        drwxrwxr-x+  9 kkel kkel 4096 mar 28 19:42 kkel/
+        drwxrwxr-x+  8 kkos kkos 4096 mar 23 17:59 kkos/
+        drwxrwx---+  8 klec klec 4096 mar 25 20:34 klec/
+        drwxrwx---+  6 kmar kmar 4096 mar 24 14:36 kmar/
+        drwxrwxr-x+  2 kmur kmur 4096 mar 22 10:28 kmur/
+        drwxrwxr-x+  3 kpep kpep 4096 mar 25 15:40 kpep/
+        drwxrwxr-x+  4 kprz kprz 4096 mar 25 15:40 kprz/
+        drwxrwxr-x+  2 ktec ktec 4096 mar  4 14:10 ktec/
+        drwxrwxr-x+  3 ktut ktut 4096 mar 25 12:45 ktut/
+        drwxrwxr-x+  5 kwac kwac 4096 mar 25 12:45 kwac/
+        drwxrwx---+  8 kwlo kwlo 4096 mar 24 14:45 kwlo/
+        drwxrwxr-x+ 14 kzak kzak 4096 mar 23 20:32 kzak/
+        drwxrwxr-x+ 12 lsil lsil 4096 mar 27 12:21 lsil/
+        drwxrwxr-x+  3 lszc lszc 4096 mar 25 12:45 lszc/
+        drwxrwxr-x+  5 mbar mbar 4096 mar 18 10:35 mbar/
+        drwxrwxr-x+  2 mbik mbik 4096 lut 27 13:49 mbik/
+        drwxrwxr-x+  4 mbro mbro 4096 mar 23 22:06 mbro/
+        drwxrwxr-x+ 13 mcym mcym 4096 mar 27 22:23 mcym/
+        drwxrwxr-x+  5 mdam mdam 4096 mar 23 18:31 mdam/
+        drwxrwx---+  8 mdob mdob 4096 mar 24 14:37 mdob/
+        drwxrwxr-x+  4 mdon mdon 4096 mar  9 16:19 mdon/
+        drwxrwxr-x+  4 mdud mdud 4096 mar 24 12:42 mdud/
+        drwxrwxr-x+  2 melm melm 4096 lut 27 13:49 melm/
+        drwxrwxr-x+  2 mfil mfil 4096 mar 16 16:15 mfil/
+        drwxrwxr-x+  3 mfri mfri 4096 mar 21 15:06 mfri/
+        drwxrwxr-x+ 10 mhol mhol 4096 mar 28 14:02 mhol/
+        drwxrwxr-x+  3 mkal mkal 4096 mar 25 15:48 mkal/
+        drwxrwxr-x+  6 mkow mkow 4096 mar 25 10:47 mkow/
+        drwxrwxr-x+  3 mkro mkro 4096 mar 25 15:39 mkro/
+        drwxrwxr-x+  9 mmec mmec 4096 mar 28 16:40 mmec/
+        drwxrwxr-x+  2 mmez mmez 4096 mar 22 10:28 mmez/
+        drwxrwxr-x+  3 mmro mmro 4096 mar 21 15:02 mmro/
+        drwxrwxr-x+  3 morz morz 4096 mar 25 15:39 morz/
+        drwxrwxr-x+  2 mosi mosi 4096 mar 22 10:28 mosi/
+        drwxrwxr-x+  9 mpis mpis 4096 mar 21 19:40 mpis/
+        drwxrwxr-x+  2 mpla mpla 4096 mar 22 10:28 mpla/
+        drwxrwxr-x+ 12 mple mple 4096 mar 28 17:51 mple/
+        drwxrwxr-x+  3 mpol mpol 4096 mar 25 15:43 mpol/
+        drwxrwxr-x+  3 mpyr mpyr 4096 mar 25 12:45 mpyr/
+        drwxrwxr-x+  6 mros mros 4096 mar 25 10:51 mros/
+        drwxrwxr-x+  6 msag msag 4096 mar 18 12:43 msag/
+        drwxrwxr-x+  4 msmu msmu 4096 mar 22 16:47 msmu/
+        drwxrwxr-x+  4 mszr mszr 4096 mar 25 14:54 mszr/
+        drwxrwx---+ 19 mwar mwar 4096 mar 24 14:25 mwar/
+        drwxrwxr-x+  2 mzap mzap 4096 mar 22 10:28 mzap/
+        drwxrwxr-x+ 15 mzwi mzwi 4096 mar 26 17:18 mzwi/
+        drwxrwxr-x+  5 odie odie 4096 mar  9 16:21 odie/
+        drwxrwxr-x+  2 olew olew 4096 mar 22 10:28 olew/
+        drwxrwxr-x+ 15 omil omil 4096 mar 27 12:21 omil/
+        drwxrwxr-x+  3 pfra pfra 4096 mar 14 20:12 pfra/
+        drwxrwxr-x+  2 pgub pgub 4096 mar 16 17:16 pgub/
+        drwxrwxr-x+  4 pik  pik  4096 sty 21 00:13 pik/
+        drwxrwxr-x+  2 pkos pkos 4096 mar 22 10:16 pkos/
+        drwxrwxr-x+  5 pnie pnie 4096 mar 18 22:02 pnie/
+        drwxrwxr-x+ 11 ppio ppio 4096 mar 28 19:39 ppio/
+        drwxrwxr-x+  5 pras pras 4096 mar 25 10:35 pras/
+        drwxrwxr-x+  5 proz proz 4096 mar 16 16:29 proz/
+        drwxrwxr-x+  5 pzar pzar 4096 mar 25 12:10 pzar/
+        drwxrwxr-x+ 11 pzwo pzwo 4096 mar 27 16:18 pzwo/
+        drwxrwxr-x+  2 rkow rkow 4096 lut 27 13:48 rkow/
+        drwxrwxr-x+  5 rszy rszy 4096 mar 24 12:32 rszy/
+        drwxrwxr-x+  4 rtra rtra 4096 mar 14 18:55 rtra/
+        drwxrwxr-x+  7 serd serd 4096 mar 24 15:08 serd/
+        drwxrwxr-x+  2 smil smil 4096 mar 22 10:28 smil/
+        drwxrwxr-x+  3 soku soku 4096 mar 25 15:40 soku/
+        drwxrwxr-x+  4 spiw spiw 4096 mar 25 11:45 spiw/
+        drwxrwxr-x+  4 sryc sryc 4096 mar 23 18:07 sryc/
+        drwxrwxr-x+ 14 tlor tlor 4096 mar 26 21:30 tlor/
+        drwxrwxr-x+  3 ttre ttre 4096 mar 24 17:46 ttre/
+        drwxrwxr-x+  5 twas twas 4096 mar 25 10:51 twas/
+        drwxrwxr-x+  4 vhor vhor 4096 mar 25 15:43 vhor/
+        drwxrwxr-x+  6 wgor wgor 4096 mar 24 12:49 wgor/
+        drwxrwxr-x+  2 wkin wkin 4096 mar 22 10:28 wkin/
+        drwxrwxr-x+  8 wkoz wkoz 4096 mar 24 12:42 wkoz/
+        drwxrwxr-x+  2 wser wser 4096 mar  4 16:46 wser/
+        drwxrwxr-x+  5 wsta wsta 4096 mar 24 12:46 wsta/
+        drwxrwxr-x+ 10 zpan zpan 4096 mar 21 19:49 zpan/
+
+2.
+    Get a list of everyone currently logged on and save the list in a file called "users "in your own home directory.
+        asta@pollux:~$ who >> ~/users
+        asta@pollux:~$ cat users
+        kblo     pts/1        2021-03-28 19:16 (89.64.112.53)
+        kjag     pts/2        2021-03-28 19:47 (89.68.28.125)
+        kkel     pts/3        2021-03-28 16:51 (89.64.103.134)
+        asta     pts/5        2021-03-28 17:25 (81.190.50.4)
+
+3.
+    Get a list of all of the processes that are running and add this list to the end of the "users" file.
+        asta@pollux:~$ ps >> ~/users
+        asta@pollux:~$ cat users
+        kblo     pts/1        2021-03-28 19:16 (89.64.112.53)
+        kjag     pts/2        2021-03-28 19:47 (89.68.28.125)
+        kkel     pts/3        2021-03-28 16:51 (89.64.103.134)
+        asta     pts/5        2021-03-28 17:25 (81.190.50.4)
+          PID TTY          TIME CMD
+        15042 pts/5    00:00:00 bash
+        18732 pts/5    00:00:00 ps
+
+
+FIND:
+
+2.
+    Find all files with the filename alterego.
+        
+
+3.
+    Find all files that belong to floopy. (jfis)
+        asta@pollux:/$ find / -user jfis 2> /dev/null
+        /var/tmp/elvis7.ses
+        /home/jfis
+        /home/jfis/.lesshst
+        /home/jfis/.links
+        /home/jfis/instrukcja_8
+        /home/jfis/instrukcja_8/cv
+        /home/jfis/instrukcja_8/odpowiedzi
+        /home/jfis/passwd
+        /home/jfis/.bash_history
+        /home/jfis/laborki1
+        /home/jfis/laborki1/dir2
+        /home/jfis/laborki1/dir2/dir2a
+        /home/jfis/laborki1/dir2/dir2a/four
+        /home/jfis/laborki1/dir2/dir2a/five
+        /home/jfis/laborki1/dir2/two
+        /home/jfis/laborki1/dir2/three
+        /home/jfis/laborki1/dir1
+        /home/jfis/laborki1/dir1/dir3
+        /home/jfis/laborki1/dir1/one
+        /home/jfis/laborki1/readme.new
+
+4.
+    Find all empty files in the /etc directory.
+        /etc/uucp/oldconfig
+        /etc/kde/kdm/sessions
+        /etc/smartd_warning.d
+        /etc/usermin/authentic-theme
+        /etc/sane.d/dll.d
+        /etc/cron.d
+        /etc/dnsmasq.d
+        /etc/pm/sleep.d
+        /etc/pm/power.d
+        /etc/pm/config.d
+        /etc/gnupg
+        /etc/php.d
+        /etc/sensors.d
+        /etc/auto.master.d
+        /etc/NetworkManager/dispatcher.d/no-wait.d
+        /etc/NetworkManager/dispatcher.d/pre-up.d
+        /etc/NetworkManager/dispatcher.d/pre-down.d
+        /etc/NetworkManager/system-connections
+        /etc/php-fpm.d
+        /etc/ConsoleKit/run-seat.d
+        /etc/ConsoleKit/run-session.d
+        /etc/ca-certificates/update.d
+        /etc/usb_modeswitch.d
+        /etc/cron.hourly
+        /etc/udisks2
+        /etc/cups/interfaces
+        /etc/cups/ppd
+        /etc/request-key.d
+        /etc/udev/hwdb.d
+        /etc/udev/devices
+        /etc/cron.weekly
+        /etc/rc.d/rc4.d
+        /etc/rc.d/rc2.d
+        /etc/rc.d/rc3.d
+        /etc/rc.d/rc6.d
+        /etc/rc.d/rc0.d
+        /etc/rc.d/rc5.d
+        /etc/rc.d/rc1.d
+        /etc/ssl/private
+        /etc/sysctl.d
+        /etc/X11/xorg.conf.d
+        /etc/slackpkg/templates
+        /etc/pkcs11/modules
+        /etc/gconf/gconf.xml.defaults
+        /etc/gconf/gconf.xml.mandatory
+        /etc/cron.monthly
+
+5.
+    Find all files under the /etc directory with a filename that starts with K (in uppercase)
+        asta@pollux:~$ find /etc/ -name "K*"  2> /dev/null
+        /etc/X11/app-defaults/KOI8RXTerm
+        /etc/X11/app-defaults/KOI8RXTerm-color
+
+6.
+    Find all directories starting in /var.
+        asta@pollux:~$ find /var/ -type d  2> /dev/null
+        /var/
+        /var/usermin
+        /var/usermin/modules
+        /var/lib
+        /var/lib/dbus
+        /var/lib/slocate
+        /var/lib/hp
+        /var/lib/iptraf-ng
+        /var/lib/virtuoso
+        /var/lib/virtuoso/vsp
+        /var/lib/virtuoso/vsp/admin
+        /var/lib/virtuoso/vsp/images
+        /var/lib/virtuoso/vsp/vsmx
+        /var/lib/virtuoso/db
+        /var/lib/rpm
+        /var/lib/nfs
+        /var/lib/nfs/sm.bak
+        /var/lib/nfs/sm
+        /var/lib/rootfs-lxc
+        /var/lib/xdm
+        /var/lib/NetworkManager
+        /var/lib/udisks
+        /var/lib/mysql
+        /var/lib/dhcpcd
+        /var/lib/samba
+        /var/lib/samba/private
+        /var/lib/samba/private/msg.sock
+        /var/lib/stunnel
+        /var/lib/php
+        /var/lib/polkit
+        /var/lib/net-snmp
+        /var/lib/net-snmp/cert_indexes
+        /var/lib/net-snmp/mib_indexes
+        /var/lib/udisks2
+        /var/lib/os-prober
+        /var/lib/htdig
+        /var/lib/alsa
+        /var/lib/arpd
+        /var/lib/usb_modeswitch
+        /var/lib/lxc
+        /var/lib/upower
+        /var/lib/slackpkg
+        /var/lib/bsdgames
+        /var/lib/bsdgames/sail
+        /var/lib/bsdgames/phantasia
+        /var/lib/elm
+        /var/lib/xkb
+        /var/state
+        /var/state/dnsmasq
+        /var/state/dhcp
+        /var/state/rpcbind
+        /var/state/saslauthd
+        /var/lock
+        /var/lock/iptraf-ng
+        /var/lock/sane
+        /var/lock/subsys
+        /var/empty
+        /var/cache
+        /var/cache/fontconfig
+        /var/cache/ldconfig
+        /var/cache/samba
+        /var/cache/samba/msg.lock
+        /var/cache/samba/printing
+        /var/cache/cups
+        /var/cache/packages
+        /var/cache/lxc
+        /var/run
+        /var/run/nscd
+        /var/run/dbus
+        /var/run/iptraf-ng
+        /var/run/NetworkManager
+        /var/run/mysql
+        /var/run/samba
+        /var/run/samba/ncalrpc
+        /var/run/samba/ncalrpc/np
+        /var/run/samba/nmbd
+        /var/run/stunnel
+        /var/run/ConsoleKit
+        /var/run/cups
+        /var/run/cups/certs
+        /var/run/named
+        /var/named
+        /var/named/caching-example
+        /var/log
+        /var/log/uucp
+        /var/log/iptraf-ng
+        /var/log/samba
+        /var/log/samba/cores
+        /var/log/ConsoleKit
+        /var/log/setup
+        /var/log/setup/tmp
+        /var/log/httpd
+        /var/log/scripts
+        /var/log/nfsd
+        /var/log/cups
+        /var/log/packages
+        /var/log/removed_packages
+        /var/log/removed_scripts
+        /var/log/sa
+        /var/db
+        /var/db/nscd
+        /var/db/sudo
+        /var/db/proftpd
+        /var/games
+        /var/games/emacs
+        /var/spool
+        /var/spool/uucp
+        /var/spool/uucp/.Status
+        /var/spool/atspool
+        /var/spool/mail
+        /var/spool/clientmqueue
+        /var/spool/rwho
+        /var/spool/atjobs
+        /var/spool/samba
+        /var/spool/mqueue
+        /var/spool/cups
+        /var/spool/uucppublic
+        /var/spool/cron
+        /var/spool/netatalk
+        /var/spool/slrnpull
+        /var/spool/slrnpull/news
+        /var/spool/slrnpull/out.going
+        /var/spool/slrnpull/out.going/rejects
+        /var/spool/slrnpull/data
+        /var/man
+        /var/man/cat6
+        /var/man/cat3
+        /var/man/cat7
+        /var/man/cat5
+        /var/man/cat4
+        /var/man/cat8
+        /var/man/catn
+        /var/man/cat9
+        /var/man/cat2
+        /var/man/cat1
+        /var/www
+        /var/www/icons
+        /var/www/icons/small
+        /var/www/cgi-bin
+        /var/www/htdocs
+        /var/www/htdocs/htdig
+        /var/www/htdocs/.well-known
+        /var/www/htdocs/.well-known/acme-challenge
+        /var/www/htdocs/manual
+        /var/www/htdocs/manual/developer
+        /var/www/htdocs/manual/images
+        /var/www/htdocs/manual/rewrite
+        /var/www/htdocs/manual/mod
+        /var/www/htdocs/manual/platform
+        /var/www/htdocs/manual/misc
+        /var/www/htdocs/manual/faq
+        /var/www/htdocs/manual/ssl
+        /var/www/htdocs/manual/howto
+        /var/www/htdocs/manual/style
+        /var/www/htdocs/manual/style/latex
+        /var/www/htdocs/manual/style/xsl
+        /var/www/htdocs/manual/style/xsl/util
+        /var/www/htdocs/manual/style/lang
+        /var/www/htdocs/manual/style/scripts
+        /var/www/htdocs/manual/style/css
+        /var/www/htdocs/manual/vhosts
+        /var/www/htdocs/manual/programs
+        /var/www/error
+        /var/www/error/include
+        /var/yp
+        /var/tmp
+        /var/webmin
+
+7.
+    Find a file named penguin.
+        asta@pollux:~$ find  -name "penguin"  2> /dev/null
+        ./penguin
+
+8.
+    Find all files (not directories) that start with "p". (just a couple examples because there were so many)
+        asta@pollux:~$ find / type f -name "p*" 2> /dev/null
+        /opt/webmin/postgresql/lang/pl
+        /opt/webmin/postgresql/lang/pt
+        /opt/webmin/postgresql/postgresql-lib.pl
+        /sbin/pivot_root
+        /sbin/pkgtool
+        /sbin/pvck
+        /sbin/pvcreate
+        /sbin/pvs
+
+9.
+    Find all files that end with ".gz".
+        asta@pollux:~$ find / type f -name "*.gz" 2> /dev/null
+        /usr/man/nb/man8/installpkg.8.gz
+        /usr/man/nb/man8/pkgtool.8.gz
+        /usr/man/nb/man8/explodepkg.8.gz
+        /usr/man/pt_PT/man1/nmap.1.gz
+        /usr/man/pt_PT/man5/slackpkg.conf.5.gz
+        /usr/man/pt_PT/man8/slackpkg.8.gz
+        /usr/man/pt_PT/man8/upgradepkg.8.gz
+        /usr/man/pt_PT/man8/makepkg.8.gz
+        /usr/man/pt_PT/man8/removepkg.8.gz
+        /usr/man/pt_PT/man8/installpkg.8.gz
+        /usr/man/pt_PT/man8/pkgtool.8.gz
+        /usr/man/pt_PT/man8/explodepkg.8.gz
+        /usr/man/man2/shutdown.2.gz
+        /usr/man/man2/dup3.2.gz
+        /usr/man/man2/inb_p.2.gz
+        /usr/man/man2/timer_create.2.gz
+
+10.
+    Find everything that belongs to the mail group.

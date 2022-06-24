@@ -1,0 +1,7 @@
+CHIP INC16 {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+    Sumator16Bitowy(a=in,b[0]=true,s=out);
+}

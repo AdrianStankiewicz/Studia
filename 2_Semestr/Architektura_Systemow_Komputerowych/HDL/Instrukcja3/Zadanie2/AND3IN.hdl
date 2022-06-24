@@ -1,0 +1,10 @@
+CHIP AND3IN{
+IN a,b,c;
+OUT out;
+        
+PARTS:
+Nand (a=a, b=b, out=w1);
+Nand (a=w1, b=w1, out=w2);
+Nand (a=w2, b=c, out=w3);
+Nand (a=w3, b=w3, out=out);
+}

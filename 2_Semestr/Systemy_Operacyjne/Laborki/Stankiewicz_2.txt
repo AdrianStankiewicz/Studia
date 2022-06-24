@@ -1,0 +1,349 @@
+DIRECTORY LISTINGS:
+
+DO ROBIENIA
+
+2
+    In a previous lab, the directory map showed the following directories under /.
+    bin, boot, dev, etc, home, lib, mnt, proc, sbin, tmp, usr, var
+    Look at the directory listing for the root directory on floppix.
+    Are there any directories in the above list that are not present in floppix?
+        no
+    Are there any top-level directories that are present in floppix and not listed above?
+        lib64, lost+found, media, opt, root, run, srv, sys
+ 
+3
+    Change to the root directory and try to list the contents of each of the top-level directories.
+    Which of these directories are empty?
+        None of them is empty
+    Ordinary users cannot view the contents of some of these directories.
+    Which ones?
+        lost+found, root
+    What are the permissions for those directories?
+        drwx--x---   9 root root  4096 mar  4 16:52 root/
+        drwx------   2 root root 16384 lut  9  2019 lost+found/
+ 
+4
+    What is the purpose of the -F option of the ls command. Look this up using the man pages.
+        -F, --classify - append indicator (one of */=>@|) to entries
+
+5 
+    Try running the commands:
+        ls   -F   /home
+        ls   -F   /bin
+    What symbol does the -F option use to identify directories?
+        /
+    What symbol does the -F option use to idenfify executable files?
+        *
+
+FILE COMMANDS:
+
+DO ZROBIENIA bez 6
+
+2.
+    Get a listing of the files in your own home directory.
+        dir1/  newdir/
+
+3. 
+    What hidden files (filename begins with . ) are present in your own home directory?
+        .bash_history
+
+4. 
+    What hidden files (filename begins with . ) are present in your own home directory?
+        .bash_history  .ddd/  .links/
+
+5.
+    Use head or tail to do the following:
+
+    Display the last 4 lines of the file /etc/passwd.
+        mmro:x:906:906:Mrówka Marek - II SiST sem 4 (nst.):/home/mmro:/bin/bash
+        dpta:x:907:907:Ptach Dariusz - II SiST sem 4 (nst.):/home/dpta:/bin/bash
+        pnie:x:908:908:Niemczyk Pawel - IV SiST ns poprawka:/home/pnie:/bin/bash
+        sryc:x:909:909:Rychert Seweryn - IV SiST poprawka:/home/sryc:/bin/bash
+    Display the last 4 lines of the file /etc/group.
+        mmro:x:906:
+        dpta:x:907:
+        pnie:x:908:
+        sryc:x:909:
+    Display the first 10 lines of the file /etc/login.defs.
+        #
+        # /etc/login.defs - Configuration control definitions for the shadow package.
+        #
+        #       $Id: login.defs 3038 2009-07-23 20:41:35Z nekral-guest $
+        #
+
+        #
+        # Delay in seconds before being allowed another attempt after a login failure
+        #
+        FAIL_DELAY              3
+
+7.
+    In your own home directory, use the touch command to create five files: one, two, three, four and five. Get a directory listing to make sure that the command worked.
+        asta@pollux:~$ touch one
+        asta@pollux:~$ touch two
+        asta@pollux:~$ touch three
+        asta@pollux:~$ touch four
+        asta@pollux:~$ touch five
+        asta@pollux:~$ ls
+        dir1/  five  four  newdir/  one  three  two
+
+8. 
+    Practice making directories.
+    In your own home directory, make 2 subdirectories: dir1 and dir2. Get a directory listing to make sure that the command worked.
+        asta@pollux:~$ mkdir dir1
+        asta@pollux:~$ mkdir dir2
+    In dir2, make a subdirectory called dir2a .
+        asta@pollux:~$ cd dir2
+        asta@pollux:~/dir2$ mkdir dir2a
+
+9. 
+    Practice moving files from your own home directory:
+    Move the file called one to the directory dir1 . Get directory listings of  the source directory and dir1 to make sure that the move command worked.
+        asta@pollux:~$ mv one dir1/one
+        asta@pollux:~$ ls
+        dir1/  dir2/  five  four  newdir/  three  two
+        asta@pollux:~$ cd dir1
+        asta@pollux:~/dir1$ ls
+        dir2/  one
+    Use a single command and wildcard characters to move all files in your home directory that begin with the letter "t" to dir2 . Get a directory listing to make sure that the move command worked.
+        asta@pollux:~$ mv t* dir2
+        asta@pollux:~$ ls
+        dir1/  dir2/  five  four  newdir/
+        asta@pollux:~$ cd dir2
+        asta@pollux:~/dir2$ ls
+        dir2a/  three  two
+    Use a single command and wildcard characters to move all files in your home directory that begin with the letter "f" to the directory dir2a . Get a directory listing to make sure that the move command worked.
+        asta@pollux:~$ mv f* dir2/dir2a/
+        asta@pollux:~$ ls
+        dir1/  dir2/  newdir/
+        asta@pollux:~$ cd dir2/dir2a/
+        asta@pollux:~/dir2/dir2a$ ls
+        five  four
+    
+10.
+    Use the move command to rename files.
+    Use the move command to change the name of the file called readme2 to readme.new.
+        asta@pollux:~$ touch readme2
+        asta@pollux:~$ mv readme2 readme.new
+        asta@pollux:~$ ls
+        dir1/  dir2/  newdir/  readme.new
+    Create a subdirectory called aaa.
+        asta@pollux:~$ mkdir dir1/aaa
+        asta@pollux:~$ ls dir1
+        aaa/  dir2/  one
+    Can you use the move command to change the name of aaa to dir3?
+        yes
+
+PRACTICE_EX 2:
+1. List the files in the /bin directory
+    asta@pollux:~$ ls /bin
+    Mail@           env*         mail@              ps*         telnet*
+    [*              expand*      md5sum*            ptx*        test*
+    arch*           expr*        mkdir*             pwd*        timeout*
+    ash*            factor*      mkfifo*            readlink*   touch*
+    awk@            false*       mknod*             realpath*   tr*
+    base32*         fgrep*       mktemp-gnu*        red@        true*
+    base64*         findmnt*     more*              rksh@       truncate*
+    basename*       fmt*         mount*             rm*         tsort*
+    bash*           fold*        mountpoint*        rmdir*      tty*
+    bunzip2@        free*        mt@                rpm*        ulockmgr_server*
+    bzcat@          ftp*         mt-GNU*            runcon*     umount*
+    bzip2*          fusermount*  mt-st*             rzip*       uname*
+    bzip2recover*   gawk@        mv*                sed*        uncompress@
+    cat*            gawk-4.1.3*  nail@              seq*        unexpand*
+    chcon*          getopt*      netstat*           setterm*    uniq*
+    chgrp*          ginstall@    nice*              sh@         unlink*
+    chmod*          grep*        nisdomainname@     sha1sum*    users*
+    chown*          groups*      nl*                sha224sum*  usleep*
+    chroot*         gunzip*      nohup*             sha256sum*  vdir*
+    cksum*          gzexe*       nproc*             sha384sum*  wc*
+    comm*           gzip*        ntfs-3g*           sha512sum*  wdctl*
+    compress@       head*        ntfs-3g.probe*     shred*      which*
+    cp*             hostid*      ntfs-3g.secaudit*  shuf*       who*
+    cpio*           hostname*    ntfs-3g.usermap*   sleep*      whoami*
+    csh@            id*          ntfscat*           sln@        xz*
+    csplit*         install*     ntfscluster*       sort*       yes*
+    cut*            ipmask*      ntfscmp*           split*      ypdomainname@
+    date*           join*        ntfsfix*           stat*       zcat*
+    dd*             keyctl*      ntfsinfo*          stdbuf*     zcmp*
+    df*             kill*        ntfsls*            stty*       zdiff*
+    dialog*         killall*     numfmt*            su*         zegrep*
+    dir*            ksh*         od*                sulogin@    zfgrep*
+    dircolors*      link*        paste*             sum*        zforce*
+    dirname*        ln*          pathchk*           sync*       zgrep*
+    dmesg*          loadkeys*    pidof@             tac*        zless*
+    dnsdomainname@  login*       ping*              tail*       zmore*
+    domainname@     logname*     ping6*             tar*        znew*
+    du*             lowntfs-3g*  pinky*             tar-1.13*   zsh*
+    echo*           ls*          pr*                tar-1.29@   zsh-5.2@
+    ed*             lsblk*       printenv*          tcsh*
+    egrep*          lsmod@       printf*            tee*
+2. Display the type of file of /bin/cat, /etc/passwd and /usr/bin/passwd (use 'file file_name').
+    asta@pollux:~$ file /bin/cat
+    /bin/cat: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, stripped
+    
+    asta@pollux:~$ file /etc/passwd
+    /etc/passwd: UTF-8 Unicode text
+
+    asta@pollux:~$ file /usr/bin/passwd
+    /usr/bin/passwd: setuid executable, regular file, no read permission
+
+3a. Create a directory ~/files and enter it.
+        asta@pollux:~$ mkdir ~/files
+3b. Copy the below files into your created directory [files]:
+    asta@pollux:/home/azd/exercises$ cp /home/azd/exercises/files/sample.pdf ~/files
+    asta@pollux:~$ cd files
+    asta@pollux:~/files$ ls
+    sample.pdf
+
+    asta@pollux:~/files$ cp /home/azd/exercises/files/troll_face.jpg ~/files
+    asta@pollux:~/files$ ls ~/files
+    sample.pdf  troll_face.jpg
+3c. Display the type of file of troll_face.jpg and sample.pdf
+    asta@pollux:~/files$ file troll_face.jpg
+    troll_face.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 96x96, segment length 16, baseline, precision 8, 340x340, frames 1
+
+    asta@pollux:~/files$ file sample.pdf
+    sample.pdf: PDF document, version 1.3
+3d. Display the type of file of troll_face.jpg and sample.pdf
+    asta@pollux:~/files$ mv troll_face.jpg troll_face.pdf
+    asta@pollux:~/files$ ls
+    sample.pdf  troll_face.pdf
+3e. Display the type of file of troll_face.pdf and sample.pdf
+    asta@pollux:~/files$ file sample.pdf
+    sample.pdf: PDF document, version 1.3
+    asta@pollux:~/files$ file troll_face.pdf
+    troll_face.pdf: JPEG image data, JFIF standard 1.01, resolution (DPI), density 96x96, segment length 16, baseline, precision 8, 340x340, frames 1
+4. Create a directory ~/touched and enter it.
+    asta@pollux:~/files$ mkdir ~/touched
+    asta@pollux:~/files$ cd ~/touched
+    asta@pollux:~/touched$
+5. Create the files today.txt and yesterday.txt in touched.
+    asta@pollux:~/touched$ touch today.txt
+    asta@pollux:~/touched$ touch yesterday.txt
+    asta@pollux:~/touched$ ls
+    today.txt  yesterday.txt
+6. Change the date on yesterday.txt to match yesterday's date (use 'touch -t YYYYMMDDHHMM file_name')
+    asta@pollux:~/touched$ touch -t 202103191957 yesterday.txt
+7. Copy yesterday.txt to copy.yesterday.txt
+    asta@pollux:~/touched$ cp yesterday.txt copy.yesterday.txt
+    asta@pollux:~/touched$ ls
+    copy.yesterday.txt  today.txt  yesterday.txt
+8. Rename copy.yesterday.txt to [my.file.txt]
+    asta@pollux:~/touched$ mv copy.yesterday.txt my.file.txt
+    asta@pollux:~/touched$ ls
+    my.file.txt  today.txt  yesterday.txt
+9. Create a directory called ~/testbackup and copy all files from ~/touched into it (use cp -r).
+    asta@pollux:~/touched$ cp -r ~/touched ~/testbackup/
+10. Use one command to remove the directory ~/testbackup and all files into it.
+    asta@pollux:~/touched$ rm -r ~/testbackup/
+    asta@pollux:~$ ls
+    dir1/  dir2/  files/  newdir/  readme.new  touched/
+11. Create a directory ~/etcbackup and copy all *.conf files from /etc into it. Did you include all subdirectories of /etc ?
+    asta@pollux:~$ mkdir ~/etcbackup
+    asta@pollux:~$ cp -r /etc/*.conf ~/etcbackup
+    cp: nie można otworzyć '/etc/autofs_ldap_auth.conf' do czytania: Brak dostępu
+    cp: nie można otworzyć '/etc/wpa_supplicant.conf' do czytania: Brak dostępu
+    asta@pollux:~$ ls ~/etcbackup
+    asound.conf                gpm-syn.conf       mke2fs.conf       resolv.conf
+    ca-certificates.conf       gpm-twiddler.conf  mtools.conf       sensors3.conf
+    cgconfig.conf              host.conf          mysqlaccess.conf  serial.conf
+    cgred.conf                 identd.conf        named.conf        smartd.conf
+    cgrules.conf               inetd.conf         nfsmount.conf     syslog.conf
+    cgsnapshot_blacklist.conf  irssi.conf         nscd.conf         ulogd.conf
+    dhclient.conf              ld.so.conf         nsswitch.conf     updatedb.conf
+    dhcpcd.conf                lftp.conf          ntp.conf          usb_modeswitch.conf
+    dhcpd.conf                 lilo.conf          pear.conf         vsftpd.conf
+    dnsmasq.conf               logrotate.conf     php-fpm.conf      xboard.conf
+    esd.conf                   lrzip.conf         pine.conf         yp.conf
+    genpowerd.conf             man.conf           proftpd.conf
+    gpm-root.conf              mdadm.conf         request-key.conf
+
+    PRACTISE_EX 3:
+
+1. Display the first 12 lines of /etc/services.
+    #
+    # Network services, Internet style
+    #
+    # Note that it is presently the policy of IANA to assign a single well-known
+    # port number for both TCP and UDP; hence, most entries here have two entries
+    # even if the protocol doesn't support UDP operations.
+    #
+    # The latest IANA port assignments can be gotten from
+    #
+    #       http://www.iana.org/assignments/port-numbers
+    #
+    # The Well Known Ports are those from 0 through 1023.
+2. Display the last line of /etc/passwd.
+    asta@pollux:~$ tail -n 1 /etc/passwd
+    sryc:x:909:909:Rychert Seweryn - IV SiST poprawka:/home/sryc:/bin/bash
+3. Use cat to create a file named count.txt that looks like this:
+    asta@pollux:~$ cat > count.txt
+    one
+    two
+    three
+    four
+    five
+    ^C
+    asta@pollux:~$ cat count.txt
+    one
+    two
+    three
+    four
+    five
+4. Use cp to make a backup of this file to cnt.txt.
+    asta@pollux:~$ cp count.txt cnt.txt
+    asta@pollux:~$ ls
+    cnt.txt  count.txt  dir1/  dir2/  etcbackup/  files/  newdir/  readme.new  touched/
+5. Use cat to make a backup of this file to catcnt.txt.
+    asta@pollux:~$ cat cnt.txt > catcnt.txt
+6. Display catcnt.txt, but with all lines in reverse order (the last line first).
+    asta@pollux:~$ tac catcnt.txt
+    five
+    four
+    three
+    two
+    one
+7. Use more to display /etc/services.
+    asta@pollux:~$ more /etc/services
+    #
+    # Network services, Internet style
+    #
+    # Note that it is presently the policy of IANA to assign a single well-known
+    # port number for both TCP and UDP; hence, most entries here have two entries
+    # even if the protocol doesn't support UDP operations.
+    #
+    # The latest IANA port assignments can be gotten from
+    #
+    #       http://www.iana.org/assignments/port-numbers
+    #
+    # The Well Known Ports are those from 0 through 1023.
+    # The Registered Ports are those from 1024 through 49151
+    # The Dynamic and/or Private Ports are those from 49152 through 65535
+    #
+    # Kerberos services are for Kerberos v4, and are unofficial.  Sites running
+    # v5 should uncomment v5 entries and comment v4 entries.
+    #
+    # $FreeBSD: src/etc/services,v 1.117 2010/02/01 13:30:06 ume Exp $
+    #       From: @(#)services      5.8 (Berkeley) 5/9/91
+    #
+    # WELL KNOWN PORT NUMBERS
+    #
+    --Więcej--(0%)
+8. Use ls to find the biggest file in /etc. (use -S and -r options)
+    asta@pollux:~$ ls -S -r /etc
+    issue.net                  mysqlaccess.conf       libnl/
+9. 
+    First terminal:
+        asta@pollux:~$ echo 'this is th efirst line' > tailing.txt
+        asta@pollux:~$ echo This is tailing >> tailing.txt
+    Second terminal:
+        asta@pollux:~$ tail -f tailing.txt
+        this is th efirst line
+        This is tailing
+        ^C
+10. Use cat to create a file named tailing.txt that contains the contents of tailing.txt followed by the contents of /etc/passwd. (content of tailing.txt then content of /etc/pawsswd)
+    asta@pollux:~$ cat tailing.txt /etc/passwd >> tailing.txt
+    cat: tailing.txt: plik wejściowy jest plikiem wyjściowym        //I changed the name of output file
+    asta@pollux:~$ cat tailing.txt /etc/passwd >> tailing2.txt      //This one works
+11. Use cat to create a file named tailing.txt that contains the contents of tailing.txt preceded by the contents of /etc/passwd. (content of /etc/passwd then content of tailing.txt)
+    asta@pollux:~$ cat /etc/passwd tailing.txt > tailing2.txt

@@ -1,0 +1,95 @@
+DO ZROBIENIA bez 6
+
+2.
+    Get a listing of the files in your own home directory.
+        dir1/  newdir/
+
+3. 
+    What hidden files (filename begins with . ) are present in your own home directory?
+        .bash_history
+
+4. 
+    What hidden files (filename begins with . ) are present in your own home directory?
+        .bash_history  .ddd/  .links/
+
+5.
+    Use head or tail to do the following:
+
+    Display the last 4 lines of the file /etc/passwd.
+        mmro:x:906:906:Mrówka Marek - II SiST sem 4 (nst.):/home/mmro:/bin/bash
+        dpta:x:907:907:Ptach Dariusz - II SiST sem 4 (nst.):/home/dpta:/bin/bash
+        pnie:x:908:908:Niemczyk Pawel - IV SiST ns poprawka:/home/pnie:/bin/bash
+        sryc:x:909:909:Rychert Seweryn - IV SiST poprawka:/home/sryc:/bin/bash
+    Display the last 4 lines of the file /etc/group.
+        mmro:x:906:
+        dpta:x:907:
+        pnie:x:908:
+        sryc:x:909:
+    Display the first 10 lines of the file /etc/login.defs.
+        #
+        # /etc/login.defs - Configuration control definitions for the shadow package.
+        #
+        #       $Id: login.defs 3038 2009-07-23 20:41:35Z nekral-guest $
+        #
+
+        #
+        # Delay in seconds before being allowed another attempt after a login failure
+        #
+        FAIL_DELAY              3
+
+7.
+    In your own home directory, use the touch command to create five files: one, two, three, four and five. Get a directory listing to make sure that the command worked.
+        asta@pollux:~$ touch one
+        asta@pollux:~$ touch two
+        asta@pollux:~$ touch three
+        asta@pollux:~$ touch four
+        asta@pollux:~$ touch five
+        asta@pollux:~$ ls
+        dir1/  five  four  newdir/  one  three  two
+
+8. 
+    Practice making directories.
+    In your own home directory, make 2 subdirectories: dir1 and dir2. Get a directory listing to make sure that the command worked.
+        asta@pollux:~$ mkdir dir1
+        asta@pollux:~$ mkdir dir2
+    In dir2, make a subdirectory called dir2a .
+        asta@pollux:~$ cd dir2
+        asta@pollux:~/dir2$ mkdir dir2a
+
+9. 
+    Practice moving files from your own home directory:
+    Move the file called one to the directory dir1 . Get directory listings of  the source directory and dir1 to make sure that the move command worked.
+        asta@pollux:~$ mv one dir1/one
+        asta@pollux:~$ ls
+        dir1/  dir2/  five  four  newdir/  three  two
+        asta@pollux:~$ cd dir1
+        asta@pollux:~/dir1$ ls
+        dir2/  one
+    Use a single command and wildcard characters to move all files in your home directory that begin with the letter "t" to dir2 . Get a directory listing to make sure that the move command worked.
+        asta@pollux:~$ mv t* dir2
+        asta@pollux:~$ ls
+        dir1/  dir2/  five  four  newdir/
+        asta@pollux:~$ cd dir2
+        asta@pollux:~/dir2$ ls
+        dir2a/  three  two
+    Use a single command and wildcard characters to move all files in your home directory that begin with the letter "f" to the directory dir2a . Get a directory listing to make sure that the move command worked.
+        asta@pollux:~$ mv f* dir2/dir2a/
+        asta@pollux:~$ ls
+        dir1/  dir2/  newdir/
+        asta@pollux:~$ cd dir2/dir2a/
+        asta@pollux:~/dir2/dir2a$ ls
+        five  four
+    
+10.
+    Use the move command to rename files.
+    Use the move command to change the name of the file called readme2 to readme.new.
+        asta@pollux:~$ touch readme2
+        asta@pollux:~$ mv readme2 readme.new
+        asta@pollux:~$ ls
+        dir1/  dir2/  newdir/  readme.new
+    Create a subdirectory called aaa.
+        asta@pollux:~$ mkdir dir1/aaa
+        asta@pollux:~$ ls dir1
+        aaa/  dir2/  one
+    Can you use the move command to change the name of aaa to dir3?
+        yes

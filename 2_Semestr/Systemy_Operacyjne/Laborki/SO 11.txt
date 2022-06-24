@@ -1,0 +1,295 @@
+DO ZROBIENIA (odpowiedzi do Exercises: 1-10)
+
+2.
+    Find all files with the filename alterego.
+        
+
+3.
+    Find all files that belong to floopy. (jfis)
+        asta@pollux:/$ find / -user jfis 2> /dev/null
+        /var/tmp/elvis7.ses
+        /home/jfis
+        /home/jfis/.lesshst
+        /home/jfis/.links
+        /home/jfis/instrukcja_8
+        /home/jfis/instrukcja_8/cv
+        /home/jfis/instrukcja_8/odpowiedzi
+        /home/jfis/passwd
+        /home/jfis/.bash_history
+        /home/jfis/laborki1
+        /home/jfis/laborki1/dir2
+        /home/jfis/laborki1/dir2/dir2a
+        /home/jfis/laborki1/dir2/dir2a/four
+        /home/jfis/laborki1/dir2/dir2a/five
+        /home/jfis/laborki1/dir2/two
+        /home/jfis/laborki1/dir2/three
+        /home/jfis/laborki1/dir1
+        /home/jfis/laborki1/dir1/dir3
+        /home/jfis/laborki1/dir1/one
+        /home/jfis/laborki1/readme.new
+
+4.
+    Find all empty files in the /etc directory.
+        /etc/uucp/oldconfig
+        /etc/kde/kdm/sessions
+        /etc/smartd_warning.d
+        /etc/usermin/authentic-theme
+        /etc/sane.d/dll.d
+        /etc/cron.d
+        /etc/dnsmasq.d
+        /etc/pm/sleep.d
+        /etc/pm/power.d
+        /etc/pm/config.d
+        /etc/gnupg
+        /etc/php.d
+        /etc/sensors.d
+        /etc/auto.master.d
+        /etc/NetworkManager/dispatcher.d/no-wait.d
+        /etc/NetworkManager/dispatcher.d/pre-up.d
+        /etc/NetworkManager/dispatcher.d/pre-down.d
+        /etc/NetworkManager/system-connections
+        /etc/php-fpm.d
+        /etc/ConsoleKit/run-seat.d
+        /etc/ConsoleKit/run-session.d
+        /etc/ca-certificates/update.d
+        /etc/usb_modeswitch.d
+        /etc/cron.hourly
+        /etc/udisks2
+        /etc/cups/interfaces
+        /etc/cups/ppd
+        /etc/request-key.d
+        /etc/udev/hwdb.d
+        /etc/udev/devices
+        /etc/cron.weekly
+        /etc/rc.d/rc4.d
+        /etc/rc.d/rc2.d
+        /etc/rc.d/rc3.d
+        /etc/rc.d/rc6.d
+        /etc/rc.d/rc0.d
+        /etc/rc.d/rc5.d
+        /etc/rc.d/rc1.d
+        /etc/ssl/private
+        /etc/sysctl.d
+        /etc/X11/xorg.conf.d
+        /etc/slackpkg/templates
+        /etc/pkcs11/modules
+        /etc/gconf/gconf.xml.defaults
+        /etc/gconf/gconf.xml.mandatory
+        /etc/cron.monthly
+
+5.
+    Find all files under the /etc directory with a filename that starts with K (in uppercase)
+        asta@pollux:~$ find /etc/ -name "K*"  2> /dev/null
+        /etc/X11/app-defaults/KOI8RXTerm
+        /etc/X11/app-defaults/KOI8RXTerm-color
+
+6.
+    Find all directories starting in /var.
+        asta@pollux:~$ find /var/ -type d  2> /dev/null
+        /var/
+        /var/usermin
+        /var/usermin/modules
+        /var/lib
+        /var/lib/dbus
+        /var/lib/slocate
+        /var/lib/hp
+        /var/lib/iptraf-ng
+        /var/lib/virtuoso
+        /var/lib/virtuoso/vsp
+        /var/lib/virtuoso/vsp/admin
+        /var/lib/virtuoso/vsp/images
+        /var/lib/virtuoso/vsp/vsmx
+        /var/lib/virtuoso/db
+        /var/lib/rpm
+        /var/lib/nfs
+        /var/lib/nfs/sm.bak
+        /var/lib/nfs/sm
+        /var/lib/rootfs-lxc
+        /var/lib/xdm
+        /var/lib/NetworkManager
+        /var/lib/udisks
+        /var/lib/mysql
+        /var/lib/dhcpcd
+        /var/lib/samba
+        /var/lib/samba/private
+        /var/lib/samba/private/msg.sock
+        /var/lib/stunnel
+        /var/lib/php
+        /var/lib/polkit
+        /var/lib/net-snmp
+        /var/lib/net-snmp/cert_indexes
+        /var/lib/net-snmp/mib_indexes
+        /var/lib/udisks2
+        /var/lib/os-prober
+        /var/lib/htdig
+        /var/lib/alsa
+        /var/lib/arpd
+        /var/lib/usb_modeswitch
+        /var/lib/lxc
+        /var/lib/upower
+        /var/lib/slackpkg
+        /var/lib/bsdgames
+        /var/lib/bsdgames/sail
+        /var/lib/bsdgames/phantasia
+        /var/lib/elm
+        /var/lib/xkb
+        /var/state
+        /var/state/dnsmasq
+        /var/state/dhcp
+        /var/state/rpcbind
+        /var/state/saslauthd
+        /var/lock
+        /var/lock/iptraf-ng
+        /var/lock/sane
+        /var/lock/subsys
+        /var/empty
+        /var/cache
+        /var/cache/fontconfig
+        /var/cache/ldconfig
+        /var/cache/samba
+        /var/cache/samba/msg.lock
+        /var/cache/samba/printing
+        /var/cache/cups
+        /var/cache/packages
+        /var/cache/lxc
+        /var/run
+        /var/run/nscd
+        /var/run/dbus
+        /var/run/iptraf-ng
+        /var/run/NetworkManager
+        /var/run/mysql
+        /var/run/samba
+        /var/run/samba/ncalrpc
+        /var/run/samba/ncalrpc/np
+        /var/run/samba/nmbd
+        /var/run/stunnel
+        /var/run/ConsoleKit
+        /var/run/cups
+        /var/run/cups/certs
+        /var/run/named
+        /var/named
+        /var/named/caching-example
+        /var/log
+        /var/log/uucp
+        /var/log/iptraf-ng
+        /var/log/samba
+        /var/log/samba/cores
+        /var/log/ConsoleKit
+        /var/log/setup
+        /var/log/setup/tmp
+        /var/log/httpd
+        /var/log/scripts
+        /var/log/nfsd
+        /var/log/cups
+        /var/log/packages
+        /var/log/removed_packages
+        /var/log/removed_scripts
+        /var/log/sa
+        /var/db
+        /var/db/nscd
+        /var/db/sudo
+        /var/db/proftpd
+        /var/games
+        /var/games/emacs
+        /var/spool
+        /var/spool/uucp
+        /var/spool/uucp/.Status
+        /var/spool/atspool
+        /var/spool/mail
+        /var/spool/clientmqueue
+        /var/spool/rwho
+        /var/spool/atjobs
+        /var/spool/samba
+        /var/spool/mqueue
+        /var/spool/cups
+        /var/spool/uucppublic
+        /var/spool/cron
+        /var/spool/netatalk
+        /var/spool/slrnpull
+        /var/spool/slrnpull/news
+        /var/spool/slrnpull/out.going
+        /var/spool/slrnpull/out.going/rejects
+        /var/spool/slrnpull/data
+        /var/man
+        /var/man/cat6
+        /var/man/cat3
+        /var/man/cat7
+        /var/man/cat5
+        /var/man/cat4
+        /var/man/cat8
+        /var/man/catn
+        /var/man/cat9
+        /var/man/cat2
+        /var/man/cat1
+        /var/www
+        /var/www/icons
+        /var/www/icons/small
+        /var/www/cgi-bin
+        /var/www/htdocs
+        /var/www/htdocs/htdig
+        /var/www/htdocs/.well-known
+        /var/www/htdocs/.well-known/acme-challenge
+        /var/www/htdocs/manual
+        /var/www/htdocs/manual/developer
+        /var/www/htdocs/manual/images
+        /var/www/htdocs/manual/rewrite
+        /var/www/htdocs/manual/mod
+        /var/www/htdocs/manual/platform
+        /var/www/htdocs/manual/misc
+        /var/www/htdocs/manual/faq
+        /var/www/htdocs/manual/ssl
+        /var/www/htdocs/manual/howto
+        /var/www/htdocs/manual/style
+        /var/www/htdocs/manual/style/latex
+        /var/www/htdocs/manual/style/xsl
+        /var/www/htdocs/manual/style/xsl/util
+        /var/www/htdocs/manual/style/lang
+        /var/www/htdocs/manual/style/scripts
+        /var/www/htdocs/manual/style/css
+        /var/www/htdocs/manual/vhosts
+        /var/www/htdocs/manual/programs
+        /var/www/error
+        /var/www/error/include
+        /var/yp
+        /var/tmp
+        /var/webmin
+
+7.
+    Find a file named penguin.
+        asta@pollux:~$ find  -name "penguin"  2> /dev/null
+        ./penguin
+
+8.
+    Find all files (not directories) that start with "p". (just a couple examples because there were so many)
+        asta@pollux:~$ find / type f -name "p*" 2> /dev/null
+        /opt/webmin/postgresql/lang/pl
+        /opt/webmin/postgresql/lang/pt
+        /opt/webmin/postgresql/postgresql-lib.pl
+        /sbin/pivot_root
+        /sbin/pkgtool
+        /sbin/pvck
+        /sbin/pvcreate
+        /sbin/pvs
+
+9.
+    Find all files that end with ".gz".
+        asta@pollux:~$ find / type f -name "*.gz" 2> /dev/null
+        /usr/man/nb/man8/installpkg.8.gz
+        /usr/man/nb/man8/pkgtool.8.gz
+        /usr/man/nb/man8/explodepkg.8.gz
+        /usr/man/pt_PT/man1/nmap.1.gz
+        /usr/man/pt_PT/man5/slackpkg.conf.5.gz
+        /usr/man/pt_PT/man8/slackpkg.8.gz
+        /usr/man/pt_PT/man8/upgradepkg.8.gz
+        /usr/man/pt_PT/man8/makepkg.8.gz
+        /usr/man/pt_PT/man8/removepkg.8.gz
+        /usr/man/pt_PT/man8/installpkg.8.gz
+        /usr/man/pt_PT/man8/pkgtool.8.gz
+        /usr/man/pt_PT/man8/explodepkg.8.gz
+        /usr/man/man2/shutdown.2.gz
+        /usr/man/man2/dup3.2.gz
+        /usr/man/man2/inb_p.2.gz
+        /usr/man/man2/timer_create.2.gz
+
+10.
+    Find everything that belongs to the mail group.

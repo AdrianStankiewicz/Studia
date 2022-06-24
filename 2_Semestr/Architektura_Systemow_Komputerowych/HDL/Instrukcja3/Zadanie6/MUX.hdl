@@ -1,0 +1,10 @@
+CHIP MUX{
+IN x0,x1,sel;
+OUT out;
+    
+PARTS:
+NOT(a=sel,out=w1);
+AND(a=x0,b=w1,out=w2);
+AND(a=x1,b=sel,out=w3);
+OR(a=w2,b=w3,out=out);
+}

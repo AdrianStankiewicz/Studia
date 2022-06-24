@@ -1,0 +1,238 @@
+3. 
+    What error message is displayed?
+        -bash: CAL: nie znaleziono polecenia
+    Why? 
+        the program can distinct small and capital letters
+
+4. 
+    What happens if you enter "cat" without specifying a filename?
+        the prompt dissappears and after writing somthing the command line prints back the same input
+    Does [Ctrl-d] take you back to the command prompt?
+        Yes
+    Does [Ctrl-c] take you back to the command prompt?
+        Yes
+
+    Now, enter the command "sleep 60". This command pauses for 60 seconds.
+    Does [Ctrl-d] take you back to the command prompt?
+        No
+    Does [Ctrl-c] take you back to the command prompt?
+        Yes
+
+5. 
+    what are 3 options for the who command?
+        -p, -m, -l
+    The who command can accept 2 random arguments. What is output when you enter the command: who am i
+        asta     pts/65       2021-03-10 12:15 (81.190.50.4)
+    switch to console 2 and login as alterego.
+        can't switch console o log in as alterego on PuTTY
+    as alterego, what is output when you enter the command: who am i
+        can't log in as alterego on PuTTY
+    as alterego, what is output when you enter the command: who likes linux
+        can't log in as alterego on PuTTY
+    logout on console 2 and switch back to console 1. what is output when you enter the command: who likes linux
+        asta     pts/65       2021-03-10 12:15 (81.190.50.4)
+
+6.
+    Press the [up-arrow] key to recall the command: who -H likes linux? 
+    Press [Ctrl-h] What happens?
+        last symbol disappears
+    Press [Ctrl-w] What happens?
+        last word disappears
+    Press [Ctrl-u] What happens?
+        whole command disappears
+    Press [Ctrl-d] What happens?
+        terminal closes
+        
+8. 
+    Enter the command:  ls  /h[tab]
+    What directory name starts with h?  
+        home
+    Enter the command:  ls   /usr/bin/s[tab][tab]
+    Which filenames in /usr/bin start with s?
+        sa                            signtool
+        sadf                          signver
+        samba-regedit                 simpleexpand
+        samba-tool                    simpleindex
+        sancov                        simplesearch
+        sane-config                   single2bin
+        sane-find-scanner             sip
+        sar                           sirtopnm
+        savelog                       size
+        savetextmode                  size86
+        sb                            sjeng
+        sbcdec                        skanlite
+        sbcenc                        skill
+        sbcinfo                       slabtop
+        sbigtopgm                     slackdtxt
+        sc                            slacktrack
+        scan-build                    sldtoppm
+        scan-view                     sleep
+        scanadf                       sliceprint
+        scanimage                     slocate
+        scgcheck                      slrn
+        scgskeleton                   slrnpull
+        scim                          slsh
+        scim-config-agent             smbcacls
+        scim-im-agent                 smbclient
+        scim-input-pad                smbcontrol
+        scim-make-table               smbcquotas
+        scim-setup                    smbget
+        scons                         smbpasswd
+        scons-time                    smbprint
+        sconsign                      smbspool
+        scp                           smbstatus
+        scp-dbus-service              smbtar
+        scqref                        smbtorture
+        screen                        smbtree
+        screen-4.4.0                  smime
+        script                        smime_keys
+        scriptreplay                  smokeapi
+        scsi_logging_level            smokegen
+        scsi_mandat                   smproxy
+        scsi_readcap                  smtpd.py
+        scsi_ready                    sndfile-cmp
+        scsi_satl                     sndfile-concat
+        scsi_start                    sndfile-convert
+        scsi_stop                     sndfile-deinterleave
+        scsi_temperature              sndfile-info
+        sdiff                         sndfile-interleave
+        sdl-config                    sndfile-metadata-get
+        sdptool                       sndfile-metadata-set
+        seamonkey                     sndfile-play
+        secret-tool                   sndfile-regtest
+        sed                           sndfile-resample
+        seejpeg                       sndfile-salvage
+        sendiso                       snice
+        sendmail                      snmp-bridge-mib
+        sensors                       snmpbulkget
+        sensors-conf-convert          snmpbulkwalk
+        seq                           snmpcheck
+        servicemenudeinstallation     snmpconf
+        servicemenuinstallation       snmpdelta
+        sessreg                       snmpdf
+        setarch                       snmpget
+        setcifsacl                    snmpgetnext
+        setconsolefont                snmpinform
+        setfacl                       snmpnetstat
+        setfattr                      snmpset
+        setfdprm                      snmpstatus
+        setfont                       snmptable
+        seticons                      snmptest
+        setkeycodes                   snmptranslate
+        setleds                       snmptrap
+        setmetamode                   snmpusm
+        setsid                        snmpvacm
+        setstyle                      snmpwalk
+        setterm                       snow2opml
+        setvtrgb                      snownews
+        setxkbmap                     sockdown
+        sexp-conv                     socklist
+        seyon                         soelim
+        sfconvert                     solid-action-desktop-gen
+        sfinfo                        solid-hardware
+        sftp                          soma
+        sg                            sopranocmd
+        sg_compare_and_write          sopranod
+        sg_copy_results               sort
+        sg_dd                         sotruss
+        sg_decode_sense               sox
+        sg_emc_trespass               soxi
+        sg_format                     spam
+        sg_get_config                 spctoppm
+        sg_get_lba_status             speaker-test
+        sg_ident                      spent
+        sg_inq                        spider
+        sg_logs                       splain
+        sg_luns                       split
+        sg_map                        split2po
+        sg_map26                      splitmail
+        sg_modes                      splitvt
+        sg_opcodes                    spottopgm
+        sg_persist                    sprof
+        sg_prevent                    sputoppm
+        sg_raw                        sqlite3
+        sg_rbuf                       sqlite3_analyzer
+        sg_rdac                       srftopam
+        sg_read                       srptool
+        sg_read_attr                  ssh
+        sg_read_block_limits          ssh-add
+        sg_read_buffer                ssh-agent
+        sg_read_long                  ssh-copy-id
+        sg_readcap                    ssh-keygen
+        sg_reassign                   ssh-keyscan
+        sg_referrals                  ssltap
+        sg_rep_zones                  start-pulseaudio-x11
+        sg_requests                   startblackbox
+        sg_reset                      startfluxbox
+        sg_reset_wp                   startfvwm2
+        sg_rmsn                       startkde
+        sg_rtpg                       startx
+        sg_safte                      startxfce4
+        sg_sanitize                   stat
+        sg_sat_identify               states
+        sg_sat_phy_event              stdbuf
+        sg_sat_read_gplog             step
+        sg_sat_set_features           storageservicemanager
+        sg_scan                       strace
+        sg_senddiag                   strace-graph
+        sg_ses                        strace-log-merge
+        sg_ses_microcode              stream
+        sg_start                      strfile
+        sg_stpg                       strigiclient
+        sg_sync                       strigicmd
+        sg_test_rwbuf                 strigidaemon
+        sg_timestamp                  strings
+        sg_turs                       strings-GNU
+        sg_unmap                      strip
+        sg_verify                     struct2osd.sh
+        sg_vpd                        stty
+        sg_wr_mode                    stunnel
+        sg_write_buffer               stunnel3
+        sg_write_long                 sudo
+        sg_write_same                 sudoedit
+        sg_write_verify               sudoreplay
+        sg_xcopy                      sum
+        sg_zone                       sunicontopnm
+        sginfo                        superformat
+        sgitopnm                      superkaramba
+        sgm_dd                        svgakeymap
+        sgml2html                     svgtopam
+        sgml2info                     svn
+        sgml2latex                    svn-clean
+        sgml2lyx                      svn-tools/
+        sgml2rtf                      svnadmin
+        sgml2txt                      svnbackport
+        sgml2xml                      svnbench
+        sgml2xml-isoent               svnchangesince
+        sgmlcheck                     svndumpfilter
+        sgmldiff                      svnforwardport
+        sgmlnorm                      svnfsfs
+        sgmlpre                       svngettags
+        sgmlsasp                      svnintegrate
+        sgmlspl                       svnlastchange
+        sgmlwhich                     svnlastlog
+        sgp_dd                        svnlook
+        sha1pass                      svnmucc
+        sha1sum                       svnrdump
+        sha224sum                     svnrevertlast
+        sha256sum                     svnserve
+        sha384sum                     svnsync
+        sha512sum                     svnversion
+        shar                          svnversions
+        sharesec                      swappo
+        shasum                        sweeper
+        shlibsign                     swig
+        showaudio                     sx
+        showchar                      sxpm
+        showconsolefont               sync
+        showexternal                  synclient
+        showfont                      syndaemon
+        showkey                       syslinux
+        shownonascii                  syslinux-nomtools
+        showpartial                   syslinux2ansi
+        showpicture                   system-config-printer
+        showppd                       system-config-printer-applet
+        showrgb                       systemsettings
+        shred                         systool
+        shuf                          sysvbanner
+        sieveeditor                   sz

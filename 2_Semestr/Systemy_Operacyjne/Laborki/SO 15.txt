@@ -1,0 +1,144 @@
+1.
+    Copy the file /etc/services to your own home directory. This file contains a list of the port numbers used for Internet network services.
+        asta@pollux:~$ cp /etc/services ~/
+        asta@pollux:~$ ls ~/
+        [B             dir1/  etcbackup/  find_ex/  one      readme.new*  touched/
+        backup-files/  dir2/  files/      newdir/   penguin  services     users
+
+2.
+    How many lines are in the file.
+        asta@pollux:~$ wc -l services
+        2401 services
+
+3.
+    Display all of the lines for tcp services.
+        asta@pollux:~$ grep tcp services
+    Count the number of lines for tcp services.
+        asta@pollux:~$ grep tcp services | wc -l
+        1174
+
+4.
+    Display all of the lines for udp services.
+        asta@pollux:~$ grep udp services
+    Count the number of lines for udp services.
+        asta@pollux:~$ grep udp services | wc -l
+        1136
+
+5.
+    Use the "last" command to display the record of all login sessions.
+    What command counts the number of login sessions for floopy?
+        asta@pollux:~$ last | wc -l
+        2060
+
+6.
+    Display a long directory listing for the /etc directory.
+    Pipe the output of the long directory listing through a grep command that will only display the entries for directories in /etc.
+        asta@pollux:~$ ls -l /etc | grep /
+        drwxr-xr-x   5 root root     4096 lis 19  2015 ConsoleKit/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 ImageMagick-6/
+        drwxr-xr-x   5 root root     4096 lut  9  2019 NetworkManager/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 UPower/
+        drwxr-xr-x  13 root root     4096 lis 21  2015 X11/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 acpi/
+        drwxr-xr-x   9 root root     4096 paź 23  2015 asciidoc/
+        lrwxrwxrwx   1 root root       28 lut  9  2019 asound.state -> ../var/lib/alsa/asound.state
+        drwxr-xr-x   2 root root     4096 lut  9  2019 at-spi2/
+        drwxr-xr-x   2 root root     4096 kwi 18  2013 auto.master.d/
+        drwxr-xr-x   3 root root     4096 lis 20  2015 avahi/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 bluetooth/
+        drwxr-xr-x   3 root root     4096 kwi 20  2016 ca-certificates/
+        drwxr-xr-x   2 root root     4096 mar  4  2016 conntrackd/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 cron.daily/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.hourly/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.monthly/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.weekly/
+        drwxr-xr-x   5 root root     4096 lut  3  2016 cups/
+        drwxr-xr-x   2 root root     4096 lis 19  2015 cupshelpers/
+        drwxr-xr-x   3 root root     4096 maj 31  2016 dbus-1/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 default/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 distcc/
+        drwxr-xr-x   2 root root     4096 maj 18  2016 dnsmasq.d/
+        drwxr-xr-x   3 root root     4096 lis 11  2015 file/
+        drwxr-xr-x   4 root root     4096 maj 21  2013 fonts/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gamin/
+        drwxr-xr-x   6 root root     4096 cze 14  2016 gconf/
+        drwxr-xr-x   3 root root     4096 lis 24  2015 gimp/
+        drwxr-xr-x   2 root root     4096 kwi 24  2016 gnupg/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 grub.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gtk/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gtk-2.0/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gtk-3.0/
+        drwxr-xr-x   2 root root     4096 cze  1  2016 hp/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 htdig/
+        drwxr-xr-x   4 root root     4096 kwi 14  2020 httpd/
+        lrwxrwxrwx   1 root root       11 lut  9  2019 init.d -> rc.d/init.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 iproute2/
+        drwxr-xr-x   2 root root     4096 gru 17  2015 joe/
+        drwxr-xr-x   4 root root     4096 paź 25  2015 kde/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 libnl/
+        lrwxrwxrwx   1 root root       33 lut  9  2019 localtime-copied-from -> /usr/share/zoneinfo/Europe/Warsaw
+        drwxr-xr-x   2 root root     4096 lut  9  2019 logrotate.d/
+        drwxr-xr-x   6 root root     4096 lut  9  2019 lvm/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 lxc/
+        drwxr-xr-x   3 root root     4096 kwi  5  2019 mail/
+        drwxr-xr-x   2 root root     4096 mar 26  2016 mc/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 mcelog/
+        drwxr-xr-x   3 root root     4096 maj 17  2016 mercurial/
+        lrwxrwxrwx   1 root root        4 lut  9  2019 misc -> file/
+        drwxr-xr-x   2 root root     4096 lis 24  2015 modprobe.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 mplayer/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 mutt/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 my.cnf.d/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 netatalk/
+        drwxr-xr-x   2 root root     4096 cze  4  2016 nftables/
+        drwxr-xr-x   2 root root     4096 kwi  6 13:11 ntp/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 openldap/
+        drwxr-xr-x   4 root root     4096 maj 10  2016 openvpn/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 pcmcia/
+        drwxr-xr-x   2 root root     4096 cze 24  2016 php-fpm.d/
+        drwxr-xr-x   2 root root     4096 cze 24  2016 php.d/
+        drwxr-xr-x   3 root root     4096 mar  7  2016 pkcs11/
+        drwxr-xr-x   5 root root     4096 paź 27  2013 pm/
+        drwxr-xr-x   3 root root     4096 mar 26  2016 polkit-1/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 ppp/
+        drwxr-xr-x   2 root root     4096 mar  2  2012 profile.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 pulse/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 radiusclient/
+        drwxr-xr-x  10 root root     4096 wrz 20  2019 rc.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc0.d -> rc.d/rc0.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc1.d -> rc.d/rc1.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc2.d -> rc.d/rc2.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc3.d -> rc.d/rc3.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc4.d -> rc.d/rc4.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc5.d -> rc.d/rc5.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc6.d -> rc.d/rc6.d/
+        drwxr-xr-x   2 root root     4096 mar  7  2016 rc_keymaps/
+        drwxr-xr-x   2 root root     4096 gru 18  2015 request-key.d/
+        lrwxrwxrwx   1 root root       16 lut  9  2019 rmt -> /usr/libexec/rmt*
+        drwxr-xr-x   3 root root     4096 lut 24  2020 samba/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 sane.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 scim/
+        drwxr-xr-x   2 root root     4096 lis 23  2015 sensors.d/
+        drwxr-xr-x   2 root root     4096 paź 23  2015 sgml/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 skel/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 slackpkg/
+        drwxr-xr-x   2 root root     4096 cze  7  2016 smartd_warning.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 snmp/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 soma/
+        drwxr-xr-x   2 root root     4096 lut 10  2019 ssh/
+        drwxr-xr-x   5 root root     4096 lut  9  2019 ssl/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 stunnel/
+        drwxr-x---   2 root root     4096 mar 25  2016 sudoers.d/
+        drwxr-xr-x   2 root root     4096 mar 15  2016 sysctl.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 sysstat/
+        drwxr-xr-x   2 root root     4096 lis 18  2015 tin/
+        drwxr-xr-x   5 root root     4096 lut 25 12:11 udev/
+        drwxr-xr-x   2 root root     4096 lis 19  2015 udisks2/
+        drwxr-xr-x   2 root root     4096 gru 15  2015 usb_modeswitch.d/
+        drwxr-xr-x  36 root bin      4096 wrz 18  2020 usermin/
+        drwxr-xr-x   3 root root     4096 cze  5  2003 uucp/
+        drwxr-xr-x   2 root root     4096 mar 19  2015 vga/
+        drwxr-xr-x 126 root root     4096 lut 27 16:05 webmin/
+        drwxr-xr-x   7 root root     4096 kwi 27  2016 xdg/
+        drwxr-xr-x   2 root root     4096 paź 23  2015 xml/

@@ -1,0 +1,429 @@
+WHO'S ON FLOPPIX
+
+    1.
+    Finger alterego and answer the following questions.
+
+    a.
+        is alterego logged in?
+            [asta@pollux ~]$ finger mpis
+            No, he isn't
+    b.
+        when was the last time alterego logged in?
+            Last login Mon Apr 26 00:31 (CEST) on pts/2 from 153.19.227.165
+    c.
+        does alterego have mail waiting?
+            No mail.
+    d.
+        when was the last time alterego read mail?
+ 
+    e.
+        does alterego have a plan?
+            No Plan.
+2.
+    What data does finger return about your own account?
+        [asta@pollux ~]$ finger asta
+        Login: asta                             Name: Stankiewicz Adrian Arkadiusz - I INF sem 2
+        Directory: /home/asta                   Shell: /bin/bash
+        Office: 404, 123976545                  Home Phone: 987654321
+        On since Fri Apr 30 21:38 (CEST) on pts/4 from 81.190.50.4
+        2 seconds idle
+        No mail.
+        No Plan.
+        
+        It returns name, login, directory, shell, office, phone, online time, curent activity,  mail and plan
+ 
+3.
+    Use finger to determine if there is a user called superego?
+        [asta@pollux ~]$ finger superego
+        finger: superego: no such user.
+4.
+    Create some data for the last command to display.
+    Login and logout a few times as yourself, alterego and floopy.
+    Make a few mistakes logging in.
+5.
+    Enter the command: last
+    How many logins were recorded?
+        [asta@pollux ~]$ last | grep 'asta' | head
+        asta     pts/4        81.190.50.4      Fri Apr 30 21:44   still logged in
+        asta     pts/4        81.190.50.4      Fri Apr 30 21:44 - 21:44  (00:00)
+        asta     pts/4        81.190.50.4      Fri Apr 30 21:38 - 21:43  (00:05)
+6.
+    Enter the command: lastb
+    How many login attempts were recorded?
+        [asta@pollux ~]$ lastb
+
+        btmp begins Thu Feb 25 12:04:48 2021
+7.
+    Setup the system so alterego and floopy are doing something.
+    Logon as alterego on virtual console 2 and startup vi .
+    Logon as floopy on virtual console 3.
+8.
+    On virtual console 1, enter the command: ps aux
+    What are alterego and floopy doing?
+        [asta@pollux ~]$ ps aux
+        USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+        root         1  0.0  0.0   4372  1392 ?        Ss   lut25   0:36 init [3]
+        root         2  0.0  0.0      0     0 ?        S    lut25   0:00 [kthreadd]
+        root         3  0.0  0.0      0     0 ?        S    lut25   0:10 [ksoftirqd/0]
+        root         5  0.0  0.0      0     0 ?        S<   lut25   0:00 [kworker/0:0H]
+        root         7  0.0  0.0      0     0 ?        S    lut25   7:09 [rcu_sched]
+        root         8  0.0  0.0      0     0 ?        S    lut25   0:00 [rcu_bh]
+        root         9  0.0  0.0      0     0 ?        S    lut25   0:02 [migration/0]
+        root        10  0.0  0.0      0     0 ?        S    lut25   0:02 [migration/1]
+        root        11  0.0  0.0      0     0 ?        S    lut25   0:12 [ksoftirqd/1]
+        root        13  0.0  0.0      0     0 ?        S<   lut25   0:00 [kworker/1:0H]
+        root        14  0.0  0.0      0     0 ?        S    lut25   0:01 [migration/2]
+        root        15  0.0  0.0      0     0 ?        S    lut25   0:09 [ksoftirqd/2]
+        root        17  0.0  0.0      0     0 ?        S<   lut25   0:00 [kworker/2:0H]
+        root        18  0.0  0.0      0     0 ?        S    lut25   0:01 [migration/3]
+        root        19  0.0  0.0      0     0 ?        S    lut25   0:09 [ksoftirqd/3]
+        root        21  0.0  0.0      0     0 ?        S<   lut25   0:00 [kworker/3:0H]
+        root        22  0.0  0.0      0     0 ?        S    lut25   0:00 [kdevtmpfs]
+        root        23  0.0  0.0      0     0 ?        S<   lut25   0:00 [netns]
+        root        24  0.0  0.0      0     0 ?        S<   lut25   0:00 [perf]
+        root        25  0.0  0.0      0     0 ?        S<   lut25   0:00 [writeback]
+        root        26  0.0  0.0      0     0 ?        SN   lut25   0:36 [khugepaged]
+        root        27  0.0  0.0      0     0 ?        S<   lut25   0:00 [crypto]
+        root        28  0.0  0.0      0     0 ?        S<   lut25   0:00 [kintegrityd]
+        root        29  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root        30  0.0  0.0      0     0 ?        S<   lut25   0:00 [kblockd]
+        root        31  0.0  0.0      0     0 ?        S<   lut25   0:00 [ata_sff]
+        root        32  0.0  0.0      0     0 ?        S<   lut25   0:00 [md]
+        root        33  0.0  0.0      0     0 ?        S<   lut25   0:00 [devfreq_wq]
+        root        38  0.0  0.0      0     0 ?        S<   lut25   0:00 [rpciod]
+        root        57  0.0  0.0      0     0 ?        S    lut25   0:05 [kswapd0]
+        root        58  0.0  0.0      0     0 ?        S<   lut25   0:00 [vmstat]
+        root        59  0.0  0.0      0     0 ?        S    lut25   0:00 [fsnotify_mark]
+        root        60  0.0  0.0      0     0 ?        S<   lut25   0:00 [nfsiod]
+        root       126  0.0  0.0      0     0 ?        S<   lut25   0:00 [kthrotld]
+        root       128  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       130  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       132  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       134  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       135  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       137  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       139  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       140  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       142  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       143  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       145  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       147  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       148  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       149  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       150  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       151  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       152  0.0  0.0      0     0 ?        S    lut25   0:00 [scsi_eh_0]
+        root       153  0.0  0.0      0     0 ?        S<   lut25   0:00 [scsi_tmf_0]
+        root       154  0.0  0.0      0     0 ?        S    lut25   0:00 [scsi_eh_1]
+        root       155  0.0  0.0      0     0 ?        S<   lut25   0:00 [scsi_tmf_1]
+        root       158  0.0  0.0      0     0 ?        S    lut25   0:00 [scsi_eh_2]
+        root       159  0.0  0.0      0     0 ?        S<   lut25   0:00 [scsi_tmf_2]
+        root       160  0.0  0.0      0     0 ?        S    lut25   0:00 [scsi_eh_3]
+        root       161  0.0  0.0      0     0 ?        S<   lut25   0:00 [scsi_tmf_3]
+        root       167  0.0  0.0      0     0 ?        S<   lut25   0:00 [raid5wq]
+        root       172  0.0  0.0      0     0 ?        S<   lut25   0:00 [deferwq]
+        root       173  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       174  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       175  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       210  0.0  0.0      0     0 ?        S<   lut25   0:02 [kworker/3:1H]
+        root       211  0.0  0.0      0     0 ?        S<   lut25   0:02 [kworker/1:1H]
+        root       212  0.0  0.0      0     0 ?        S<   lut25   0:01 [kworker/0:1H]
+        root       213  0.0  0.0      0     0 ?        S<   lut25   0:02 [kworker/2:1H]
+        root       234  0.0  0.0      0     0 ?        S<   lut25   0:00 [kdmflush]
+        root       235  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       238  0.0  0.0      0     0 ?        S<   lut25   0:00 [kdmflush]
+        root       239  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       257  0.0  0.0      0     0 ?        S    lut25   1:33 [jbd2/dm-1-8]
+        root       258  0.0  0.0      0     0 ?        S<   lut25   0:00 [ext4-rsv-conve
+        root       275  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       276  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       277  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       278  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       279  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       280  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       281  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       282  0.0  0.0      0     0 ?        S<   lut25   0:00 [bioset]
+        root       607  0.0  0.0  36268  1800 ?        Ss   lut25   0:01 /sbin/udevd --d
+        root       634  0.0  0.0      0     0 ?        SN   lut25   0:00 [kipmi0]
+        root       640  0.0  0.0      0     0 ?        S<   lut25   0:00 [ttm_swap]
+        root       753  0.0  0.0      0     0 ?        S    lut25   0:00 [jbd2/sda1-8]
+        root       754  0.0  0.0      0     0 ?        S<   lut25   0:00 [ext4-rsv-conve
+        root       765  0.0  0.0  15316     4 ?        S    lut25   0:00 /usr/sbin/cgman
+        root       801  0.0  0.0   6504  1484 ?        Ss   lut25   1:47 /usr/sbin/syslo
+        root       805  0.0  0.0   4376  1160 ?        Ss   lut25   0:00 /usr/sbin/klogd
+        message+   988  0.0  0.0  19860  1376 ?        Ss   lut25   0:00 /usr/bin/dbus-d
+        root      1006  0.0  0.0      0     0 ?        S<   lut25   0:00 [ipv6_addrconf]
+        root      1007  0.0  0.1  28676  2792 ?        Ss   lut25   3:02 /usr/sbin/sshd
+        root      1023  0.0  0.1  98180  2860 ?        Ss   lut25   1:15 /usr/sbin/ntpd
+        root      1030  0.0  0.0   4392     0 ?        Ss   lut25   0:00 /usr/sbin/acpid
+        root      1038  0.0  0.0 410392  1544 ?        Ssl  lut25   0:00 /usr/sbin/conso
+        polkitd   1048  0.0  0.1 386256  2108 ?        Sl   lut25   0:00 /usr/lib/polkit
+        root      1055  0.0  0.0  12828  1724 ?        Ss   lut25   0:04 /usr/sbin/crond
+        daemon    1057  0.0  0.0  12816    12 ?        Ss   lut25   0:00 /usr/sbin/atd -
+        root      1061  0.0  0.1  55948  3572 ?        Ss   lut25   1:07 sendmail: accep
+        smmsp     1068  0.0  0.1  36692  2088 ?        Ss   lut25   0:01 sendmail: Queue
+        root      1162  0.0  0.2 434600  5964 ?        Ss   lut25   0:47 /usr/sbin/httpd
+        root      1249  0.0  0.1 300232  2948 ?        Ss   lut25   0:08 /usr/sbin/smbd
+        root      1250  0.0  0.0      0     0 ?        S    02:04   0:02 [kworker/2:1]
+        root      1262  0.0  0.0 292136   692 ?        S    lut25   0:00 /usr/sbin/smbd
+        root      1263  0.0  0.0 292136  1440 ?        S    lut25   0:00 /usr/sbin/smbd
+        root      1265  0.0  0.1 224592  3120 ?        Ss   lut25   0:52 /usr/sbin/nmbd
+        root      1267  0.0  0.0 300232  1640 ?        S    lut25   0:11 /usr/sbin/smbd
+        root      1269  0.0  0.0   7556  1096 ?        Ss   lut25   0:00 /usr/sbin/gpm -
+        root      1290  0.0  0.4  61748  9288 ?        Ss   lut25   0:44 /usr/bin/perl /
+        root      1291  0.0  0.0  13280  1524 tty1     Ss+  lut25   0:00 /sbin/agetty 38
+        root      1292  0.0  0.0  13280  1576 tty2     Ss+  lut25   0:00 /sbin/agetty 38
+        root      1293  0.0  0.0  13280  1608 tty3     Ss+  lut25   0:00 /sbin/agetty 38
+        root      1294  0.0  0.0  13280  1592 tty4     Ss+  lut25   0:00 /sbin/agetty 38
+        root      1295  0.0  0.0  13280  1556 tty5     Ss+  lut25   0:00 /sbin/agetty 38
+        root      1296  0.0  0.0  13280  1612 tty6     Ss+  lut25   0:00 /sbin/agetty 38
+        root      1759  0.0  0.9  98392 20380 ?        Ss   kwi20   0:09 /usr/bin/perl /
+        root      2081  0.0  0.1  10268  2316 ?        S    lut25   0:00 /bin/sh /usr/bi
+        mysql     2158  0.0  1.1 753452 23000 ?        Sl   lut25  14:30 /usr/libexec/my
+        root      2401  0.0  0.0      0     0 ?        S    mar11   0:11 [kworker/1:0]
+        root      3150  0.0  0.0      0     0 ?        S    mar12   0:36 [kworker/3:0]
+        root      5044  0.0  0.0      0     0 ?        S    lut25   0:19 [kworker/0:2]
+        root      9146  0.0  0.0   6488  1448 ?        Ss   kwi27   0:00 /usr/sbin/inetd
+        root     13825  0.0  0.2  31236  4716 ?        Ss   17:41   0:00 sshd: bpar [pri
+        bpar     13827  0.0  0.1  31236  3280 ?        S    17:41   0:00 sshd: bpar@pts/
+        bpar     13828  0.0  0.1  19116  4012 pts/1    Ss+  17:41   0:00 -bash
+        bpar     14249  0.0  0.0   5012  1532 pts/1    T    18:12   0:00 cat
+        bpar     14486  0.0  0.0   5012  1576 pts/1    T    18:35   0:00 cat
+        root     16575  0.0  0.2  31236  4648 ?        Ss   20:50   0:00 sshd: smil [pri
+        smil     16577  0.0  0.1  31400  3488 ?        S    20:50   0:03 sshd: smil@pts/
+        smil     16578  0.0  0.1  18940  3860 pts/2    Ss+  20:50   0:00 -bash
+        root     17044  0.0  0.2  31236  4684 ?        Ss   21:27   0:00 sshd: jpuf [pri
+        jpuf     17050  0.0  0.1  31236  3368 ?        S    21:28   0:00 sshd: jpuf@pts/
+        jpuf     17051  0.0  0.1  18784  3700 pts/3    Ss+  21:28   0:00 -bash
+        root     17055  0.0  0.0      0     0 ?        S    kwi29   0:00 [kworker/3:2]
+        root     17102  0.0  0.0      0     0 ?        S    21:31   0:00 [kworker/u8:0]
+        root     17204  0.0  0.0      0     0 ?        S    21:39   0:00 [kworker/u8:1]
+        root     17229  0.0  0.2  31236  4628 ?        Ss   21:41   0:00 sshd: smil [pri
+        smil     17231  0.0  0.1  31236  3264 ?        S    21:41   0:00 sshd: smil@pts/
+        smil     17232  0.0  0.1  18772  3696 pts/5    Ss+  21:41   0:00 -bash
+        root     17264  0.0  0.0      0     0 ?        S    21:43   0:00 [kworker/2:2]
+        root     17310  0.0  0.0      0     0 ?        S    21:44   0:00 [kworker/u8:2]
+        root     17356  0.0  0.2  31236  4660 ?        Ss   21:47   0:00 sshd: asta [pri
+        asta     17358  0.0  0.1  31236  3216 ?        S    21:47   0:00 sshd: asta@pts/
+        asta     17359  0.0  0.1  18784  3648 pts/4    Ss   21:47   0:00 -bash
+        root     17379  0.0  0.0      0     0 ?        S    21:48   0:00 [kworker/2:0]
+        asta     17384  0.0  0.1  18240  2676 pts/4    R+   21:48   0:00 ps aux
+        root     25275  0.0  0.0      0     0 ?        S    kwi28   0:00 [kworker/1:1]
+        apache   28762  0.0  5.5 2359828 113164 ?      Sl   mar15   3:29 /usr/sbin/httpd
+        apache   28763  0.0  6.5 2362508 133664 ?      Sl   mar15   3:41 /usr/sbin/httpd
+        apache   28776  0.0  7.0 2362508 143808 ?      Sl   mar15   5:08 /usr/sbin/httpd
+        apache   28866  0.0  7.9 2362508 163668 ?      Sl   mar15   5:38 /usr/sbin/httpd
+        root     29136  0.0  0.0      0     0 ?        S    kwi28   0:00 [kworker/0:1]
+9.
+    Is lpd (the line printer daemon) running?
+        No
+
+
+
+PROCESS MANAGEMENT
+
+1.
+    Use the ps command:
+        a.
+            Enter the command ps au
+        b.
+            What processes are running on tty1?
+        c.
+            What processes are running on tty2?
+        d.
+            Switch to virtual console 2, login as alterego and enter the command ps au again.
+        e.
+            What processes are running on tty1?
+        f.
+            What processes are running on tty2?
+        g.
+            Logout on virtual console 2; switch back to virtual console 1.
+        h.
+            What processes are running on tty1?
+        i.
+            What processes are running on tty2?
+        j.
+            Enter the command: ps aux
+        k.
+            What additional processes are running?
+2. 
+    Suspend, background, foreground, kill
+        a.
+            Start links.
+                [asta@pollux ~]$ links
+        b.
+            Suspend it.
+                [Ctrl + Z]
+        c.
+            Enter the command: (sleep 60 ; sleep 60 ; ls -l > flist)
+            (make sure that you include the brackets; this command means: wait 60 seconds, wait 60 seconds, save the output from ls -l in the file flist).
+                [asta@pollux ~]$ (sleep 60 ; sleep 60 ; ls -l > flist)
+        d.
+            Suspend this command.
+                [Ctrl + Z]
+        e.
+            Background the sleep process started in step 3.
+                [asta@pollux ~]$ bg
+        f.
+            Foreground links
+                [asta@pollux ~]$ fg
+        g.
+            Suspend links
+                [Ctrl + Z]
+        h.
+            Kill links
+                [asta@pollux ~]$ killall links
+                [1]   Zakończony             links
+                [2]   Zakończony             links
+                [4]   Zakończony             links
+                [5]   Zakończony             links
+        i.
+            Check to see if the sleep command line has finished
+                [asta@pollux ~]$ jobs
+                [6]+  Zatrzymano              ( sleep 60; sleep 60; /bin/ls $LS_OPTIONS -l > flist )
+
+
+
+WGET-PRACTICE
+
+    1. 
+        Download "http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf" with wget
+            [asta@pollux ~]$ wget http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf
+    2.
+        Download and store a file With a Different File name [down-file.pdf] Using wget -O
+        url: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf
+            [asta@pollux ~]$ wget -O down-file.pdf http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf
+    3. 
+        Specify Download Speed / Download Rate Using wget –limit-rate
+        url: https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+            [asta@pollux ~]$ wget --limit-rate=200k https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+    4. 
+        Download in the Background Using wget -b
+        url: https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+            [asta@pollux ~]$ wget -b https://www.offensive-security.com/reports/penetration-testing-sample-report-2013.pdf
+                Kontynuacja w tle, pid 5365.
+                Wyjście zostanie zapisane do `wget-log'.
+            [asta@pollux ~]$ tail -f wget-log
+                26700K .......... .......... .......... .......... .......... 98% 11,7M 0s
+                26750K .......... .......... .......... .......... .......... 99% 9,92M 0s
+                26800K .......... .......... .......... .......... .......... 99% 11,7M 0s
+                26850K .......... .......... .......... .......... .......... 99% 11,6M 0s
+                26900K .......... .......... .......... .......... .......... 99% 11,7M 0s
+                26950K .......... .......... .......... .......... .......... 99% 9,93M 0s
+                27000K .......... .......... .......... .......... ..        100% 13,9M=2,4s
+
+                2021-05-05 23:43:03 (10,8 MB/s) - zapisano `penetration-testing-sample-report-2013.pdf.1' [27691955/27691955]
+    5.
+        Test Download URL Using wget –-spider
+        url1: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf
+        url2: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-XYZ.pdf
+            [asta@pollux ~]$ wget --spider http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf
+            Plik na zdalnym serwerze istnieje.
+
+            [asta@pollux ~]$ wget --spider http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-XYZ.pdf
+            Zdalny plik nie istnieje -- zepsuty odnośnik!!!
+    6.
+        Download Multiple Files Using Wget -i
+        url1: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf
+        url2: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-02.pdf
+        url3: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-04A.pdf
+        url4: http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-06.pdf
+            [asta@pollux ~]$ echo "http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-01i.pdf" >> plikiDoPobrania.txt
+            [asta@pollux ~]$ echo "http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-02.pdf" >> plikiDoPobrania.txt
+            [asta@pollux ~]$ echo "http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-04A.pdf" >> plikiDoPobrania.txt
+            [asta@pollux ~]$ echo "http://castor.am.gdynia.pl/~pik/prokom/pliki/mp--csh-06.pdf" >> plikiDoPobrania.txt
+            [asta@pollux ~]$ wget -i plikiDoPobrania.txt
+    7. Download Only Certain File Types Using wget -r -A
+        url: we.umg.edu.pl
+        file types: .png,.jpg
+            [asta@pollux ~]$ wget -r -A[.png,.jpg] [we.umg.edu.pl]
+            http://[we.umg.edu.pl]: Niewłaściwy adres numeryczny IPv6.
+            [asta@pollux ~]$ wget -r -A[.png,.jpg] [153.19.112.229]
+            http://[153.19.112.229]: Niewłaściwy adres numeryczny IPv6.
+
+            Próbowałem oba ale nie działa. Konenda prosi o IPv6, ale nasza strona takiego nie udostepnia (sprawdzilem nslookup)
+
+PRACTICE_EX9
+
+Section 1
+
+    1.
+        Use ps to search for the init process by name
+            [asta@pollux ~]$ ps -C init
+    2.
+        What is the process id of the init process ?
+            1
+    3.
+        Use the who am i command to determine your terminal name.
+            [asta@pollux ~]$ whoami
+            asta
+    4.  
+        Using your terminal name from above, use ps to find all processes associated with your terminal.
+            [asta@pollux ~]$ ps -u asta
+    5.
+        What is the process id of your shell ?
+
+    6.
+        What is the parent process id of your shell ?
+    7.
+        Start three instances of the [sleep 3342] in background.
+            [asta@pollux ~]$ sleep 180 &
+            [10] 5826
+            [asta@pollux ~]$ sleep 180 &
+            [11] 5827
+            [asta@pollux ~]$ sleep 180 &
+            [12] 5828
+    8.
+        Locate the process id of all sleep commands.
+            [asta@pollux ~]$ jobs
+            [10]   Działa                 sleep 180 &
+            [11]   Działa                 sleep 180 &
+            [12]   Działa                 sleep 180 &
+    9.
+        Use a standard kill to kill one of the sleep processes.
+            [asta@pollux ~]$ kill -sygnał 10
+    10.
+        Use one command to kill all sleep processes
+            [asta@pollux ~]$ killall sleep
+            [10]   Zakończony             sleep 180
+            [11]   Zakończony             sleep 180
+            [12]   Zakończony             sleep 180
+
+Section 2
+
+    1.
+        Use the jobs command to verify whether you have any processes running in background.
+            [asta@pollux ~]$ jobs
+    2.
+        Use vi to create a little text file. Suspend vi in background.
+            [asta@pollux ~]$ vi
+            [Ctrl + Z]
+    3.
+        Verify with jobs that vi is suspended in background.
+            [10]+  Zatrzymano              vi
+    4.
+        Start find / -name allfiles.txt 2>/dev/null in foreground. Suspend it in background before it finishes.
+    5.
+        Start two long sleep processes in background. (sleep 500)
+            [asta@pollux /]$ sleep 500 &
+            [asta@pollux /]$ sleep 500 &
+    6.
+        Display all jobs in background.
+            [asta@pollux /]$ jobs
+    7.
+        Use the kill command to suspend the last sleep process.
+            kill -sygnał 13
+            kill -9 13
+            kill -SIGKILL 13
+    8.
+        Continue the find process in background (make sure it runs again).
+    9.
+        Put one of the sleep processes back in foreground.
+            [asta@pollux /]$ fg 12
+    10.
+        At the end kill all running processes.
+            [asta@pollux /]$ killall -u asta
+
+Section 3
+
+    Nie mam dostępu do 2 terminali :/

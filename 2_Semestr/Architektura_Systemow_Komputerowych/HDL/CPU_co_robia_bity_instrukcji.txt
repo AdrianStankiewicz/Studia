@@ -1,0 +1,17 @@
+//15 - instrukcja A czy C?
+//14,13 - nieużywane
+//12 - ALU operuje na A czy pamięci M?
+//11 - zerować wartość D?
+//10 - negować wartość D?
+//9 - zerować wartość A/M?
+//8 - negować wartość A/M?
+//7 - dodawać czy mnożyć bitowo w ALU?
+//6 - negować wynik operacji w ALU?
+//5 - zapisać wynik do rejestru A
+//4 - zapisać wynik do rejestru D
+//3 - zapisać wynik do pamięci M
+//2 - skok jeżeli wynik ujemny
+//1 - skok jeżeli wynik zerowy
+//0 - skok jeżeli wynik dodatni
+
+15 - LSB

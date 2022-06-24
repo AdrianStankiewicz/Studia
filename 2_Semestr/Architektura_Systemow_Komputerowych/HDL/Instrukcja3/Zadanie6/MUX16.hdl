@@ -1,0 +1,22 @@
+CHIP MUX16{
+IN x0[16],x1[16],sel;
+OUT out[16];
+    
+PARTS:
+MUX(x0=x0[0],x1=x1[0],sel=sel,out=out[0]);
+MUX(x0=x0[1],x1=x1[1],sel=sel,out=out[1]);
+MUX(x0=x0[2],x1=x1[2],sel=sel,out=out[2]);
+MUX(x0=x0[3],x1=x1[3],sel=sel,out=out[3]);
+MUX(x0=x0[4],x1=x1[4],sel=sel,out=out[4]);
+MUX(x0=x0[5],x1=x1[5],sel=sel,out=out[5]);
+MUX(x0=x0[6],x1=x1[6],sel=sel,out=out[6]);
+MUX(x0=x0[7],x1=x1[7],sel=sel,out=out[7]);
+MUX(x0=x0[8],x1=x1[8],sel=sel,out=out[8]);
+MUX(x0=x0[9],x1=x1[9],sel=sel,out=out[9]);
+MUX(x0=x0[10],x1=x1[10],sel=sel,out=out[10]);
+MUX(x0=x0[11],x1=x1[11],sel=sel,out=out[11]);
+MUX(x0=x0[12],x1=x1[12],sel=sel,out=out[12]);
+MUX(x0=x0[13],x1=x1[13],sel=sel,out=out[13]);
+MUX(x0=x0[14],x1=x1[14],sel=sel,out=out[14]);
+MUX(x0=x0[15],x1=x1[15],sel=sel,out=out[15]);
+}

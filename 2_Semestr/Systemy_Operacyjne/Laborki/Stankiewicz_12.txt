@@ -1,0 +1,159 @@
+WORKING WITH GROUPS
+
+1.
+    As superuser, create a group called readers. The password should be * , the gid should be 200 and initially, there should not be any users in this group.
+        root@linux:~# groupadd readers
+        vim /etc/group
+        readers:x:200
+2.
+    Create the subdirectory /home/readers. This subdirectory should be owned by the user root and the group readers. The permissions on this subdirectory should be rwxr-x---. Copy /etc/passwd to /home/readers.
+        root@linux:/home# mkdir readers
+        root@linux:/home# chown -R root /home/readers
+        root@linux:/home# chgrp -R readers /home/readers
+        root@linux:/home# ls -l | grep "readers"
+        drwxr-x--- 2 root readers 4096 maj 31 20:25 readers/
+
+        root@linux:/etc# cp /etc/passwd ../home/readers
+3.
+    On another virtual console, login as alterego. Can you:
+    - list the contents of /home/readers? (answer should be no)
+    - cd to /home/readers? (answer should be no)
+    - cat /home/readers/passwd? (answer should be no)
+    - create a file in the directory /home/readers? (answer should be no)
+    Logout.
+
+        alterego@linux:/home$ ls readers
+        ls: nie można otworzyć katalogu 'readers': Brak dostępu
+
+        alterego@linux:/home$ cd readers
+        bash: cd: readers: Brak dostępu
+
+        alterego@linux:/home$ cat /home/readers/passwd
+        cat: /home/readers/passwd: Brak dostępu
+
+        alterego@linux:/home$ touch /readers/plik.txt
+        touch: nie można dotknąć '/readers/plik.txt': Nie ma takiego pliku ani katalogu
+4.
+    As superuser, add alterego and floopy to the readers group. The line in /etc/group should now be: readers:*:200:alterego,floopy
+        vim /etc/group
+        readers:*:200:alterego,floopy
+5.
+    On another virtual console, login as alterego.
+    Use the "id" command to verify that you are now a member of the readers group.
+    What is your gid? _____
+    Can you:
+    - list the contents of /home/readers? (answer should now be yes)
+    - cd to /home/readers? (answer should now be yes)
+    - cat /home/readers/passwd? (answer should now be yes)
+    - create a file in the directory /home/readers? (answer should still be no)
+
+        root@linux:~# su alterego
+        alterego@linux:/root$ id
+        uid=1006(alterego) gid=1006 grupy=1006,200(readers)
+
+        alterego@linux:/home/readers$ ls
+        passwd
+
+        alterego@linux:/root$ cd /home/readers
+        alterego@linux:/home/readers$
+
+        alterego@linux: cat passwd
+        DZIAŁA
+
+        alterego@linux:/home/readers$ touch plik
+        touch: nie można dotknąć 'plik': Brak dostępu
+6.
+    Still working as alterego
+    - cd to your own home directory
+        alterego@linux:/$ cd ~
+        alterego@linux:~$
+    
+    - what is your gid? (use the "id" command to determine this)
+        1006
+
+    - use touch to create a new file called test1
+        alterego@linux:/$ touch test1
+
+    - which user and group own test1?
+        -rw-r--r-- 1 alterego 1006 0 maj 31 20:50 test1
+        ALTEREGO 1006
+
+    - enter the command: newgrp readers
+        alterego@linux:~$ newgrp readers
+
+    - what is your gid? (use the "id" command to determine this) _____
+        1006
+
+    - use touch to create a new file called test2
+        alterego@linux:~$ touch test2
+
+    - which user and group own test2?
+        -rw-r--r-- 1 alterego 1006 0 maj 31 20:52 test2
+
+    - logout
+7.
+    As superuser, change the permissions on /home/readers to rwxrwx---.
+        root@linux:~# chmod 770 /home/readers
+8.
+    Login as alterego.
+    - what is your gid? (use the "id" command to determine this) _____
+        1006
+
+    - cd to /home/readers
+        alterego@linux:~$ cd /home/readers
+        alterego@linux:/home/readers$
+
+    - use touch to create a new file called test3.
+        alterego@linux:/home/readers$ touch test3
+
+    - Who owns test3? Which group owns test3?
+        -rw-r--r-- 1 alterego 1006    0 maj 31 21:13 test3
+9.
+    As superuser, change the permissions on /home/readers to rwxrws---.
+        root@linux:/home# chmod g-x readers
+        root@linux:/home# chmod g+s readers
+        root@linux:/home# ls -l | grep "readers"
+        drwxrwS--- 2 root     readers 4096 maj 31 21:13 readers/
+10.
+    Login as alterego.
+    - what is your gid? (use the "id" command to determine this)
+        1006
+    - cd to /home/readers
+    - use touch to create a new file called test4.
+    - Who owns test4? Which group owns test4?
+
+        alterego@linux:/home$ cd /home/readers
+        bash: cd: /home/readers: Brak dostępu
+
+ADD USERS PRACTICE
+
+1.
+    Ponieważ tamci są już stworzeni zrobiłem 2 innych:
+
+        root@linux:/home# vim /etc/passwd
+        mierzejewski:x:1016:1016:Adrian:/home/mierzejewski:/bin/bash
+        root@linux:/home# mkdir mierzejewski
+        root@linux:/home# chown -R mierzejewski /home/mierzejewski
+
+        root@linux:/home# useradd -m -d /home/grosicki -c "Kamil" grosicki
+2.
+    Set a password for each user. 
+        root@linux:/home# passwd grosicki (Hasl0)
+        root@linux:/home# passwd mierzejewski (Hasl0)
+3.
+    Create new groups 
+
+        vim /etc/group
+        shenhua:x:1022:
+
+        root@linux:/home# groupadd albion
+4.
+    set group admins
+        root@linux:/home# vim /etc/gshadow
+        albion:*:grosicki:
+
+        root@linux:/home# gpasswd -A grosicki grosicki
+5.
+    Set passwords for groups: (using "gpasswd" command)
+        root@linux:/home# gpasswd grosicki (Hasl0)
+        root@linux:/home# gpasswd albion (Hasl0)

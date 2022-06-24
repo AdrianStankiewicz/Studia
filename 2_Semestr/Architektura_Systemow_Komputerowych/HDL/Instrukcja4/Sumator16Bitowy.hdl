@@ -1,0 +1,22 @@
+CHIP Sumator16Bitowy{
+IN a[16],b[16];
+OUT s[16],cout;
+        
+PARTS:
+SumatorPolowkowy(a=a[0], b=b[0], c=cout1, s=s[0]);
+SumatorPelny(cin=cout1, a=a[1], b=b[1], cout=cout2, s=s[1]);
+SumatorPelny(cin=cout2, a=a[2], b=b[2], cout=cout3, s=s[2]);
+SumatorPelny(cin=cout3, a=a[3], b=b[3], cout=cout4, s=s[3]);
+SumatorPelny(cin=cout4, a=a[4], b=b[4], cout=cout5, s=s[4]);
+SumatorPelny(cin=cout5, a=a[5], b=b[5], cout=cout6, s=s[5]);
+SumatorPelny(cin=cout6, a=a[6], b=b[6], cout=cout7, s=s[6]);
+SumatorPelny(cin=cout7, a=a[7], b=b[7], cout=cout8, s=s[7]);
+SumatorPelny(cin=cout8, a=a[8], b=b[8], cout=cout9, s=s[8]);
+SumatorPelny(cin=cout9, a=a[9], b=b[9], cout=cout10, s=s[9]);
+SumatorPelny(cin=cout10, a=a[10], b=b[10], cout=cout11, s=s[10]);
+SumatorPelny(cin=cout11, a=a[11], b=b[11], cout=cout12, s=s[11]);
+SumatorPelny(cin=cout12, a=a[12], b=b[12], cout=cout13, s=s[12]);
+SumatorPelny(cin=cout13, a=a[13], b=b[13], cout=cout14, s=s[13]);
+SumatorPelny(cin=cout14, a=a[14], b=b[14], cout=cout15, s=s[14]);
+SumatorPelny(cin=cout15, a=a[15], b=b[15], cout=cout, s=s[15]);
+}

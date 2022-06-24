@@ -1,0 +1,119 @@
+DO ZROBIENIA
+
+1.
+    What is your current search path?
+        asta@pollux:~$ echo $PATH
+        /usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin
+2.
+    Check what programs does each directory has ?
+   /usr/local/bin ;
+        asta@pollux:~$ cd /usr/local/bin
+        asta@pollux:/usr/local/bin$ ls
+        manual*
+    /usr/bin;
+        minicom*                               mk_cmds*
+        zonetab2pot.py*                        mkafmmap*
+        zoo*
+    /bin ;
+        printenv*          tcsh*
+        egrep*       printf*            tee*
+    /usr/games ;
+        adventure*   bcd*        factor*   mille*      pom*
+3.
+    Where we can find the following commands: (use 'which' OR 'type')
+    - manual
+        man: /usr/bin/man /etc/man.conf /usr/local/man /usr/share/man /usr/man/man1/man.1.gz /usr/man/man7/man.7.gz
+    - ls
+        ls: /usr/bin/ls /bin/ls /usr/man/man1/ls.1.gz
+    - grep
+        grep: /usr/bin/grep /bin/grep /usr/man/man1/grep.1.gz /usr/info/grep.info.gz
+    - mkdir
+        mkdir: /usr/bin/mkdir /bin/mkdir /usr/man/man1/mkdir.1.gz /usr/man/man2/mkdir.2.gz
+    - who
+        who: /usr/bin/who /bin/who /usr/man/man1/who.1.gz
+    - snake
+        snake: /usr/games/snake /usr/man/man6/snake.6.gz
+    - random
+        random: /usr/games/random /usr/man/man6/random.6.gz /usr/man/man3/random.3.gz /usr/man/man4/random.4.gz
+    - ifconfig (use find)
+        asta@pollux:~$ find / -name ifconfig 2> /dev/null
+        /sbin/ifconfig
+4.
+    Clear your path $PATH.
+        asta@pollux:/usr/games$ PATH=
+        asta@pollux:/usr/games$ echo $PATH
+        
+5.
+    Try to create a new file/directory into your home directory. (using touch or mkdir)
+        asta@pollux:~$ PATH=
+        asta@pollux:~$ touch newfile
+        -bash: touch: Nie ma takiego pliku ani katalogu
+6.
+    Now try to create direcoty [myNewDir] using the command: /bin/mkdir myNewDir. Did this work?
+        asta@pollux:~$ /bin/mkdir myNewDir
+7.
+    Add /bin directory to $PATH.
+        asta@pollux:/$ PATH=/bin
+        asta@pollux:/$ echo $PATH
+        /bin
+8.
+    And now try to create a dir.
+        asta@pollux:~$ echo $PATH
+        /bin
+        asta@pollux:~$ mkdir myNewDir
+        mkdir: nie można utworzyć katalogu „myNewDir”: Plik istnieje
+9.
+    And now try to run a game [worm]. 
+        asta@pollux:~$ ./worm
+        -bash: ./worm: Nie ma takiego pliku ani katalogu
+
+10.
+    Go to the dir /usr/games, and now run it. Is it run ? (using ./worm)
+        asta@pollux:/usr/games$ ./worm
+
+        Well, you ran into something and the game is over.
+        Your final score was 119
+11.
+    Now copy the game [worm] to your home directory.
+        asta@pollux:~$ cp worm ~
+12.
+    Add your home directory to $PATH.
+        asta@pollux:~$ PATH=$PATH:/home/asta
+        asta@pollux:~$ echo $PATH
+        /bin:/home/asta
+13.
+    Can you run it now ? (using worm)
+        asta@pollux:~$ ./worm
+
+        Well, you ran into something and the game is over.
+        Your final score was 6
+14.
+    Add /usr/games directory to $PATH.
+        asta@pollux:~$ PATH=$PATH:/usr/games
+        asta@pollux:~$ echo $PATH
+        /bin:/home/asta:/usr/games
+15.
+    What is your current search path now ?
+        /bin:/home/asta:/usr/games
+16.
+    Logout and login again.
+        done
+17.
+    Display your $PATH, where each directory is printed in newline instead of after ":". (use tr )
+        asta@pollux:~$ echo $PATH | tr ":" '\n'
+        /usr/local/bin
+        /usr/bin
+        /bin
+        /usr/games
+        /usr/lib64/kde4/libexec
+        /usr/lib64/qt/bin
+        /usr/share/texmf/bin
+18.
+    Find where does "ifconfig" exist. And then add its directory to $PATH, in order to run "ifconfig" from the command line.
+        asta@pollux:~$ find / -name ifconfig 2> /dev/null
+        /sbin/ifconfig
+
+        asta@pollux:~$ PATH=$PATH:/sbin/ifconfig
+
+
+NIE WIEM TU NIE MOGĘ URUCHOMIĆ IFCONFIG

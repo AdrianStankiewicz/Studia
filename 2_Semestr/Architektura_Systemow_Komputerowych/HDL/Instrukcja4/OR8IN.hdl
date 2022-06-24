@@ -1,0 +1,13 @@
+CHIP OR8IN {
+    IN in[8];
+    OUT out;
+    
+    PARTS:
+    OR(a=in[0],b=in[1],out=a);
+    OR(a=a,b=in[2],out=b);
+    OR(a=b,b=in[3],out=c);
+    OR(a=c,b=in[4],out=d);
+    OR(a=d,b=in[5],out=e);
+    OR(a=e,b=in[6],out=f);
+    OR(a=f,b=in[7],out=out);
+}

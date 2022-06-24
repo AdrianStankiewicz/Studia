@@ -1,0 +1,11 @@
+CHIP DEMUX{
+IN a,sel;
+OUT x0,x1;
+        
+PARTS:
+Nand(a=sel, b=sel, out=w1);
+Nand(a=a, b=w1, out=w2);
+Nand(a=sel, b=a, out=w3);
+Nand(a=w2, b=w2, out=x0);
+Nand(a=w3, b=w3, out=x1);
+}

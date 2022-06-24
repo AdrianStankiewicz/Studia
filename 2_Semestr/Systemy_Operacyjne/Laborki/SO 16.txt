@@ -1,0 +1,128 @@
+1 - 3.
+    Skipped not to change password
+
+4.
+    Try to the password for another user. For example, enter the command:  
+        asta@pollux:~$ passwd floppy
+        passwd: user 'floppy' does not exist
+
+        asta@pollux:~$ passwd kjag
+        passwd: Nie możesz przeglądać lub zmieniać informacji o haśle dla kjag.
+5.
+    Can you view the contents of the directory /sbin?
+        asta@pollux:~$ ls /root
+        /bin/ls: nie można otworzyć katalogu '/root': Brak dostępu
+        No.
+6.
+    What are the permissions for the directory /sbin?
+        asta@pollux:~$ ls -l /root
+        /bin/ls: nie można otworzyć katalogu '/root': Brak dostępu
+7.
+    Change the permissions on "readme" in your own home so that you have read/write access, the group has read access and others have no access.
+        asta@pollux:~$ chmod 750 readme
+8.
+    Change permissions on your home directory so that you have read/write/execute permissions, the group has read/execute permissions, and everyone else has no access.
+        asta@pollux:~$ chmod 750 ~/
+9.
+    Make sure that you are in your own home directory. Create a subdirectory called ddd and copy readme to ddd/fff (a file called fff in the ddd subdirectory).
+        asta@pollux:~$ mkdir ddd
+        asta@pollux:~$ cp readme ~/ddd/fff
+        asta@pollux:~$ ls ddd
+        fff*
+    what are the permissions on ddd and fff?
+        asta@pollux:~$ ls -l ddd
+        razem 0
+        -rwxr-x--- 1 asta asta 0 kwi 14 11:41 fff*
+    
+        asta@pollux:~$: ls -l 
+        drwxr-xr-x  2 asta asta     4096 kwi 14 11:41 ddd/
+
+    change the permissions on fff to only rwx for the owner.
+        asta@pollux:~$ chmod 700 ~/ddd/fff
+        asta@pollux:~$ ls -l ~/ddd
+        razem 0
+        -rwx------ 1 asta asta 0 kwi 14 11:41 fff*
+10.
+    Try the following exercise to see some of the operations that you can and cannot do when you have only read permission on a directory.
+    change the permissions on ddd only r for the owner (no permissions for the group and the world)
+        asta@pollux:~$ chmod 400 ~/ddd
+
+    can you get a directory listing for ddd? No
+        asta@pollux:~$ ls -l ~/ddd
+        /bin/ls: nie ma dostępu do '/home/asta/ddd/fff': Brak dostępu
+        razem 0
+        -????????? ? ? ? ?            ? fff
+
+    can you cd to ddd? No
+        asta@pollux:~$ cd ddd
+        -bash: cd: ddd: Brak dostępu
+
+    can you view the contents of fff with the command: cat ddd/fff ? No
+        asta@pollux:~$ cat ddd/fff
+        cat: ddd/fff: Brak dostępu
+
+    can you delete fff with the command: rm ddd/fff ? No
+        asta@pollux:~$ rm ddd/fff
+        rm: nie można usunąć 'ddd/fff': Brak dostępu
+11.
+    Try the following to see what you can do when you have read and execute permission for a directory.
+    change the permissions on ddd only rx for the owner (no permissions for the group and the world)
+        asta@pollux:~$ chmod 500 ~/ddd
+
+    can you get a directory listing for ddd? Yes
+        -rwx------ 1 asta asta 0 kwi 14 11:41 fff*
+
+    can you cd to ddd? Yes
+        asta@pollux:~$ cd ddd
+        asta@pollux:~/ddd$
+
+    can you view the contents of fff with the command: cat ddd/fff ? Yes
+        asta@pollux:~$ cat ddd/fff
+        asta@pollux:~$
+
+    can you delete fff with the command: rm ddd/fff ? No
+        asta@pollux:~$ rm ddd/fff
+        rm: nie można usunąć 'ddd/fff': Brak dostępu
+12.
+    Try the following to see what you can do when you have write and execute permissions for a directory.
+    change the permissions on ddd only wx for the owner (no permissions for the group and the world)
+        asta@pollux:~$ chmod 300 ~/ddd
+
+    can you get a directory listing for ddd? No
+        asta@pollux:~$ ls -l ~/ddd
+        /bin/ls: nie można otworzyć katalogu '/home/asta/ddd': Brak dostępu
+
+    can you cd to ddd? Yes
+        asta@pollux:~$ cd ddd
+        asta@pollux:~/ddd$
+
+    can you view the contents of fff with the command: cat ddd/fff ? No
+        asta@pollux:~/ddd$ cat ddd/fff
+        cat: ddd/fff: Nie ma takiego pliku ani katalogu
+
+    can you delete fff with the command: rm ddd/fff ? Yes
+        asta@pollux:~$ rm ddd/fff
+
+    can you execute the command: cd ; cp readme ddd/fff  Yes
+        asta@pollux:~$ cd ; cp readme ddd/fff
+13.
+    Try the following to see what you can do when you have only execute permissions for a directory.
+    change the permissions on ddd only x for the owner (no permissions for the group and the world)
+        asta@pollux:~$ chmod 100 ~/ddd
+
+    can you get a directory listing for ddd? No
+        /bin/ls: nie można otworzyć katalogu '/home/asta/ddd': Brak dostępu
+
+    can you cd to ddd? Yes
+        asta@pollux:~$ cd ~/ddd
+        asta@pollux:~/ddd$
+
+    can you view the contents of fff with the command: cat ddd/fff ? Yes
+        asta@pollux:~$ cat ddd/fff
+
+    can you delete with the command: rm ddd/fff No
+        asta@pollux:~$ rm ddd/fff
+    rm: nie można usunąć 'ddd/fff': Brak dostępu
+
+    can you execute the command: cd ; cp readme ddd/fff  Yes
+        asta@pollux:~$ cd ; cp readme ddd/fff

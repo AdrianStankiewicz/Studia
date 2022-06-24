@@ -1,0 +1,476 @@
+PIPES AND FILTERS:
+
+1.
+    Copy the file /etc/services to your own home directory. This file contains a list of the port numbers used for Internet network services.
+        asta@pollux:~$ cp /etc/services ~/
+        asta@pollux:~$ ls ~/
+        [B             dir1/  etcbackup/  find_ex/  one      readme.new*  touched/
+        backup-files/  dir2/  files/      newdir/   penguin  services     users
+
+2.
+    How many lines are in the file.
+        asta@pollux:~$ wc -l services
+        2401 services
+
+3.
+    Display all of the lines for tcp services.
+        asta@pollux:~$ grep tcp services
+    Count the number of lines for tcp services.
+        asta@pollux:~$ grep tcp services | wc -l
+        1174
+
+4.
+    Display all of the lines for udp services.
+        asta@pollux:~$ grep udp services
+    Count the number of lines for udp services.
+        asta@pollux:~$ grep udp services | wc -l
+        1136
+
+5.
+    Use the "last" command to display the record of all login sessions.
+    What command counts the number of login sessions for floopy?
+        asta@pollux:~$ last | wc -l
+        2060
+
+6.
+    Display a long directory listing for the /etc directory.
+    Pipe the output of the long directory listing through a grep command that will only display the entries for directories in /etc.
+        asta@pollux:~$ ls -l /etc | grep /
+        drwxr-xr-x   5 root root     4096 lis 19  2015 ConsoleKit/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 ImageMagick-6/
+        drwxr-xr-x   5 root root     4096 lut  9  2019 NetworkManager/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 UPower/
+        drwxr-xr-x  13 root root     4096 lis 21  2015 X11/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 acpi/
+        drwxr-xr-x   9 root root     4096 paź 23  2015 asciidoc/
+        lrwxrwxrwx   1 root root       28 lut  9  2019 asound.state -> ../var/lib/alsa/asound.state
+        drwxr-xr-x   2 root root     4096 lut  9  2019 at-spi2/
+        drwxr-xr-x   2 root root     4096 kwi 18  2013 auto.master.d/
+        drwxr-xr-x   3 root root     4096 lis 20  2015 avahi/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 bluetooth/
+        drwxr-xr-x   3 root root     4096 kwi 20  2016 ca-certificates/
+        drwxr-xr-x   2 root root     4096 mar  4  2016 conntrackd/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 cron.daily/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.hourly/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.monthly/
+        drwxr-xr-x   2 root root     4096 maj 10  2016 cron.weekly/
+        drwxr-xr-x   5 root root     4096 lut  3  2016 cups/
+        drwxr-xr-x   2 root root     4096 lis 19  2015 cupshelpers/
+        drwxr-xr-x   3 root root     4096 maj 31  2016 dbus-1/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 default/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 distcc/
+        drwxr-xr-x   2 root root     4096 maj 18  2016 dnsmasq.d/
+        drwxr-xr-x   3 root root     4096 lis 11  2015 file/
+        drwxr-xr-x   4 root root     4096 maj 21  2013 fonts/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gamin/
+        drwxr-xr-x   6 root root     4096 cze 14  2016 gconf/
+        drwxr-xr-x   3 root root     4096 lis 24  2015 gimp/
+        drwxr-xr-x   2 root root     4096 kwi 24  2016 gnupg/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 grub.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gtk/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gtk-2.0/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 gtk-3.0/
+        drwxr-xr-x   2 root root     4096 cze  1  2016 hp/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 htdig/
+        drwxr-xr-x   4 root root     4096 kwi 14  2020 httpd/
+        lrwxrwxrwx   1 root root       11 lut  9  2019 init.d -> rc.d/init.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 iproute2/
+        drwxr-xr-x   2 root root     4096 gru 17  2015 joe/
+        drwxr-xr-x   4 root root     4096 paź 25  2015 kde/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 libnl/
+        lrwxrwxrwx   1 root root       33 lut  9  2019 localtime-copied-from -> /usr/share/zoneinfo/Europe/Warsaw
+        drwxr-xr-x   2 root root     4096 lut  9  2019 logrotate.d/
+        drwxr-xr-x   6 root root     4096 lut  9  2019 lvm/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 lxc/
+        drwxr-xr-x   3 root root     4096 kwi  5  2019 mail/
+        drwxr-xr-x   2 root root     4096 mar 26  2016 mc/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 mcelog/
+        drwxr-xr-x   3 root root     4096 maj 17  2016 mercurial/
+        lrwxrwxrwx   1 root root        4 lut  9  2019 misc -> file/
+        drwxr-xr-x   2 root root     4096 lis 24  2015 modprobe.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 mplayer/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 mutt/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 my.cnf.d/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 netatalk/
+        drwxr-xr-x   2 root root     4096 cze  4  2016 nftables/
+        drwxr-xr-x   2 root root     4096 kwi  6 13:11 ntp/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 openldap/
+        drwxr-xr-x   4 root root     4096 maj 10  2016 openvpn/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 pcmcia/
+        drwxr-xr-x   2 root root     4096 cze 24  2016 php-fpm.d/
+        drwxr-xr-x   2 root root     4096 cze 24  2016 php.d/
+        drwxr-xr-x   3 root root     4096 mar  7  2016 pkcs11/
+        drwxr-xr-x   5 root root     4096 paź 27  2013 pm/
+        drwxr-xr-x   3 root root     4096 mar 26  2016 polkit-1/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 ppp/
+        drwxr-xr-x   2 root root     4096 mar  2  2012 profile.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 pulse/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 radiusclient/
+        drwxr-xr-x  10 root root     4096 wrz 20  2019 rc.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc0.d -> rc.d/rc0.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc1.d -> rc.d/rc1.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc2.d -> rc.d/rc2.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc3.d -> rc.d/rc3.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc4.d -> rc.d/rc4.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc5.d -> rc.d/rc5.d/
+        lrwxrwxrwx   1 root root       10 lut  9  2019 rc6.d -> rc.d/rc6.d/
+        drwxr-xr-x   2 root root     4096 mar  7  2016 rc_keymaps/
+        drwxr-xr-x   2 root root     4096 gru 18  2015 request-key.d/
+        lrwxrwxrwx   1 root root       16 lut  9  2019 rmt -> /usr/libexec/rmt*
+        drwxr-xr-x   3 root root     4096 lut 24  2020 samba/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 sane.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 scim/
+        drwxr-xr-x   2 root root     4096 lis 23  2015 sensors.d/
+        drwxr-xr-x   2 root root     4096 paź 23  2015 sgml/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 skel/
+        drwxr-xr-x   3 root root     4096 lut  9  2019 slackpkg/
+        drwxr-xr-x   2 root root     4096 cze  7  2016 smartd_warning.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 snmp/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 soma/
+        drwxr-xr-x   2 root root     4096 lut 10  2019 ssh/
+        drwxr-xr-x   5 root root     4096 lut  9  2019 ssl/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 stunnel/
+        drwxr-x---   2 root root     4096 mar 25  2016 sudoers.d/
+        drwxr-xr-x   2 root root     4096 mar 15  2016 sysctl.d/
+        drwxr-xr-x   2 root root     4096 lut  9  2019 sysstat/
+        drwxr-xr-x   2 root root     4096 lis 18  2015 tin/
+        drwxr-xr-x   5 root root     4096 lut 25 12:11 udev/
+        drwxr-xr-x   2 root root     4096 lis 19  2015 udisks2/
+        drwxr-xr-x   2 root root     4096 gru 15  2015 usb_modeswitch.d/
+        drwxr-xr-x  36 root bin      4096 wrz 18  2020 usermin/
+        drwxr-xr-x   3 root root     4096 cze  5  2003 uucp/
+        drwxr-xr-x   2 root root     4096 mar 19  2015 vga/
+        drwxr-xr-x 126 root root     4096 lut 27 16:05 webmin/
+        drwxr-xr-x   7 root root     4096 kwi 27  2016 xdg/
+        drwxr-xr-x   2 root root     4096 paź 23  2015 xml/
+
+PRACTICE_EX6.TXT:
+
+1. Put a sorted list of all bash users (who have /bin/bash shell) from /etc/passwd file in bashusers.txt.
+- cat /etc/passwd | grep /bin/bash$ | sort > bashusers.txt
+    asta@pollux:~$ cat /etc/passwd | grep /bin/bash$ | sort > bashusers.txt
+    asta@pollux:~$ ls
+    [B             dir1/       files/    one          services
+    backup-files/  dir2/       find_ex/  penguin      touched/
+    bashusers.txt  etcbackup/  newdir/   readme.new*  users
+2. Put a sorted list of all last logged on users in last-online-users.txt.
+    asta@pollux:~$ cat lastonlineusers.txt
+3. Make a list of all filenames in /etc that contain the string "conf" in their filename.
+- ls /etc | grep 'conf' 
+    asta@pollux:~$ ls /etc | grep 'conf'
+    anthy-conf
+    asound.conf
+    autofs_ldap_auth.conf
+    ca-certificates.conf
+    cgconfig.conf
+    cgred.conf
+    cgrules.conf
+    cgsnapshot_blacklist.conf
+    dhclient.conf
+    dhclient.conf.example
+    dhcpcd.conf
+    dhcpd.conf
+    dhcpd.conf.example
+    dnsmasq.conf
+    esd.conf
+    gconf/
+    genpowerd.conf
+    gpm-root.conf
+    gpm-syn.conf
+    gpm-twiddler.conf
+    host.conf
+    identd.conf
+    idn.conf.sample
+    idnalias.conf.sample
+    inetd.conf
+    irssi.conf
+    ld.so.conf
+    lftp.conf
+    lilo.conf
+    lilo.conf_example
+    logrotate.conf
+    lrzip.conf
+    man.conf
+    mdadm.conf
+    mke2fs.conf
+    mkinitrd.conf.sample
+    mtools.conf
+    mysqlaccess.conf
+    named.conf
+    netconfig
+    nfsmount.conf
+    nscd.conf
+    nsswitch.conf
+    nsswitch.conf-nis
+    ntp.conf
+    pear.conf
+    php-fpm.conf
+    php-fpm.conf.default
+    pine.conf
+    proftpd.conf
+    request-key.conf
+    resolv.conf
+    sensors3.conf
+    serial.conf
+    smartd.conf
+    syslog.conf
+    ulogd.conf
+    updatedb.conf
+    usb_modeswitch.conf
+    vsftpd.conf
+    warnquota.conf-sample
+    wpa_supplicant.conf
+    xboard.conf
+    yp.conf
+4. Make a sorted list of all files in /etc that contain the case insensitive string conf in their filename.
+    ls /etc | grep -i conf
+    asta@pollux:~$ ls /etc | grep -i conf
+    anthy-conf
+    asound.conf
+    autofs_ldap_auth.conf
+    ca-certificates.conf
+    cgconfig.conf
+    cgred.conf
+    cgrules.conf
+    cgsnapshot_blacklist.conf
+    dhclient.conf
+    dhclient.conf.example
+    dhcpcd.conf
+    dhcpd.conf
+    dhcpd.conf.example
+    dnsmasq.conf
+    esd.conf
+    gconf/
+    genpowerd.conf
+    gpm-root.conf
+    gpm-syn.conf
+    gpm-twiddler.conf
+    host.conf
+    identd.conf
+    idn.conf.sample
+    idnalias.conf.sample
+    inetd.conf
+    irssi.conf
+    ld.so.conf
+    lftp.conf
+    lilo.conf
+    lilo.conf_example
+    logrotate.conf
+    lrzip.conf
+    man.conf
+    mdadm.conf
+    mke2fs.conf
+    mkinitrd.conf.sample
+    mtools.conf
+    mysqlaccess.conf
+    named.conf
+    netconfig
+    nfsmount.conf
+    nscd.conf
+    nsswitch.conf
+    nsswitch.conf-nis
+    ntp.conf
+    pear.conf
+    php-fpm.conf
+    php-fpm.conf.default
+    pine.conf
+    proftpd.conf
+    request-key.conf
+    resolv.conf
+    sensors3.conf
+    serial.conf
+    smartd.conf
+    syslog.conf
+    ulogd.conf
+    updatedb.conf
+    usb_modeswitch.conf
+    vsftpd.conf
+    warnquota.conf-sample
+    wpa_supplicant.conf
+    xboard.conf
+    yp.conf
+5. Look at the output of /sbin/ifconfig. Write a line that displays only ip address and the
+subnet mask. (use head; grep; tr -s; cut; )
+- head -2 | grep inet | tr -s ' ' | cut -d' ' -f3,5
+
+6. Write a line that removes all non-letters from a stream. 
+- Add the following text int file "file.txt". (use: echo )
+	This is, yes really! , a text with ?&* too many str$ange# characters ;-) 
+
+    asta@pollux:~$ echo "This is, yes really! , a text with ?&* too many str$ange# characters ;-)" > file.txt
+    asta@pollux:~$ cat file.txt
+    This is, yes really! , a text with ?&* too many str# characters ;-)
+    asta@pollux:~$ cat file.txt | tr -d '!@#$%^&*();-?.,)-'
+    This is yes really  a text with  too many str characters
+7. Write a line that receives "employees.txt" file, and outputs all words on a separate line (use: tr).
+    asta@pollux:~$ cat employees.txt | tr ' ' '\n'
+    100
+    Johnson
+    smith
+    200
+    John
+    Doe
+    300
+    Sanjay
+    Gupta
+    400
+    Ashok
+    Sharma
+8. Search files which called [penguin] and the results of searching redirect to penguin.txt and the error messages to error.txt.
+    asta@pollux:/$ find . "penguin" 2>> ~/error.txt 1>> ~/penguin.txt
+9. Merge these two files together to file results.txt (use: cat)
+    asta@pollux:~$ cat error.txt penguin.txt > results.txt
+10. Show the first 5 directories in /etc listing which have the most size. (use: sort)
+    asta@pollux:/$ ls /etc -s -l | sort -r | head -6
+    razem 2632
+    692 -rw-r--r--   1 root root   706385 mar  3  2000 termcap-BSD
+    224 -rw-r--r--   1 root root   228928 lut 25 12:11 ld.so.cache
+    160 -rw-r--r--   1 root root   159851 mar  9  2016 lynx.cfg
+    84 -rw-r--r--   1 root root    83348 lut  6  2010 services
+    72 -rw-r--r--   1 root root    73245 kwi 13  2020 php.ini
+11. Show the last 5 directories in /etc listing which have the lowest size.(use: sort)
+    asta@pollux:/$ ls /etc -s -l | sort | head -6
+    0 -rw-r--r--   1 root root        0 lut  9  2019 crypttab
+    0 -rw-r--r--   1 root root        0 wrz 17  1999 issue.net
+    0 lrwxrwxrwx   1 root root        4 lut  9  2019 misc -> file/
+    0 lrwxrwxrwx   1 root root        7 lut  9  2019 zprofile -> profile
+    0 lrwxrwxrwx   1 root root       10 lut  9  2019 rc0.d -> rc.d/rc0.d/
+    0 lrwxrwxrwx   1 root root       10 lut  9  2019 rc1.d -> rc.d/rc1.d/
+12. Show the listing of directories in /etc, where Others don't have any access permission "---".
+- ls -l /etc | grep '^d......---'
+    asta@pollux:/$ ls -l /etc | grep '^d......---'
+    drwxr-x---   2 root root     4096 mar 25  2016 sudoers.d/
+13. Show the listing of directories, where Group has "read" and "execute" as an access permission.
+- ls -l /ect | grep '^d...r-x...'
+    drwxr-xr-x   5 root root     4096 lis 19  2015 ConsoleKit/
+    drwxr-xr-x   2 root root     4096 lut  9  2019 ImageMagick-6/
+    drwxr-xr-x   5 root root     4096 lut  9  2019 NetworkManager/
+    drwxr-xr-x   2 root root     4096 lut  9  2019 UPower/
+    drwxr-xr-x  13 root root     4096 lis 21  2015 X11/
+
+FILTERS.TXT:
+2.
+    asta@pollux:~$ join employees.txt bonus.txt
+    100 Johnson smith $5000.00
+    200 John Doe $500.00
+    300 Sanjay Gupta $3000.00
+    400 Ashok Sharma $1250.00
+3.
+    asta@pollux:~$ cat employees.txt | tr 'e' 'E'
+    100 Johnson smith
+    200 John DoE
+    300 Sanjay Gupta
+    400 Ashok Sharma
+4.
+    asta@pollux:~$ cat employees.txt | tr 'a-z' 'A-Z'
+    100 JOHNSON SMITH
+    200 JOHN DOE
+    300 SANJAY GUPTA
+    400 ASHOK SHARMA
+5.
+    asta@pollux:~$ cat department.txt | tr 'A-Z' 'a-z'
+    100 finance
+    200 marketing
+    300 product developer
+    400 sales
+6.
+    asta@pollux:~$ cat bonus.txt | tr ' ' '\n'
+    100
+    $5000.00
+    200
+    $500.00
+    300
+    $3000.00
+    400
+    $1250.00
+7.
+    asta@pollux:~$ cat employees.txt | tr -d '0-9'
+    Johnson smith
+    John Doe
+    Sanjay Gupta
+    Ashok Sharma
+8.
+    asta@pollux:~$ cat spaces.txt | tr -s ' '
+    one two three four
+     five six
+9.
+    asta@pollux:~$ sort names.txt -k1
+    Alex Jason:400:Sales
+    Emma Thomas:200:Marketing
+    Madison Randy:300:Product Development
+    Nisha Singh:100:Sales
+    Sanjay Gupta:500:Support
+10.
+    asta@pollux:~$ sort names.txt -k2
+    Sanjay Gupta:500:Support
+    Alex Jason:400:Sales
+    Madison Randy:300:Product Development
+    Nisha Singh:100:Sales
+    Emma Thomas:200:Marketing
+11.
+    asta@pollux:~$ sort names.txt -t: -k3
+    Emma Thomas:200:Marketing
+    Madison Randy:300:Product Development
+    Alex Jason:400:Sales
+    Nisha Singh:100:Sales
+    Sanjay Gupta:500:Support
+12.
+    asta@pollux:~$ sort names.txt -t: -k2n
+    Nisha Singh:100:Sales
+    Emma Thomas:200:Marketing
+    Madison Randy:300:Product Development
+    Alex Jason:400:Sales
+    Sanjay Gupta:500:Support
+13.
+    asta@pollux:~$ sort players.txt | uniq
+    Aguero
+    Benzema
+    Messi
+    Navas
+    Ronaldo
+    Stegen
+    Suarez
+14.
+    asta@pollux:~$ sort players.txt | uniq -c
+      2 Aguero
+      2 Benzema
+      1 Messi
+      1 Navas
+      2 Ronaldo
+      1 Stegen
+      1 Suarez
+15.
+    asta@pollux:~$ wc bonus.txt
+     4  8 51 bonus.txt
+
+    asta@pollux:~$ wc bonus.txt -l
+    4 bonus.txt
+
+    asta@pollux:~$ wc bonus.txt -w
+    8 bonus.txt
+
+    asta@pollux:~$ wc bonus.txt -c
+    51 bonus.txt
+16.
+    asta@pollux:~$ cat /etc/passwd | cut -d":" -f1,3
+    root:0
+    bin:1
+    daemon:2
+    adm:3
+    lp:4
+    sync:5
+17.
+    asta@pollux:~$ cut employees.txt -d ' ' -f 2-
+    Johnson smith
+    John Doe
+    Sanjay Gupta
+    Ashok Sharma
+18.
+    asta@pollux:~$ cut employees.txt -c 2-7
+    00 Joh
+    00 Joh
+    00 San
+    00 Ash
+19.
+    asta@pollux:~$ cat /etc/passwd | cut -d":" -f5,5 | cut -d"-" -f1

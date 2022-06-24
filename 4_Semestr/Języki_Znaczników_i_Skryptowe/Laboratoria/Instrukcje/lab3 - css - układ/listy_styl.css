@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #91867E;
+    color:black;
+
+    font-size: 13 px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-size: 160%;
+}
+h3 {
+    font-size: 120%;
+    border-bottom: 1px solid black;
+}
+h4 {
+    font-size: 100%;
+    border-bottom: 1px solid gray;
+}
+h2, h3, h4 {
+    line-height: 1em;
+}
+
+#menu a {
+    display: block;
+    padding: 8px 0 6px 10px;
+}
+#menu {
+    position: absolute;
+    top: 5em;
+    left: 0;
+    width: 25%;
+
+    font-size: 13px;
+}
+#menu:hover {
+    background-color: #FCBB42;
+}
+
+#zawartosc {
+    margin-top: 0;
+    margin-right: 10em;
+    margin-bottom: 1em; 
+    margin-left: 27%;
+    padding: 0;
+
+    background-color: #B2AAA4;
+}
+
+#zawartosc p {
+    line-height: 1.66em;
+    margin: 0.5em 1em 0.5em 2em;
+}

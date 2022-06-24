@@ -1,0 +1,83 @@
+body {
+    background-color: #c0392b;
+    color: #000;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: #b6aeae;
+    border: 1px solid black;
+    margin-bottom: 0;
+}
+
+#zawartosc {
+    width: 80%;
+    color: #b6aeae;
+    padding: 1px 0 1px 5%;
+    min-width: 500px;
+}
+
+#zawartosc p {
+    margin-top: 0;
+}
+
+#menu {
+    width: 13%;
+    padding-top: 0;
+    background-color: #c0392b;
+}
+#menu ul {
+    margin:0;
+    padding:0;
+}
+#menu li {
+    position:relative;
+}
+#menu ul ul {
+    position:absolute;
+    top:0;
+}
+#menu ul ul {
+    left:7em;
+}
+li {
+    list-style: none;
+}
+ul {
+    background-color: #eee303;
+    border: 1px solid;
+}
+#menu ul li {
+    margin: 0;
+}
+
+#menu a {
+    padding: 2px 0 2px 0;
+    text-decoration: none;
+}
+#menu ul li {
+    border-bottom: 1px solid #999;
+}
+#menu li:hover {
+    background-color:#f39c12;
+}
+
+#menu li.podmenu {
+    background: url(strzalka.gif) 95% 55% no-repeat;
+}
+
+#menu ul ul {
+    display: none;
+}
+
+#menu ul li.podmenu:hover > ul {
+    display:block;
+}
+
+#menu ul li.podmenu li:hover > ul {
+    display:block;
+}

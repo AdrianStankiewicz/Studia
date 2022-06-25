@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poprawna konstrukcja czystego HTML – strony i formularze">
+    <meta name="author" content="Adrian Stankiewicz 47576">
+    <meta name="keywords" content="UMG Uniwersytet Morski Gdynia">
+    <link rel="stylesheet" href="styles/umg_formularz.css">
+    <title>UMG Formularz</title>
+</head>
+<body>
+    <header>
+        <img src="logoUMG.png" alt="Zdjęcie logo UMG">
+        <h1>Uniwersytet Morski w Gdyni</h1>
+        <img id="budynek" src="budynekUMG.jpg" alt="Zdjęcie budynku UMG">
+    </header>
+    <h2>Formularz rejestrcyjny</h2>
+    <form action="docelowePHP.php" method="post">
+    <label for="html">Nazwisko<input id="nazwisko" type="text"></label>
+    <label for="imie">Imię<input id="imie" type="text"></label><br>
+    <label for="email">Adres e-mail<input id="email" type="email"></label><br>
+    <p><label for="województwo">Województwo<select id="województwo">
+        <option value="pomorskie">Pomorskie</option>
+        <option value="zachodnio-pomorskie">Zachodnio-Pomorskie</option>
+        <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option></select></label></p>
+    <label for="wydzial">Wydział:
+        <br><input type="checkbox" name="wydzial" value="Elektryczny">Elektryczny
+        <br><input type="checkbox" name="wydzial" value="Mechaniczny">Mechaniczny
+        <br><input type="checkbox" name="wydzial" value="Nawigacyjny">Nawigacyjny
+        <br><input type="checkbox" name="wydzial" value="Przedsiębiorczości i Towaroznawstwa">Przedsiębiorczości i Towaroznawstwa
+    </label>
+    <p>Chcę otrzymywać: <input type="radio" name="informacje" value="tylko rekrutacja">tylko informacje na temat rekrutacji <input type="radio" name="informacje" value="wszystkie">wszystkie informacje</p>
+    <label>Uwagi/komentarze <br><textarea rows="7" cols="60"></textarea></label>
+    <p><button type="submit">Wyślij</button></p>
+</form>
+    <p><a href="umg_strona.html">Powrót do strony głównej</a></p>
+</body>
+</html>

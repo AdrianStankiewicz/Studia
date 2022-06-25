@@ -1,0 +1,11 @@
+clear
+clc
+
+% Wymagania nakladane na projektowany układ
+MrdB = 3;
+BW = 5;
+
+% Wyznaczamy wartości bezwzględne modułu
+Mr = 10^(MrdB/20);
+
+% Wyznaczamy zete

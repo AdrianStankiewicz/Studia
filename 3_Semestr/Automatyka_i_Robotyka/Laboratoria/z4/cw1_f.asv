@@ -1,0 +1,8 @@
+clear;
+clc;
+
+Gs = tf([5 7],[1 5 13 14 6]);
+
+% Kryteria Routha
+% [xK * y
+blt = [0 5*13] - [5 14]

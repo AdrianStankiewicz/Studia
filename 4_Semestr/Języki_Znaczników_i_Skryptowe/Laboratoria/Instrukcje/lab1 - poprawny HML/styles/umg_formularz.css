@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    align-items: baseline;
+}
+
+header #budynek {
+    padding-left: 20px;
+}
+
+#email {
+    width: 370px;
+}
+
+#uwagi {
+    width: 30vw;
+    height: 10vh;
+}

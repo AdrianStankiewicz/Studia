@@ -1,0 +1,81 @@
+=============================================================================
+CREATE TABLE [dbo].[Abilities] (
+    [Id]       INT IDENTITY (1, 1) NOT NULL,
+    [idLeader] INT NOT NULL,
+    [idSkills] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Abilities_Leader] FOREIGN KEY ([idLeader]) REFERENCES [dbo].[Leader] ([Id]),
+    CONSTRAINT [FK_Abilities_Skills] FOREIGN KEY ([idSkills]) REFERENCES [dbo].[Skills] ([Id])
+);
+=============================================================================
+CREATE TABLE [dbo].[Class] (
+    [Id]   INT        IDENTITY (1, 1) NOT NULL,
+    [name] CHAR (50)  NOT NULL,
+    [type] CHAR (200) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+=============================================================================
+CREATE TABLE [dbo].[Group] (
+    [Id]       INT      IDENTITY (1, 1) NOT NULL,
+    [idClass]  INT      NOT NULL,
+    [idLeader] INT      NOT NULL,
+    [seats]    INT      NOT NULL,
+    [day]      INT      NOT NULL,
+    [time]     CHAR (5) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Group_Class] FOREIGN KEY ([idClass]) REFERENCES [dbo].[Class] ([Id]),
+    CONSTRAINT [FK_Group_Leader] FOREIGN KEY ([idLeader]) REFERENCES [dbo].[Leader] ([Id])
+);
+=============================================================================
+CREATE TABLE [dbo].[Leader] (
+    [Id]        INT       IDENTITY (1, 1) NOT NULL,
+    [full_name] CHAR (40) NOT NULL,
+    [city]      CHAR (25) NOT NULL,
+    [address]   CHAR (30) NOT NULL,
+    [phone]     CHAR (9)  NOT NULL,
+    [birth]     DATE      NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+=============================================================================
+CREATE TABLE [dbo].[Regs] (
+    [Id]      INT IDENTITY (1, 1) NOT NULL,
+    [idGroup] INT NOT NULL,
+    [idUser]  INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Regs_User] FOREIGN KEY ([idUser]) REFERENCES [dbo].[User] ([Id]),
+    CONSTRAINT [FK_Regs_Group] FOREIGN KEY ([idGroup]) REFERENCES [dbo].[Group] ([Id])
+);
+=============================================================================
+CREATE TABLE [dbo].[Skills] (
+    [Id]   INT       IDENTITY (1, 1) NOT NULL,
+    [name] CHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+=============================================================================
+CREATE TABLE [dbo].[User] (
+    [Id]         INT       IDENTITY (1, 1) NOT NULL,
+    [full_name]  CHAR (40) NOT NULL,
+    [phone]      CHAR (9)  NOT NULL,
+    [birth]      DATE      NOT NULL,
+    [created_at] DATETIME  DEFAULT (getdate()) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [CK_User_phone] CHECK ([phone]>(0) AND [phone]<(999999999))
+);
+=============================================================================
+CREATE FUNCTION [dbo].[FunctionIdGroupCount]
+(
+	@paramIdGroup int
+)
+RETURNS TABLE AS RETURN
+(
+	SELECT COUNT(Regs.idGroup) AS IloscUczestników
+	FROM Regs
+	WHERE Regs.idGroup = @paramIdGroup
+	GROUP BY idGroup
+)
+
+Na przykłąd: 
+SELECT *
+FROM [dbo].[FunctionIdGroupCount](3)
+
+Wypisuje ile osób jest przypisane do danych zajęć

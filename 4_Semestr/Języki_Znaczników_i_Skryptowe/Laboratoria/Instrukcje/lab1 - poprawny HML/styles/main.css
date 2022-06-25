@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    align-items: baseline;
+}
+
+header #budynek {
+    padding-left: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+td {
+    border: 1px solid;
+  }
